@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "r-for-data-science/data-visualization.html",
+    "href": "r-for-data-science/data-visualization.html",
+    "title": "ggplot2 demo",
+    "section": "",
+    "text": "Figure 1 further explores the impact of temperature on ozone level.\n\n\nShow code\nlibrary(ggplot2)\n\nggplot(airquality, aes(Temp, Ozone)) +\n  geom_point() +\n  geom_smooth(method=\"loess\")\n\n\n\n\n\n\n\n\nFigure 1: Temperature and ozone level."
+  },
+  {
+    "objectID": "r-for-data-science/data-visualization.html#air-quality",
+    "href": "r-for-data-science/data-visualization.html#air-quality",
+    "title": "ggplot2 demo",
+    "section": "",
+    "text": "Figure 1 further explores the impact of temperature on ozone level.\n\n\nShow code\nlibrary(ggplot2)\n\nggplot(airquality, aes(Temp, Ozone)) +\n  geom_point() +\n  geom_smooth(method=\"loess\")\n\n\n\n\n\n\n\n\nFigure 1: Temperature and ozone level."
+  }
+]
