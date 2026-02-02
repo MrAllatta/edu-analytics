@@ -12,5 +12,522 @@
     "title": "ggplot2 demo",
     "section": "",
     "text": "Figure 1 further explores the impact of temperature on ozone level.\n\n\nShow code\nlibrary(ggplot2)\n\nggplot(airquality, aes(Temp, Ozone)) +\n  geom_point() +\n  geom_smooth(method=\"loess\")\n\n\n\n\n\n\n\n\nFigure 1: Temperature and ozone level."
+  },
+  {
+    "objectID": "output/index.html",
+    "href": "output/index.html",
+    "title": "NYC Education Analytics",
+    "section": "",
+    "text": "This project explores NYC Open Data education datasets using R for statistical analysis and visualization. All analysis is written in Org-mode for literate programming and exported to Quarto for publishing.\n\n\nWe use the NYC Open Data Education Portal which provides:\n\nSchool locations and building information\nStudent enrollment and demographics\nTest scores and academic performance\nGraduation and dropout rates\nProgram participation data\n\n\n\n\n# Load required packages\nsource(\"src/R/setup.R\")\n\n# Fetch school directory data\nschools &lt;- fetch_dataset(NYC_DATA$school_directory)\n\n# Quick overview\nglimpse(schools)\n\n\n\nedu-analytics/\n├── org/                  # Org-mode source files\n│   ├── index.org\n│   ├── schools.org\n│   ├── students.org\n│   └── learning.org\n├── src/R/               # R scripts and functions\n│   ├── setup.R          # Package loading\n│   ├── nyc_data.R       # NYC Open Data endpoints\n│   └── utils.R          # Helper functions\n├── data/                # Local data cache (parquet)\n├── output/              # Generated figures\n├── docs/                # Quarto output (website)\n└── _quarto.yml          # Quarto configuration\n\n\n\n\nSchools Analysis - Building space, locations, facilities\nStudents Analysis - Enrollment, demographics, attendance\nLearning Outcomes - Test scores, graduation rates, academic progress"
+  },
+  {
+    "objectID": "output/index.html#data-sources",
+    "href": "output/index.html#data-sources",
+    "title": "NYC Education Analytics",
+    "section": "",
+    "text": "We use the NYC Open Data Education Portal which provides:\n\nSchool locations and building information\nStudent enrollment and demographics\nTest scores and academic performance\nGraduation and dropout rates\nProgram participation data"
+  },
+  {
+    "objectID": "output/index.html#getting-started",
+    "href": "output/index.html#getting-started",
+    "title": "NYC Education Analytics",
+    "section": "",
+    "text": "# Load required packages\nsource(\"src/R/setup.R\")\n\n# Fetch school directory data\nschools &lt;- fetch_dataset(NYC_DATA$school_directory)\n\n# Quick overview\nglimpse(schools)"
+  },
+  {
+    "objectID": "output/index.html#project-structure",
+    "href": "output/index.html#project-structure",
+    "title": "NYC Education Analytics",
+    "section": "",
+    "text": "edu-analytics/\n├── org/                  # Org-mode source files\n│   ├── index.org\n│   ├── schools.org\n│   ├── students.org\n│   └── learning.org\n├── src/R/               # R scripts and functions\n│   ├── setup.R          # Package loading\n│   ├── nyc_data.R       # NYC Open Data endpoints\n│   └── utils.R          # Helper functions\n├── data/                # Local data cache (parquet)\n├── output/              # Generated figures\n├── docs/                # Quarto output (website)\n└── _quarto.yml          # Quarto configuration"
+  },
+  {
+    "objectID": "output/index.html#quick-links",
+    "href": "output/index.html#quick-links",
+    "title": "NYC Education Analytics",
+    "section": "",
+    "text": "Schools Analysis - Building space, locations, facilities\nStudents Analysis - Enrollment, demographics, attendance\nLearning Outcomes - Test scores, graduation rates, academic progress"
+  },
+  {
+    "objectID": "output/data-sources.html",
+    "href": "output/data-sources.html",
+    "title": "Data Sources",
+    "section": "",
+    "text": "NYC Open Data Overview\nDataset Catalog\n\nLoading the Data Library\n\nSchools Data\n\nSchool Directory\nBuilding Space Usage\n\nStudents Data\n\nDemographic Snapshot\nAttendance Data\n\nLearning Outcomes Data\n\nTest Results\nGraduation Data\n\nAccessing the Data\n\nBasic Fetch\nWith Filtering (SoQL)\nLarge Datasets\n\nData Dictionary Reference\nUpdate Schedule"
+  },
+  {
+    "objectID": "output/data-sources.html#loading-the-data-library",
+    "href": "output/data-sources.html#loading-the-data-library",
+    "title": "Data Sources",
+    "section": "Loading the Data Library",
+    "text": "Loading the Data Library\n## ============================================================\n## Load NYC Open Data library\n## ============================================================\n\nsource(\"src/R/setup.R\")\nsource(\"src/R/nyc_data.R\")\n\n# Display available datasets\ndatasets &lt;- list_datasets()\nprint(datasets)"
+  },
+  {
+    "objectID": "output/data-sources.html#school-directory",
+    "href": "output/data-sources.html#school-directory",
+    "title": "Data Sources",
+    "section": "School Directory",
+    "text": "School Directory\n## ============================================================\n## School Directory Dataset\n## Comprehensive list of all NYC public schools\n## ============================================================\n\ninfo &lt;- get_dataset_info(NYC_DATA$school_directory)\ncat(\"Dataset:\", info$name, \"\\n\")\ncat(\"ID:\", NYC_DATA$school_directory, \"\\n\")\ncat(\"Last Updated:\", format(info$last_updated, \"%Y-%m-%d\"), \"\\n\")\ncat(\"Columns:\", info$columns, \"\\n\")"
+  },
+  {
+    "objectID": "output/data-sources.html#building-space-usage",
+    "href": "output/data-sources.html#building-space-usage",
+    "title": "Data Sources",
+    "section": "Building Space Usage",
+    "text": "Building Space Usage\n## ============================================================\n## Building Space Usage Dataset  \n## Annual space utilization metrics\n## ============================================================\n\ninfo &lt;- get_dataset_info(NYC_DATA$building_space_usage)\ncat(\"Dataset:\", info$name, \"\\n\")\ncat(\"ID:\", NYC_DATA$building_space_usage, \"\\n\")\ncat(\"Description:\", substr(info$description, 1, 200), \"...\\n\")"
+  },
+  {
+    "objectID": "output/data-sources.html#demographic-snapshot",
+    "href": "output/data-sources.html#demographic-snapshot",
+    "title": "Data Sources",
+    "section": "Demographic Snapshot",
+    "text": "Demographic Snapshot\n## ============================================================\n## Demographic Snapshot\n## Student demographics by school\n## ============================================================\n\ninfo &lt;- get_dataset_info(NYC_DATA$demographic_snapshot)\ncat(\"Dataset:\", info$name, \"\\n\")\ncat(\"ID:\", NYC_DATA$demographic_snapshot, \"\\n\")\ncat(\"Use Case: Analyze student population composition\\n\")"
+  },
+  {
+    "objectID": "output/data-sources.html#attendance-data",
+    "href": "output/data-sources.html#attendance-data",
+    "title": "Data Sources",
+    "section": "Attendance Data",
+    "text": "Attendance Data\n## ============================================================\n## Attendance & Chronic Absenteeism\n## School-level attendance metrics\n## ============================================================\n\ninfo &lt;- get_dataset_info(NYC_DATA$attendance)\ncat(\"Dataset:\", info$name, \"\\n\")\ncat(\"ID:\", NYC_DATA$attendance, \"\\n\")\ncat(\"Use Case: Study attendance patterns and chronic absenteeism\\n\")"
+  },
+  {
+    "objectID": "output/data-sources.html#test-results",
+    "href": "output/data-sources.html#test-results",
+    "title": "Data Sources",
+    "section": "Test Results",
+    "text": "Test Results\n## ============================================================\n## State Assessment Results\n## Math and ELA scores for grades 3-8\n## ============================================================\n\ncat(\"=== Math Test Results ===\\n\")\ncat(\"ID:\", NYC_DATA$math_test_results, \"\\n\")\ncat(\"Grades: 3-8\\n\")\ncat(\"Metrics: Proficiency levels 1-4\\n\\n\")\n\ncat(\"=== ELA Test Results ===\\n\")\ncat(\"ID:\", NYC_DATA$ela_test_results, \"\\n\")\ncat(\"Grades: 3-8\\n\")\ncat(\"Metrics: Proficiency levels 1-4\\n\")"
+  },
+  {
+    "objectID": "output/data-sources.html#graduation-data",
+    "href": "output/data-sources.html#graduation-data",
+    "title": "Data Sources",
+    "section": "Graduation Data",
+    "text": "Graduation Data\n## ============================================================\n## High School Graduation Outcomes\n## 4-year and 6-year cohort graduation rates\n## ============================================================\n\ninfo &lt;- get_dataset_info(NYC_DATA$graduation_outcomes)\ncat(\"Dataset:\", info$name, \"\\n\")\ncat(\"ID:\", NYC_DATA$graduation_outcomes, \"\\n\")\ncat(\"Metrics: Graduation rate, dropout rate, still enrolled\\n\")"
+  },
+  {
+    "objectID": "output/data-sources.html#basic-fetch",
+    "href": "output/data-sources.html#basic-fetch",
+    "title": "Data Sources",
+    "section": "Basic Fetch",
+    "text": "Basic Fetch\n# Fetch with automatic caching\nschools &lt;- fetch_dataset(\n  dataset_id = NYC_DATA$school_directory,\n  cache_name = \"school_directory\"\n)"
+  },
+  {
+    "objectID": "output/data-sources.html#with-filtering-soql",
+    "href": "output/data-sources.html#with-filtering-soql",
+    "title": "Data Sources",
+    "section": "With Filtering (SoQL)",
+    "text": "With Filtering (SoQL)\n# Server-side filtering\nbrooklyn_schools &lt;- fetch_dataset(\n  dataset_id = NYC_DATA$school_directory,\n  `$where` = \"boro = 'K'\"  # K = Brooklyn\n)"
+  },
+  {
+    "objectID": "output/data-sources.html#large-datasets",
+    "href": "output/data-sources.html#large-datasets",
+    "title": "Data Sources",
+    "section": "Large Datasets",
+    "text": "Large Datasets\n# Paginated fetch for large datasets\nall_demographics &lt;- fetch_large_dataset(\n  dataset_id = NYC_DATA$demographic_snapshot,\n  batch_size = 50000,\n  cache_name = \"demographics_full\"\n)"
+  },
+  {
+    "objectID": "output/schools.html",
+    "href": "output/schools.html",
+    "title": "Schools Analysis",
+    "section": "",
+    "text": "Overview\nSetup\nData Loading\n\nSchool Directory\nBuilding Space Usage\n\nExploratory Analysis\n\nSchools by Borough\nSchool Types Distribution\nGeographic Distribution\n\nBuilding Utilization Analysis\n\nSpace Utilization by District\n\nSummary Statistics\nExport Notes"
+  },
+  {
+    "objectID": "output/schools.html#school-directory",
+    "href": "output/schools.html#school-directory",
+    "title": "Schools Analysis",
+    "section": "School Directory",
+    "text": "School Directory\n## ============================================================\n## Fetch NYC School Directory\n## Dataset: 2019-2020 School Locations\n## ============================================================\n\nschools &lt;- fetch_dataset(\n  dataset_id = NYC_DATA$school_directory,\n  cache_name = \"school_directory\"\n)\n\n## Display structure\ncat(\"Dataset dimensions:\", nrow(schools), \"rows x\", ncol(schools), \"columns\\n\")\ncat(\"\\nColumn names:\\n\")\nprint(names(schools))"
+  },
+  {
+    "objectID": "output/schools.html#building-space-usage",
+    "href": "output/schools.html#building-space-usage",
+    "title": "Schools Analysis",
+    "section": "Building Space Usage",
+    "text": "Building Space Usage\n## ============================================================\n## Fetch DOE Building Space Usage\n## Updated annually - tracks space utilization in school buildings\n## ============================================================\n\nbuilding_space &lt;- fetch_dataset(\n  dataset_id = NYC_DATA$building_space_usage,\n  cache_name = \"building_space\"\n)\n\ncat(\"Building space records:\", nrow(building_space), \"\\n\")\nglimpse(building_space)"
+  },
+  {
+    "objectID": "output/schools.html#schools-by-borough",
+    "href": "output/schools.html#schools-by-borough",
+    "title": "Schools Analysis",
+    "section": "Schools by Borough",
+    "text": "Schools by Borough\n## ============================================================\n## Count of schools by borough\n## ============================================================\n\nschools_by_boro &lt;- schools |&gt;\n  count(borough = boro, name = \"n_schools\") |&gt;\n  mutate(borough = fct_reorder(borough, n_schools))\n\nggplot(schools_by_boro, aes(x = n_schools, y = borough, fill = borough)) +\n  geom_col(show.legend = FALSE) +\n  geom_text(aes(label = n_schools), hjust = -0.2, size = 4) +\n  scale_fill_viridis_d(option = \"plasma\", begin = 0.2, end = 0.8) +\n  labs(\n    title = \"NYC Public Schools by Borough\",\n    subtitle = \"Source: NYC Open Data School Directory\",\n    x = \"Number of Schools\",\n    y = NULL\n  ) +\n  theme_minimal(base_size = 14) +\n  theme(\n    plot.title = element_text(face = \"bold\"),\n    panel.grid.major.y = element_blank()\n  ) +\n  expand_limits(x = max(schools_by_boro$n_schools) * 1.1)"
+  },
+  {
+    "objectID": "output/schools.html#school-types-distribution",
+    "href": "output/schools.html#school-types-distribution",
+    "title": "Schools Analysis",
+    "section": "School Types Distribution",
+    "text": "School Types Distribution\n## ============================================================\n## Distribution of school types\n## ============================================================\n\nschool_types &lt;- schools |&gt;\n  count(school_type = schooltype, name = \"count\") |&gt;\n  filter(!is.na(school_type)) |&gt;\n  mutate(\n    pct = count / sum(count) * 100,\n    school_type = fct_reorder(school_type, count)\n  )\n\nggplot(school_types, aes(x = count, y = school_type)) +\n  geom_col(fill = \"steelblue\", alpha = 0.8) +\n  geom_text(aes(label = sprintf(\"%.1f%%\", pct)), hjust = -0.1, size = 3.5) +\n  labs(\n    title = \"Distribution of NYC School Types\",\n    x = \"Number of Schools\",\n    y = NULL\n  ) +\n  theme_minimal(base_size = 12) +\n  expand_limits(x = max(school_types$count) * 1.15)"
+  },
+  {
+    "objectID": "output/schools.html#geographic-distribution",
+    "href": "output/schools.html#geographic-distribution",
+    "title": "Schools Analysis",
+    "section": "Geographic Distribution",
+    "text": "Geographic Distribution\n## ============================================================\n## Map of school locations\n## Requires: sf package for spatial data\n## ============================================================\n\nif (\"latitude\" %in% names(schools) && \"longitude\" %in% names(schools)) {\n\n  schools_geo &lt;- schools |&gt;\n    filter(!is.na(latitude), !is.na(longitude)) |&gt;\n    mutate(\n      lat = as.numeric(latitude),\n      lon = as.numeric(longitude)\n    ) |&gt;\n    filter(between(lat, 40.4, 41.0), between(lon, -74.3, -73.7))\n\n  ggplot(schools_geo, aes(x = lon, y = lat, color = boro)) +\n    geom_point(alpha = 0.5, size = 1) +\n    scale_color_viridis_d(name = \"Borough\") +\n    labs(\n      title = \"Geographic Distribution of NYC Schools\",\n      x = \"Longitude\",\n      y = \"Latitude\"\n    ) +\n    theme_minimal() +\n    coord_fixed(ratio = 1.2)\n\n} else {\n  cat(\"Geographic coordinates not available in this dataset\\n\")\n}"
+  },
+  {
+    "objectID": "output/schools.html#space-utilization-by-district",
+    "href": "output/schools.html#space-utilization-by-district",
+    "title": "Schools Analysis",
+    "section": "Space Utilization by District",
+    "text": "Space Utilization by District\n## ============================================================\n## Analyze building space utilization\n## ============================================================\n\nif (exists(\"building_space\") && nrow(building_space) &gt; 0) {\n\n  utilization_summary &lt;- building_space |&gt;\n    group_by(district) |&gt;\n    summarise(\n      n_buildings = n_distinct(building_id),\n      total_capacity = sum(as.numeric(bldg_capacity), na.rm = TRUE),\n      total_enrollment = sum(as.numeric(bldg_enrollment), na.rm = TRUE),\n      .groups = \"drop\"\n    ) |&gt;\n    mutate(\n      utilization_rate = total_enrollment / total_capacity * 100\n    ) |&gt;\n    arrange(desc(utilization_rate))\n\n  cat(\"Top 10 Districts by Utilization Rate:\\n\")\n  print(head(utilization_summary, 10))\n\n} else {\n  cat(\"Building space data not available\\n\")\n}"
+  },
+  {
+    "objectID": "data-sources.html",
+    "href": "data-sources.html",
+    "title": "Data Sources",
+    "section": "",
+    "text": "NYC Open Data Overview\nDataset Catalog\n\nLoading the Data Library\n\nSchools Data\n\nSchool Directory\nBuilding Space Usage\n\nStudents Data\n\nDemographic Snapshot\nAttendance Data\n\nLearning Outcomes Data\n\nTest Results\nGraduation Data\n\nAccessing the Data\n\nBasic Fetch\nWith Filtering (SoQL)\nLarge Datasets\n\nData Dictionary Reference\nUpdate Schedule",
+    "crumbs": [
+      "Home",
+      "Data Sources",
+      "NYC Open Data"
+    ]
+  },
+  {
+    "objectID": "data-sources.html#loading-the-data-library",
+    "href": "data-sources.html#loading-the-data-library",
+    "title": "Data Sources",
+    "section": "Loading the Data Library",
+    "text": "Loading the Data Library\n## ============================================================\n## Load NYC Open Data library\n## ============================================================\n\nsource(\"src/R/setup.R\")\nsource(\"src/R/nyc_data.R\")\n\n# Display available datasets\ndatasets &lt;- list_datasets()\nprint(datasets)",
+    "crumbs": [
+      "Home",
+      "Data Sources",
+      "NYC Open Data"
+    ]
+  },
+  {
+    "objectID": "data-sources.html#school-directory",
+    "href": "data-sources.html#school-directory",
+    "title": "Data Sources",
+    "section": "School Directory",
+    "text": "School Directory\n## ============================================================\n## School Directory Dataset\n## Comprehensive list of all NYC public schools\n## ============================================================\n\ninfo &lt;- get_dataset_info(NYC_DATA$school_directory)\ncat(\"Dataset:\", info$name, \"\\n\")\ncat(\"ID:\", NYC_DATA$school_directory, \"\\n\")\ncat(\"Last Updated:\", format(info$last_updated, \"%Y-%m-%d\"), \"\\n\")\ncat(\"Columns:\", info$columns, \"\\n\")",
+    "crumbs": [
+      "Home",
+      "Data Sources",
+      "NYC Open Data"
+    ]
+  },
+  {
+    "objectID": "data-sources.html#building-space-usage",
+    "href": "data-sources.html#building-space-usage",
+    "title": "Data Sources",
+    "section": "Building Space Usage",
+    "text": "Building Space Usage\n## ============================================================\n## Building Space Usage Dataset  \n## Annual space utilization metrics\n## ============================================================\n\ninfo &lt;- get_dataset_info(NYC_DATA$building_space_usage)\ncat(\"Dataset:\", info$name, \"\\n\")\ncat(\"ID:\", NYC_DATA$building_space_usage, \"\\n\")\ncat(\"Description:\", substr(info$description, 1, 200), \"...\\n\")",
+    "crumbs": [
+      "Home",
+      "Data Sources",
+      "NYC Open Data"
+    ]
+  },
+  {
+    "objectID": "data-sources.html#demographic-snapshot",
+    "href": "data-sources.html#demographic-snapshot",
+    "title": "Data Sources",
+    "section": "Demographic Snapshot",
+    "text": "Demographic Snapshot\n## ============================================================\n## Demographic Snapshot\n## Student demographics by school\n## ============================================================\n\ninfo &lt;- get_dataset_info(NYC_DATA$demographic_snapshot)\ncat(\"Dataset:\", info$name, \"\\n\")\ncat(\"ID:\", NYC_DATA$demographic_snapshot, \"\\n\")\ncat(\"Use Case: Analyze student population composition\\n\")",
+    "crumbs": [
+      "Home",
+      "Data Sources",
+      "NYC Open Data"
+    ]
+  },
+  {
+    "objectID": "data-sources.html#attendance-data",
+    "href": "data-sources.html#attendance-data",
+    "title": "Data Sources",
+    "section": "Attendance Data",
+    "text": "Attendance Data\n## ============================================================\n## Attendance & Chronic Absenteeism\n## School-level attendance metrics\n## ============================================================\n\ninfo &lt;- get_dataset_info(NYC_DATA$attendance)\ncat(\"Dataset:\", info$name, \"\\n\")\ncat(\"ID:\", NYC_DATA$attendance, \"\\n\")\ncat(\"Use Case: Study attendance patterns and chronic absenteeism\\n\")",
+    "crumbs": [
+      "Home",
+      "Data Sources",
+      "NYC Open Data"
+    ]
+  },
+  {
+    "objectID": "data-sources.html#test-results",
+    "href": "data-sources.html#test-results",
+    "title": "Data Sources",
+    "section": "Test Results",
+    "text": "Test Results\n## ============================================================\n## State Assessment Results\n## Math and ELA scores for grades 3-8\n## ============================================================\n\ncat(\"=== Math Test Results ===\\n\")\ncat(\"ID:\", NYC_DATA$math_test_results, \"\\n\")\ncat(\"Grades: 3-8\\n\")\ncat(\"Metrics: Proficiency levels 1-4\\n\\n\")\n\ncat(\"=== ELA Test Results ===\\n\")\ncat(\"ID:\", NYC_DATA$ela_test_results, \"\\n\")\ncat(\"Grades: 3-8\\n\")\ncat(\"Metrics: Proficiency levels 1-4\\n\")",
+    "crumbs": [
+      "Home",
+      "Data Sources",
+      "NYC Open Data"
+    ]
+  },
+  {
+    "objectID": "data-sources.html#graduation-data",
+    "href": "data-sources.html#graduation-data",
+    "title": "Data Sources",
+    "section": "Graduation Data",
+    "text": "Graduation Data\n## ============================================================\n## High School Graduation Outcomes\n## 4-year and 6-year cohort graduation rates\n## ============================================================\n\ninfo &lt;- get_dataset_info(NYC_DATA$graduation_outcomes)\ncat(\"Dataset:\", info$name, \"\\n\")\ncat(\"ID:\", NYC_DATA$graduation_outcomes, \"\\n\")\ncat(\"Metrics: Graduation rate, dropout rate, still enrolled\\n\")",
+    "crumbs": [
+      "Home",
+      "Data Sources",
+      "NYC Open Data"
+    ]
+  },
+  {
+    "objectID": "data-sources.html#basic-fetch",
+    "href": "data-sources.html#basic-fetch",
+    "title": "Data Sources",
+    "section": "Basic Fetch",
+    "text": "Basic Fetch\n# Fetch with automatic caching\nschools &lt;- fetch_dataset(\n  dataset_id = NYC_DATA$school_directory,\n  cache_name = \"school_directory\"\n)",
+    "crumbs": [
+      "Home",
+      "Data Sources",
+      "NYC Open Data"
+    ]
+  },
+  {
+    "objectID": "data-sources.html#with-filtering-soql",
+    "href": "data-sources.html#with-filtering-soql",
+    "title": "Data Sources",
+    "section": "With Filtering (SoQL)",
+    "text": "With Filtering (SoQL)\n# Server-side filtering\nbrooklyn_schools &lt;- fetch_dataset(\n  dataset_id = NYC_DATA$school_directory,\n  `$where` = \"boro = 'K'\"  # K = Brooklyn\n)",
+    "crumbs": [
+      "Home",
+      "Data Sources",
+      "NYC Open Data"
+    ]
+  },
+  {
+    "objectID": "data-sources.html#large-datasets",
+    "href": "data-sources.html#large-datasets",
+    "title": "Data Sources",
+    "section": "Large Datasets",
+    "text": "Large Datasets\n# Paginated fetch for large datasets\nall_demographics &lt;- fetch_large_dataset(\n  dataset_id = NYC_DATA$demographic_snapshot,\n  batch_size = 50000,\n  cache_name = \"demographics_full\"\n)",
+    "crumbs": [
+      "Home",
+      "Data Sources",
+      "NYC Open Data"
+    ]
+  },
+  {
+    "objectID": "output/students.html",
+    "href": "output/students.html",
+    "title": "Students Analysis",
+    "section": "",
+    "text": "Overview\nSetup\nData Loading\n\nDemographic Snapshot\nEnrollment Data\nAttendance Data\n\nEnrollment Analysis\n\nTotal Enrollment Trends\nEnrollment by Grade Level\n\nDemographics Analysis\n\nDemographic Composition\nDemographics by Borough\n\nAttendance Patterns\n\nChronic Absenteeism\nAttendance by School Type\n\nSummary Statistics\nExport Notes"
+  },
+  {
+    "objectID": "output/students.html#demographic-snapshot",
+    "href": "output/students.html#demographic-snapshot",
+    "title": "Students Analysis",
+    "section": "Demographic Snapshot",
+    "text": "Demographic Snapshot\n## ============================================================\n## Fetch NYC School Demographics\n## Dataset: Demographic snapshot by school\n## ============================================================\n\ndemographics &lt;- fetch_dataset(\n  dataset_id = NYC_DATA$demographic_snapshot,\n  cache_name = \"demographics\"\n)\n\ncat(\"Demographics dataset:\", nrow(demographics), \"rows\\n\")\ncat(\"\\nAvailable columns:\\n\")\nprint(names(demographics))"
+  },
+  {
+    "objectID": "output/students.html#enrollment-data",
+    "href": "output/students.html#enrollment-data",
+    "title": "Students Analysis",
+    "section": "Enrollment Data",
+    "text": "Enrollment Data\n## ============================================================\n## Fetch school enrollment data\n## ============================================================\n\nenrollment &lt;- fetch_dataset(\n  dataset_id = NYC_DATA$enrollment,\n  cache_name = \"enrollment\"\n)\n\ncat(\"Enrollment records:\", nrow(enrollment), \"\\n\")\nglimpse(enrollment)"
+  },
+  {
+    "objectID": "output/students.html#attendance-data",
+    "href": "output/students.html#attendance-data",
+    "title": "Students Analysis",
+    "section": "Attendance Data",
+    "text": "Attendance Data\n## ============================================================\n## Fetch attendance and chronic absenteeism data\n## ============================================================\n\nattendance &lt;- fetch_dataset(\n  dataset_id = NYC_DATA$attendance,\n  cache_name = \"attendance\"\n)\n\ncat(\"Attendance records:\", nrow(attendance), \"\\n\")"
+  },
+  {
+    "objectID": "output/students.html#total-enrollment-trends",
+    "href": "output/students.html#total-enrollment-trends",
+    "title": "Students Analysis",
+    "section": "Total Enrollment Trends",
+    "text": "Total Enrollment Trends\n## ============================================================\n## Enrollment trends over time\n## ============================================================\n\nif (\"year\" %in% names(enrollment) || \"school_year\" %in% names(enrollment)) {\n\n  year_col &lt;- if (\"year\" %in% names(enrollment)) \"year\" else \"school_year\"\n\n  enrollment_trend &lt;- enrollment |&gt;\n    group_by(year = .data[[year_col]]) |&gt;\n    summarise(\n      total_enrollment = sum(as.numeric(total_enrollment), na.rm = TRUE),\n      .groups = \"drop\"\n    ) |&gt;\n    arrange(year)\n\n  ggplot(enrollment_trend, aes(x = year, y = total_enrollment, group = 1)) +\n    geom_line(color = \"steelblue\", linewidth = 1.2) +\n    geom_point(color = \"steelblue\", size = 3) +\n    scale_y_continuous(labels = scales::comma) +\n    labs(\n      title = \"NYC Public School Enrollment Over Time\",\n      subtitle = \"Source: NYC DOE Open Data\",\n      x = \"School Year\",\n      y = \"Total Enrollment\"\n    ) +\n    theme_minimal(base_size = 14) +\n    theme(\n      axis.text.x = element_text(angle = 45, hjust = 1),\n      plot.title = element_text(face = \"bold\")\n    )\n\n} else {\n  cat(\"Year column not found in enrollment data\\n\")\n}"
+  },
+  {
+    "objectID": "output/students.html#enrollment-by-grade-level",
+    "href": "output/students.html#enrollment-by-grade-level",
+    "title": "Students Analysis",
+    "section": "Enrollment by Grade Level",
+    "text": "Enrollment by Grade Level\n## ============================================================\n## Enrollment distribution by grade level\n## ============================================================\n\n# Look for grade-related columns\ngrade_cols &lt;- names(enrollment)[grep(\"grade|pk|k_|_k$\", names(enrollment), ignore.case = TRUE)]\n\nif (length(grade_cols) &gt; 0) {\n  cat(\"Grade-related columns found:\\n\")\n  print(grade_cols)\n\n  # Pivot to long format for visualization\n  enrollment_by_grade &lt;- enrollment |&gt;\n    select(any_of(c(\"dbn\", \"school_name\", grade_cols))) |&gt;\n    pivot_longer(\n      cols = any_of(grade_cols),\n      names_to = \"grade\",\n      values_to = \"count\"\n    ) |&gt;\n    group_by(grade) |&gt;\n    summarise(total = sum(as.numeric(count), na.rm = TRUE), .groups = \"drop\") |&gt;\n    filter(total &gt; 0) |&gt;\n    mutate(grade = fct_reorder(grade, total))\n\n  ggplot(enrollment_by_grade, aes(x = total, y = grade)) +\n    geom_col(fill = \"darkorange\", alpha = 0.8) +\n    scale_x_continuous(labels = scales::comma) +\n    labs(\n      title = \"Total Enrollment by Grade Level\",\n      x = \"Total Students\",\n      y = \"Grade\"\n    ) +\n    theme_minimal(base_size = 12)\n\n} else {\n  cat(\"No grade-level columns found\\n\")\n}"
+  },
+  {
+    "objectID": "output/students.html#demographic-composition",
+    "href": "output/students.html#demographic-composition",
+    "title": "Students Analysis",
+    "section": "Demographic Composition",
+    "text": "Demographic Composition\n## ============================================================\n## Overall demographic composition\n## ============================================================\n\n# Common demographic column patterns\ndemo_cols &lt;- c(\"asian\", \"black\", \"hispanic\", \"white\", \"multi_racial\", \n               \"native_american\", \"pacific_islander\")\n\navailable_demo &lt;- names(demographics)[names(demographics) %in% demo_cols]\n\nif (length(available_demo) &gt; 0) {\n\n  demo_totals &lt;- demographics |&gt;\n    summarise(across(all_of(available_demo), \n                     ~sum(as.numeric(.), na.rm = TRUE))) |&gt;\n    pivot_longer(everything(), names_to = \"group\", values_to = \"count\") |&gt;\n    mutate(\n      pct = count / sum(count) * 100,\n      group = str_to_title(str_replace_all(group, \"_\", \" \"))\n    )\n\n  ggplot(demo_totals, aes(x = \"\", y = pct, fill = group)) +\n    geom_col(width = 1) +\n    coord_polar(theta = \"y\") +\n    geom_text(aes(label = sprintf(\"%.1f%%\", pct)),\n              position = position_stack(vjust = 0.5),\n              size = 3) +\n    scale_fill_viridis_d(name = \"Group\") +\n    labs(\n      title = \"NYC Student Demographics\",\n      subtitle = \"Percentage by Ethnicity\"\n    ) +\n    theme_void(base_size = 12) +\n    theme(plot.title = element_text(face = \"bold\", hjust = 0.5))\n\n} else {\n  cat(\"Demographic columns not found. Available columns:\\n\")\n  print(names(demographics))\n}"
+  },
+  {
+    "objectID": "output/students.html#demographics-by-borough",
+    "href": "output/students.html#demographics-by-borough",
+    "title": "Students Analysis",
+    "section": "Demographics by Borough",
+    "text": "Demographics by Borough\n## ============================================================\n## Demographic breakdown by borough\n## ============================================================\n\nif (\"borough\" %in% names(demographics) || \"boro\" %in% names(demographics)) {\n\n  boro_col &lt;- if (\"borough\" %in% names(demographics)) \"borough\" else \"boro\"\n\n  demo_by_boro &lt;- demographics |&gt;\n    group_by(borough = .data[[boro_col]]) |&gt;\n    summarise(\n      total_students = sum(as.numeric(total_enrollment), na.rm = TRUE),\n      n_schools = n(),\n      .groups = \"drop\"\n    ) |&gt;\n    arrange(desc(total_students))\n\n  cat(\"Student Distribution by Borough:\\n\\n\")\n  print(demo_by_boro)\n\n} else {\n  cat(\"Borough column not found\\n\")\n}"
+  },
+  {
+    "objectID": "output/students.html#chronic-absenteeism",
+    "href": "output/students.html#chronic-absenteeism",
+    "title": "Students Analysis",
+    "section": "Chronic Absenteeism",
+    "text": "Chronic Absenteeism\n## ============================================================\n## Chronic absenteeism analysis\n## (Students missing 10%+ of school days)\n## ============================================================\n\nif (exists(\"attendance\") && nrow(attendance) &gt; 0) {\n\n  # Look for absenteeism rate columns\n  absent_cols &lt;- names(attendance)[grep(\"absent|chronic|attend\", \n                                        names(attendance), \n                                        ignore.case = TRUE)]\n\n  cat(\"Attendance-related columns:\\n\")\n  print(absent_cols)\n\n  if (\"chronic_absenteeism_rate\" %in% names(attendance)) {\n\n    absentee_dist &lt;- attendance |&gt;\n      filter(!is.na(chronic_absenteeism_rate)) |&gt;\n      mutate(rate = as.numeric(chronic_absenteeism_rate))\n\n    ggplot(absentee_dist, aes(x = rate)) +\n      geom_histogram(bins = 30, fill = \"coral\", color = \"white\", alpha = 0.8) +\n      geom_vline(aes(xintercept = mean(rate, na.rm = TRUE)), \n                 color = \"darkred\", linetype = \"dashed\", linewidth = 1) +\n      labs(\n        title = \"Distribution of Chronic Absenteeism Rates\",\n        subtitle = \"Dashed line = citywide average\",\n        x = \"Chronic Absenteeism Rate (%)\",\n        y = \"Number of Schools\"\n      ) +\n      theme_minimal(base_size = 12)\n\n  }\n\n} else {\n  cat(\"Attendance data not loaded\\n\")\n}"
+  },
+  {
+    "objectID": "output/students.html#attendance-by-school-type",
+    "href": "output/students.html#attendance-by-school-type",
+    "title": "Students Analysis",
+    "section": "Attendance by School Type",
+    "text": "Attendance by School Type\n## ============================================================\n## Compare attendance across school types\n## ============================================================\n\nif (exists(\"attendance\") && \"school_type\" %in% names(attendance)) {\n\n  attendance_by_type &lt;- attendance |&gt;\n    group_by(school_type) |&gt;\n    summarise(\n      n_schools = n(),\n      avg_attendance = mean(as.numeric(attendance_rate), na.rm = TRUE),\n      avg_chronic_absent = mean(as.numeric(chronic_absenteeism_rate), na.rm = TRUE),\n      .groups = \"drop\"\n    ) |&gt;\n    arrange(desc(avg_attendance))\n\n  cat(\"Attendance Metrics by School Type:\\n\\n\")\n  print(attendance_by_type)\n\n}"
+  },
+  {
+    "objectID": "output/about.html",
+    "href": "output/about.html",
+    "title": "About",
+    "section": "",
+    "text": "This project explores NYC public education data using literate programming techniques. All analysis is conducted transparently with reproducible code.\n\n\n\n\nAll data comes from the NYC Open Data Portal, specifically the Education category maintained by the NYC Department of Education.\n\n\n\n\nData Acquisition - Fetched via Socrata SODA API with local Parquet caching\nData Cleaning - Standardized borough names, parsed DBN codes, handled missing values\nExploratory Analysis - Summary statistics, distributions, correlations\nVisualization - ggplot2 graphics with consistent theming\nReporting - Org-mode → Quarto → HTML publishing\n\n\n\n\n\n\n\n\n\n\n\n\n\nTool\n\n\nVersion\n\n\nPurpose\n\n\n\n\n\n\nR\n\n\n4.x\n\n\nStatistical computing\n\n\n\n\ntidyverse\n\n\n2.x\n\n\nData manipulation\n\n\n\n\nggplot2\n\n\n3.x\n\n\nVisualization\n\n\n\n\nQuarto\n\n\n1.x\n\n\nPublishing\n\n\n\n\nEmacs Org-mode\n\n\n9.x\n\n\nLiterate programming\n\n\n\n\n\n\n\n\n\nData reflects publicly available aggregations; individual student data is protected\nSome datasets may have reporting delays or gaps\nSchool-level aggregations may mask within-school variation\nHistorical data comparability affected by policy and assessment changes\n\n\n\n\nAll code is available in the project repository. To reproduce:\ngit clone &lt;repository&gt;\ncd edu-analytics\nmake setup\nmake fetch-data\nmake all\n\n\n\nFor questions about this analysis, please open an issue on the project repository.\n\n\n\n\nCode: MIT License\nData: NYC Open Data Terms of Use\nContent: CC BY 4.0"
+  },
+  {
+    "objectID": "output/about.html#methodology",
+    "href": "output/about.html#methodology",
+    "title": "About",
+    "section": "",
+    "text": "All data comes from the NYC Open Data Portal, specifically the Education category maintained by the NYC Department of Education.\n\n\n\n\nData Acquisition - Fetched via Socrata SODA API with local Parquet caching\nData Cleaning - Standardized borough names, parsed DBN codes, handled missing values\nExploratory Analysis - Summary statistics, distributions, correlations\nVisualization - ggplot2 graphics with consistent theming\nReporting - Org-mode → Quarto → HTML publishing\n\n\n\n\n\n\n\n\n\n\n\n\n\nTool\n\n\nVersion\n\n\nPurpose\n\n\n\n\n\n\nR\n\n\n4.x\n\n\nStatistical computing\n\n\n\n\ntidyverse\n\n\n2.x\n\n\nData manipulation\n\n\n\n\nggplot2\n\n\n3.x\n\n\nVisualization\n\n\n\n\nQuarto\n\n\n1.x\n\n\nPublishing\n\n\n\n\nEmacs Org-mode\n\n\n9.x\n\n\nLiterate programming"
+  },
+  {
+    "objectID": "output/about.html#limitations",
+    "href": "output/about.html#limitations",
+    "title": "About",
+    "section": "",
+    "text": "Data reflects publicly available aggregations; individual student data is protected\nSome datasets may have reporting delays or gaps\nSchool-level aggregations may mask within-school variation\nHistorical data comparability affected by policy and assessment changes"
+  },
+  {
+    "objectID": "output/about.html#reproducibility",
+    "href": "output/about.html#reproducibility",
+    "title": "About",
+    "section": "",
+    "text": "All code is available in the project repository. To reproduce:\ngit clone &lt;repository&gt;\ncd edu-analytics\nmake setup\nmake fetch-data\nmake all"
+  },
+  {
+    "objectID": "output/about.html#contact",
+    "href": "output/about.html#contact",
+    "title": "About",
+    "section": "",
+    "text": "For questions about this analysis, please open an issue on the project repository."
+  },
+  {
+    "objectID": "output/about.html#license",
+    "href": "output/about.html#license",
+    "title": "About",
+    "section": "",
+    "text": "Code: MIT License\nData: NYC Open Data Terms of Use\nContent: CC BY 4.0"
+  },
+  {
+    "objectID": "output/learning.html",
+    "href": "output/learning.html",
+    "title": "Learning Outcomes",
+    "section": "",
+    "text": "Overview\nSetup\nData Loading\n\nMath Test Results\nELA Test Results\nGraduation Outcomes\nRegents Exam Results\n\nTest Score Analysis\n\nMath Proficiency Trends\nMath vs ELA Comparison\nTest Scores by Borough\n\nGraduation Analysis\n\nGraduation Rate Trends\nGraduation by Demographics\nDropout Analysis\n\nRegents Exam Analysis\n\nRegents Pass Rates by Subject\n\nAchievement Gap Analysis\n\nPerformance Gap by Economic Status\n\nSummary Statistics\nKey Findings\n\nProficiency Trends\nGraduation Outcomes\nAreas for Further Investigation"
+  },
+  {
+    "objectID": "output/learning.html#math-test-results",
+    "href": "output/learning.html#math-test-results",
+    "title": "Learning Outcomes",
+    "section": "Math Test Results",
+    "text": "Math Test Results\n## ============================================================\n## Fetch Math Test Results (Grades 3-8)\n## NY State standardized assessments\n## ============================================================\n\nmath_results &lt;- fetch_dataset(\n  dataset_id = NYC_DATA$math_test_results,\n  cache_name = \"math_results\"\n)\n\ncat(\"Math test records:\", nrow(math_results), \"\\n\")\ncat(\"\\nColumns:\\n\")\nprint(names(math_results))"
+  },
+  {
+    "objectID": "output/learning.html#ela-test-results",
+    "href": "output/learning.html#ela-test-results",
+    "title": "Learning Outcomes",
+    "section": "ELA Test Results",
+    "text": "ELA Test Results\n## ============================================================\n## Fetch ELA (English Language Arts) Test Results\n## ============================================================\n\nela_results &lt;- fetch_dataset(\n  dataset_id = NYC_DATA$ela_test_results,\n  cache_name = \"ela_results\"\n)\n\ncat(\"ELA test records:\", nrow(ela_results), \"\\n\")"
+  },
+  {
+    "objectID": "output/learning.html#graduation-outcomes",
+    "href": "output/learning.html#graduation-outcomes",
+    "title": "Learning Outcomes",
+    "section": "Graduation Outcomes",
+    "text": "Graduation Outcomes\n## ============================================================\n## Fetch High School Graduation Outcomes\n## ============================================================\n\ngraduation &lt;- fetch_dataset(\n  dataset_id = NYC_DATA$graduation_outcomes,\n  cache_name = \"graduation\"\n)\n\ncat(\"Graduation records:\", nrow(graduation), \"\\n\")\nglimpse(graduation)"
+  },
+  {
+    "objectID": "output/learning.html#regents-exam-results",
+    "href": "output/learning.html#regents-exam-results",
+    "title": "Learning Outcomes",
+    "section": "Regents Exam Results",
+    "text": "Regents Exam Results\n## ============================================================\n## Fetch Regents Exam Results\n## NY State high school assessments\n## ============================================================\n\nregents &lt;- fetch_dataset(\n  dataset_id = NYC_DATA$regents_results,\n  cache_name = \"regents\"\n)\n\ncat(\"Regents exam records:\", nrow(regents), \"\\n\")"
+  },
+  {
+    "objectID": "output/learning.html#math-proficiency-trends",
+    "href": "output/learning.html#math-proficiency-trends",
+    "title": "Learning Outcomes",
+    "section": "Math Proficiency Trends",
+    "text": "Math Proficiency Trends\n## ============================================================\n## Math proficiency levels over time\n## Level 3+ = proficient\n## ============================================================\n\nif (exists(\"math_results\") && nrow(math_results) &gt; 0) {\n\n  # Look for year and proficiency columns\n  year_col &lt;- intersect(c(\"year\", \"school_year\", \"test_year\"), names(math_results))[1]\n\n  if (!is.na(year_col)) {\n\n    # Calculate proficiency rate (Level 3 + Level 4)\n    math_proficiency &lt;- math_results |&gt;\n      filter(!is.na(.data[[year_col]])) |&gt;\n      group_by(year = .data[[year_col]]) |&gt;\n      summarise(\n        total_tested = sum(as.numeric(number_tested), na.rm = TRUE),\n        level_3_4 = sum(as.numeric(level_3_4_count), na.rm = TRUE),\n        .groups = \"drop\"\n      ) |&gt;\n      mutate(proficiency_rate = level_3_4 / total_tested * 100) |&gt;\n      arrange(year)\n\n    ggplot(math_proficiency, aes(x = year, y = proficiency_rate, group = 1)) +\n      geom_line(color = \"#2E86AB\", linewidth = 1.2) +\n      geom_point(color = \"#2E86AB\", size = 3) +\n      geom_hline(yintercept = 50, linetype = \"dashed\", color = \"gray50\") +\n      scale_y_continuous(limits = c(0, 100)) +\n      labs(\n        title = \"NYC Math Proficiency Rate (Grades 3-8)\",\n        subtitle = \"Percentage meeting standards (Level 3+)\",\n        x = \"Year\",\n        y = \"Proficiency Rate (%)\"\n      ) +\n      theme_minimal(base_size = 14) +\n      theme(\n        axis.text.x = element_text(angle = 45, hjust = 1),\n        plot.title = element_text(face = \"bold\")\n      )\n\n  }\n\n} else {\n  cat(\"Math results not available\\n\")\n}"
+  },
+  {
+    "objectID": "output/learning.html#math-vs-ela-comparison",
+    "href": "output/learning.html#math-vs-ela-comparison",
+    "title": "Learning Outcomes",
+    "section": "Math vs ELA Comparison",
+    "text": "Math vs ELA Comparison\n## ============================================================\n## Compare Math and ELA proficiency by year\n## ============================================================\n\nif (exists(\"math_results\") && exists(\"ela_results\")) {\n\n  # Process both datasets similarly\n  process_test_data &lt;- function(df, subject) {\n    year_col &lt;- intersect(c(\"year\", \"school_year\", \"test_year\"), names(df))[1]\n    if (is.na(year_col)) return(NULL)\n\n    df |&gt;\n      group_by(year = .data[[year_col]]) |&gt;\n      summarise(\n        proficiency_rate = sum(as.numeric(level_3_4_count), na.rm = TRUE) /\n                          sum(as.numeric(number_tested), na.rm = TRUE) * 100,\n        .groups = \"drop\"\n      ) |&gt;\n      mutate(subject = subject)\n  }\n\n  math_summary &lt;- process_test_data(math_results, \"Math\")\n  ela_summary &lt;- process_test_data(ela_results, \"ELA\")\n\n  if (!is.null(math_summary) && !is.null(ela_summary)) {\n    combined &lt;- bind_rows(math_summary, ela_summary)\n\n    ggplot(combined, aes(x = year, y = proficiency_rate, color = subject, group = subject)) +\n      geom_line(linewidth = 1.2) +\n      geom_point(size = 3) +\n      scale_color_manual(values = c(\"Math\" = \"#2E86AB\", \"ELA\" = \"#A23B72\")) +\n      labs(\n        title = \"Math vs ELA Proficiency Rates\",\n        subtitle = \"NYC Grades 3-8 State Assessments\",\n        x = \"Year\",\n        y = \"Proficiency Rate (%)\",\n        color = \"Subject\"\n      ) +\n      theme_minimal(base_size = 14) +\n      theme(\n        axis.text.x = element_text(angle = 45, hjust = 1),\n        legend.position = \"top\"\n      )\n  }\n\n}"
+  },
+  {
+    "objectID": "output/learning.html#test-scores-by-borough",
+    "href": "output/learning.html#test-scores-by-borough",
+    "title": "Learning Outcomes",
+    "section": "Test Scores by Borough",
+    "text": "Test Scores by Borough\n## ============================================================\n## Test proficiency by borough\n## ============================================================\n\nif (exists(\"math_results\") && \"borough\" %in% names(math_results)) {\n\n  boro_math &lt;- math_results |&gt;\n    group_by(borough) |&gt;\n    summarise(\n      proficiency_rate = sum(as.numeric(level_3_4_count), na.rm = TRUE) /\n                        sum(as.numeric(number_tested), na.rm = TRUE) * 100,\n      n_schools = n_distinct(dbn),\n      .groups = \"drop\"\n    ) |&gt;\n    filter(!is.na(borough)) |&gt;\n    mutate(borough = fct_reorder(borough, proficiency_rate))\n\n  ggplot(boro_math, aes(x = proficiency_rate, y = borough, fill = borough)) +\n    geom_col(show.legend = FALSE) +\n    geom_text(aes(label = sprintf(\"%.1f%%\", proficiency_rate)), \n              hjust = -0.1, size = 4) +\n    scale_fill_viridis_d(option = \"mako\", begin = 0.2, end = 0.8) +\n    labs(\n      title = \"Math Proficiency by Borough\",\n      x = \"Proficiency Rate (%)\",\n      y = NULL\n    ) +\n    theme_minimal(base_size = 14) +\n    expand_limits(x = max(boro_math$proficiency_rate) * 1.15)\n\n}"
+  },
+  {
+    "objectID": "output/learning.html#graduation-rate-trends",
+    "href": "output/learning.html#graduation-rate-trends",
+    "title": "Learning Outcomes",
+    "section": "Graduation Rate Trends",
+    "text": "Graduation Rate Trends\n## ============================================================\n## High school graduation rate trends\n## ============================================================\n\nif (exists(\"graduation\") && nrow(graduation) &gt; 0) {\n\n  grad_year_col &lt;- intersect(c(\"cohort_year\", \"cohort\", \"year\"), names(graduation))[1]\n  grad_rate_col &lt;- intersect(c(\"total_grads_pct\", \"graduation_rate\", \"grad_rate\"), names(graduation))[1]\n\n  if (!is.na(grad_year_col) && !is.na(grad_rate_col)) {\n\n    grad_trend &lt;- graduation |&gt;\n      group_by(year = .data[[grad_year_col]]) |&gt;\n      summarise(\n        avg_grad_rate = mean(as.numeric(.data[[grad_rate_col]]), na.rm = TRUE),\n        .groups = \"drop\"\n      ) |&gt;\n      filter(!is.na(year), !is.na(avg_grad_rate)) |&gt;\n      arrange(year)\n\n    ggplot(grad_trend, aes(x = year, y = avg_grad_rate, group = 1)) +\n      geom_line(color = \"forestgreen\", linewidth = 1.2) +\n      geom_point(color = \"forestgreen\", size = 3) +\n      geom_hline(yintercept = 80, linetype = \"dashed\", color = \"gray50\") +\n      annotate(\"text\", x = min(grad_trend$year), y = 82, \n               label = \"80% Goal\", hjust = 0, color = \"gray50\") +\n      scale_y_continuous(limits = c(50, 100)) +\n      labs(\n        title = \"NYC High School Graduation Rate\",\n        subtitle = \"4-Year Cohort Graduation Rate\",\n        x = \"Cohort Year\",\n        y = \"Graduation Rate (%)\"\n      ) +\n      theme_minimal(base_size = 14) +\n      theme(axis.text.x = element_text(angle = 45, hjust = 1))\n\n  }\n\n} else {\n  cat(\"Graduation data not available\\n\")\n}"
+  },
+  {
+    "objectID": "output/learning.html#graduation-by-demographics",
+    "href": "output/learning.html#graduation-by-demographics",
+    "title": "Learning Outcomes",
+    "section": "Graduation by Demographics",
+    "text": "Graduation by Demographics\n## ============================================================\n## Graduation rates by demographic group\n## ============================================================\n\nif (exists(\"graduation\")) {\n\n  # Check for demographic columns\n  demo_cols &lt;- c(\"asian\", \"black\", \"hispanic\", \"white\", \"male\", \"female\",\n                 \"ell\", \"swd\", \"poverty\")\n  available_demo &lt;- intersect(demo_cols, names(graduation))\n\n  if (length(available_demo) &gt; 0) {\n    cat(\"Graduation Rate by Demographics:\\n\\n\")\n\n    for (col in available_demo) {\n      avg_rate &lt;- mean(as.numeric(graduation[[col]]), na.rm = TRUE)\n      if (!is.na(avg_rate)) {\n        cat(sprintf(\"  %s: %.1f%%\\n\", str_to_title(col), avg_rate))\n      }\n    }\n  }\n\n}"
+  },
+  {
+    "objectID": "output/learning.html#dropout-analysis",
+    "href": "output/learning.html#dropout-analysis",
+    "title": "Learning Outcomes",
+    "section": "Dropout Analysis",
+    "text": "Dropout Analysis\n## ============================================================\n## Dropout rate analysis\n## ============================================================\n\nif (exists(\"graduation\") && \"dropout_pct\" %in% names(graduation)) {\n\n  dropout_dist &lt;- graduation |&gt;\n    filter(!is.na(dropout_pct)) |&gt;\n    mutate(dropout_rate = as.numeric(dropout_pct))\n\n  ggplot(dropout_dist, aes(x = dropout_rate)) +\n    geom_histogram(bins = 25, fill = \"firebrick\", color = \"white\", alpha = 0.8) +\n    geom_vline(aes(xintercept = mean(dropout_rate, na.rm = TRUE)),\n               color = \"darkred\", linetype = \"dashed\", linewidth = 1) +\n    labs(\n      title = \"Distribution of Dropout Rates\",\n      subtitle = \"NYC High Schools (dashed line = mean)\",\n      x = \"Dropout Rate (%)\",\n      y = \"Number of Schools\"\n    ) +\n    theme_minimal(base_size = 12)\n\n}"
+  },
+  {
+    "objectID": "output/learning.html#regents-pass-rates-by-subject",
+    "href": "output/learning.html#regents-pass-rates-by-subject",
+    "title": "Learning Outcomes",
+    "section": "Regents Pass Rates by Subject",
+    "text": "Regents Pass Rates by Subject\n## ============================================================\n## Regents exam pass rates by subject\n## ============================================================\n\nif (exists(\"regents\") && nrow(regents) &gt; 0) {\n\n  if (\"regents_exam\" %in% names(regents) || \"subject\" %in% names(regents)) {\n\n    subject_col &lt;- if (\"regents_exam\" %in% names(regents)) \"regents_exam\" else \"subject\"\n\n    regents_summary &lt;- regents |&gt;\n      group_by(subject = .data[[subject_col]]) |&gt;\n      summarise(\n        total_tested = sum(as.numeric(total_tested), na.rm = TRUE),\n        total_passed = sum(as.numeric(total_passed_65), na.rm = TRUE),\n        .groups = \"drop\"\n      ) |&gt;\n      mutate(\n        pass_rate = total_passed / total_tested * 100,\n        subject = fct_reorder(subject, pass_rate)\n      ) |&gt;\n      filter(!is.na(subject), total_tested &gt; 1000)\n\n    ggplot(regents_summary, aes(x = pass_rate, y = subject)) +\n      geom_col(fill = \"slateblue\", alpha = 0.8) +\n      geom_vline(xintercept = 65, linetype = \"dashed\", color = \"gray50\") +\n      labs(\n        title = \"Regents Exam Pass Rates by Subject\",\n        subtitle = \"Passing score = 65+\",\n        x = \"Pass Rate (%)\",\n        y = NULL\n      ) +\n      theme_minimal(base_size = 12)\n\n  }\n\n} else {\n  cat(\"Regents data not available\\n\")\n}"
+  },
+  {
+    "objectID": "output/learning.html#performance-gap-by-economic-status",
+    "href": "output/learning.html#performance-gap-by-economic-status",
+    "title": "Learning Outcomes",
+    "section": "Performance Gap by Economic Status",
+    "text": "Performance Gap by Economic Status\n## ============================================================\n## Achievement gap analysis\n## Compare economically disadvantaged vs all students\n## ============================================================\n\nif (exists(\"math_results\")) {\n\n  # Check for economic need indicator\n  econ_cols &lt;- names(math_results)[grep(\"econ|poverty|free_lunch|need\", \n                                         names(math_results), \n                                         ignore.case = TRUE)]\n\n  if (length(econ_cols) &gt; 0) {\n    cat(\"Economic indicator columns found:\\n\")\n    print(econ_cols)\n\n    # Analysis would depend on actual column structure\n    # Placeholder for gap visualization\n  } else {\n    cat(\"Economic indicator not found in test data\\n\")\n    cat(\"Available columns:\\n\")\n    print(names(math_results))\n  }\n\n}"
+  },
+  {
+    "objectID": "output/learning.html#proficiency-trends",
+    "href": "output/learning.html#proficiency-trends",
+    "title": "Learning Outcomes",
+    "section": "Proficiency Trends",
+    "text": "Proficiency Trends\n\nMath proficiency trend (improving/declining)\nELA proficiency trend\nGap between subjects"
+  },
+  {
+    "objectID": "output/learning.html#graduation-outcomes-1",
+    "href": "output/learning.html#graduation-outcomes-1",
+    "title": "Learning Outcomes",
+    "section": "Graduation Outcomes",
+    "text": "Graduation Outcomes\n\nOverall graduation rate trend\nDemographic disparities\nDropout hotspots"
+  },
+  {
+    "objectID": "output/learning.html#areas-for-further-investigation",
+    "href": "output/learning.html#areas-for-further-investigation",
+    "title": "Learning Outcomes",
+    "section": "Areas for Further Investigation",
+    "text": "Areas for Further Investigation\n\nSchools exceeding expectations\nIntervention effectiveness\nResource allocation patterns"
   }
 ]
