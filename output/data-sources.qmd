@@ -1,0 +1,270 @@
+
+# Table of Contents
+
+1.  [NYC Open Data Overview](#org9042774)
+2.  [Dataset Catalog](#orgf2f4bc3)
+    1.  [Loading the Data Library](#orgc38c917)
+3.  [Schools Data](#org67cbe00)
+    1.  [School Directory](#org57bb58a)
+    2.  [Building Space Usage](#org5588337)
+4.  [Students Data](#org0cf4438)
+    1.  [Demographic Snapshot](#org5e2b1d1)
+    2.  [Attendance Data](#orgad55875)
+5.  [Learning Outcomes Data](#org1f58851)
+    1.  [Test Results](#org10b10e4)
+    2.  [Graduation Data](#org1114550)
+6.  [Accessing the Data](#org760926c)
+    1.  [Basic Fetch](#org48e854f)
+    2.  [With Filtering (SoQL)](#org487ad9d)
+    3.  [Large Datasets](#org31a3c88)
+7.  [Data Dictionary Reference](#orgb3c94da)
+8.  [Update Schedule](#org1ddc82e)
+
+---
+title: "Data Sources"
+subtitle: "NYC Open Data Education Datasets"
+format: html
+execute:
+  echo: true
+---
+
+
+<a id="org9042774"></a>
+
+# NYC Open Data Overview
+
+The [NYC Open Data Portal](https://opendata.cityofnewyork.us/) provides free public access to over 3,000 datasets from NYC agencies. The Education category contains data from the NYC Department of Education (DOE) covering schools, students, and academic outcomes.
+
+
+<a id="orgf2f4bc3"></a>
+
+# Dataset Catalog
+
+
+<a id="orgc38c917"></a>
+
+## Loading the Data Library
+
+    ## ============================================================
+    ## Load NYC Open Data library
+    ## ============================================================
+    
+    source("src/R/setup.R")
+    source("src/R/nyc_data.R")
+    
+    # Display available datasets
+    datasets <- list_datasets()
+    print(datasets)
+
+
+<a id="org67cbe00"></a>
+
+# Schools Data
+
+
+<a id="org57bb58a"></a>
+
+## School Directory
+
+    ## ============================================================
+    ## School Directory Dataset
+    ## Comprehensive list of all NYC public schools
+    ## ============================================================
+    
+    info <- get_dataset_info(NYC_DATA$school_directory)
+    cat("Dataset:", info$name, "\n")
+    cat("ID:", NYC_DATA$school_directory, "\n")
+    cat("Last Updated:", format(info$last_updated, "%Y-%m-%d"), "\n")
+    cat("Columns:", info$columns, "\n")
+
+
+<a id="org5588337"></a>
+
+## Building Space Usage
+
+    ## ============================================================
+    ## Building Space Usage Dataset  
+    ## Annual space utilization metrics
+    ## ============================================================
+    
+    info <- get_dataset_info(NYC_DATA$building_space_usage)
+    cat("Dataset:", info$name, "\n")
+    cat("ID:", NYC_DATA$building_space_usage, "\n")
+    cat("Description:", substr(info$description, 1, 200), "...\n")
+
+
+<a id="org0cf4438"></a>
+
+# Students Data
+
+
+<a id="org5e2b1d1"></a>
+
+## Demographic Snapshot
+
+    ## ============================================================
+    ## Demographic Snapshot
+    ## Student demographics by school
+    ## ============================================================
+    
+    info <- get_dataset_info(NYC_DATA$demographic_snapshot)
+    cat("Dataset:", info$name, "\n")
+    cat("ID:", NYC_DATA$demographic_snapshot, "\n")
+    cat("Use Case: Analyze student population composition\n")
+
+
+<a id="orgad55875"></a>
+
+## Attendance Data
+
+    ## ============================================================
+    ## Attendance & Chronic Absenteeism
+    ## School-level attendance metrics
+    ## ============================================================
+    
+    info <- get_dataset_info(NYC_DATA$attendance)
+    cat("Dataset:", info$name, "\n")
+    cat("ID:", NYC_DATA$attendance, "\n")
+    cat("Use Case: Study attendance patterns and chronic absenteeism\n")
+
+
+<a id="org1f58851"></a>
+
+# Learning Outcomes Data
+
+
+<a id="org10b10e4"></a>
+
+## Test Results
+
+    ## ============================================================
+    ## State Assessment Results
+    ## Math and ELA scores for grades 3-8
+    ## ============================================================
+    
+    cat("=== Math Test Results ===\n")
+    cat("ID:", NYC_DATA$math_test_results, "\n")
+    cat("Grades: 3-8\n")
+    cat("Metrics: Proficiency levels 1-4\n\n")
+    
+    cat("=== ELA Test Results ===\n")
+    cat("ID:", NYC_DATA$ela_test_results, "\n")
+    cat("Grades: 3-8\n")
+    cat("Metrics: Proficiency levels 1-4\n")
+
+
+<a id="org1114550"></a>
+
+## Graduation Data
+
+    ## ============================================================
+    ## High School Graduation Outcomes
+    ## 4-year and 6-year cohort graduation rates
+    ## ============================================================
+    
+    info <- get_dataset_info(NYC_DATA$graduation_outcomes)
+    cat("Dataset:", info$name, "\n")
+    cat("ID:", NYC_DATA$graduation_outcomes, "\n")
+    cat("Metrics: Graduation rate, dropout rate, still enrolled\n")
+
+
+<a id="org760926c"></a>
+
+# Accessing the Data
+
+
+<a id="org48e854f"></a>
+
+## Basic Fetch
+
+    # Fetch with automatic caching
+    schools <- fetch_dataset(
+      dataset_id = NYC_DATA$school_directory,
+      cache_name = "school_directory"
+    )
+
+
+<a id="org487ad9d"></a>
+
+## With Filtering (SoQL)
+
+    # Server-side filtering
+    brooklyn_schools <- fetch_dataset(
+      dataset_id = NYC_DATA$school_directory,
+      `$where` = "boro = 'K'"  # K = Brooklyn
+    )
+
+
+<a id="org31a3c88"></a>
+
+## Large Datasets
+
+    # Paginated fetch for large datasets
+    all_demographics <- fetch_large_dataset(
+      dataset_id = NYC_DATA$demographic_snapshot,
+      batch_size = 50000,
+      cache_name = "demographics_full"
+    )
+
+
+<a id="orgb3c94da"></a>
+
+# Data Dictionary Reference
+
+For detailed field descriptions, visit the dataset pages on NYC Open Data:
+
+-   [Education Category](https://data.cityofnewyork.us/Education)
+-   [API Documentation](https://dev.socrata.com/foundry/data.cityofnewyork.us/)
+
+
+<a id="org1ddc82e"></a>
+
+# Update Schedule
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Dataset</th>
+<th scope="col" class="org-left">Update Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">School Directory</td>
+<td class="org-left">Annual (August)</td>
+</tr>
+
+<tr>
+<td class="org-left">Building Space</td>
+<td class="org-left">Annual</td>
+</tr>
+
+<tr>
+<td class="org-left">Demographics</td>
+<td class="org-left">Annual</td>
+</tr>
+
+<tr>
+<td class="org-left">Test Results</td>
+<td class="org-left">Annual (post-testing)</td>
+</tr>
+
+<tr>
+<td class="org-left">Graduation</td>
+<td class="org-left">Annual (cohort-based)</td>
+</tr>
+
+<tr>
+<td class="org-left">Attendance</td>
+<td class="org-left">Annual</td>
+</tr>
+</tbody>
+</table>
+

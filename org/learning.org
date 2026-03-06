@@ -1,0 +1,508 @@
+#+TITLE: Learning Outcomes Analysis
+#+AUTHOR: Education Data Project
+#+DATE: {{{time(%Y-%m-%d)}}}
+#+PROPERTY: header-args:R :session *R* :exports both :results output :cache yes
+#+OPTIONS: toc:2 num:t ^:nil
+
+#+BEGIN_EXPORT markdown
+---
+title: "Learning Outcomes"
+subtitle: "Test Scores, Graduation Rates, and Academic Progress"
+format: html
+execute:
+  echo: true
+  warning: false
+---
+#+END_EXPORT
+
+* Overview
+
+Analysis of NYC student learning outcomes including standardized test scores, graduation rates, and academic progress indicators.
+
+* Setup
+:PROPERTIES:
+:header-args:R: :exports code :results silent
+:END:
+
+#+NAME: setup
+#+BEGIN_SRC R
+## ============================================================
+## Setup: Load packages and data access functions
+## ============================================================
+
+source("src/R/setup.R")
+source("src/R/nyc_data.R")
+source("src/R/utils.R")
+#+END_SRC
+
+* Data Loading
+:PROPERTIES:
+:header-args:R: :exports both :results output
+:END:
+
+** Math Test Results
+
+#+NAME: load-math
+#+BEGIN_SRC R
+## ============================================================
+## Fetch Math Test Results (Grades 3-8)
+## NY State standardized assessments
+## ============================================================
+
+math_results <- fetch_dataset(
+  dataset_id = NYC_DATA$math_test_results,
+  cache_name = "math_results"
+)
+
+cat("Math test records:", nrow(math_results), "\n")
+cat("\nColumns:\n")
+print(names(math_results))
+#+END_SRC
+
+** ELA Test Results
+
+#+NAME: load-ela
+#+BEGIN_SRC R
+## ============================================================
+## Fetch ELA (English Language Arts) Test Results
+## ============================================================
+
+ela_results <- fetch_dataset(
+  dataset_id = NYC_DATA$ela_test_results,
+  cache_name = "ela_results"
+)
+
+cat("ELA test records:", nrow(ela_results), "\n")
+#+END_SRC
+
+** Graduation Outcomes
+
+#+NAME: load-graduation
+#+BEGIN_SRC R
+## ============================================================
+## Fetch High School Graduation Outcomes
+## ============================================================
+
+graduation <- fetch_dataset(
+  dataset_id = NYC_DATA$graduation_outcomes,
+  cache_name = "graduation"
+)
+
+cat("Graduation records:", nrow(graduation), "\n")
+glimpse(graduation)
+#+END_SRC
+
+** Regents Exam Results
+
+#+NAME: load-regents
+#+BEGIN_SRC R
+## ============================================================
+## Fetch Regents Exam Results
+## NY State high school assessments
+## ============================================================
+
+regents <- fetch_dataset(
+  dataset_id = NYC_DATA$regents_results,
+  cache_name = "regents"
+)
+
+cat("Regents exam records:", nrow(regents), "\n")
+#+END_SRC
+
+* Test Score Analysis
+:PROPERTIES:
+:header-args:R: :exports both :results output graphics
+:END:
+
+** Math Proficiency Trends
+
+#+NAME: math-proficiency
+#+BEGIN_SRC R :results output graphics :file output/math_proficiency.png
+## ============================================================
+## Math proficiency levels over time
+## Level 3+ = proficient
+## ============================================================
+
+if (exists("math_results") && nrow(math_results) > 0) {
+  
+  # Look for year and proficiency columns
+  year_col <- intersect(c("year", "school_year", "test_year"), names(math_results))[1]
+  
+  if (!is.na(year_col)) {
+    
+    # Calculate proficiency rate (Level 3 + Level 4)
+    math_proficiency <- math_results |>
+      filter(!is.na(.data[[year_col]])) |>
+      group_by(year = .data[[year_col]]) |>
+      summarise(
+        total_tested = sum(as.numeric(number_tested), na.rm = TRUE),
+        level_3_4 = sum(as.numeric(level_3_4_count), na.rm = TRUE),
+        .groups = "drop"
+      ) |>
+      mutate(proficiency_rate = level_3_4 / total_tested * 100) |>
+      arrange(year)
+    
+    ggplot(math_proficiency, aes(x = year, y = proficiency_rate, group = 1)) +
+      geom_line(color = "#2E86AB", linewidth = 1.2) +
+      geom_point(color = "#2E86AB", size = 3) +
+      geom_hline(yintercept = 50, linetype = "dashed", color = "gray50") +
+      scale_y_continuous(limits = c(0, 100)) +
+      labs(
+        title = "NYC Math Proficiency Rate (Grades 3-8)",
+        subtitle = "Percentage meeting standards (Level 3+)",
+        x = "Year",
+        y = "Proficiency Rate (%)"
+      ) +
+      theme_minimal(base_size = 14) +
+      theme(
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        plot.title = element_text(face = "bold")
+      )
+    
+  }
+  
+} else {
+  cat("Math results not available\n")
+}
+#+END_SRC
+
+** Math vs ELA Comparison
+
+#+NAME: math-ela-comparison
+#+BEGIN_SRC R :results output graphics :file output/math_ela_comparison.png
+## ============================================================
+## Compare Math and ELA proficiency by year
+## ============================================================
+
+if (exists("math_results") && exists("ela_results")) {
+  
+  # Process both datasets similarly
+  process_test_data <- function(df, subject) {
+    year_col <- intersect(c("year", "school_year", "test_year"), names(df))[1]
+    if (is.na(year_col)) return(NULL)
+    
+    df |>
+      group_by(year = .data[[year_col]]) |>
+      summarise(
+        proficiency_rate = sum(as.numeric(level_3_4_count), na.rm = TRUE) /
+                          sum(as.numeric(number_tested), na.rm = TRUE) * 100,
+        .groups = "drop"
+      ) |>
+      mutate(subject = subject)
+  }
+  
+  math_summary <- process_test_data(math_results, "Math")
+  ela_summary <- process_test_data(ela_results, "ELA")
+  
+  if (!is.null(math_summary) && !is.null(ela_summary)) {
+    combined <- bind_rows(math_summary, ela_summary)
+    
+    ggplot(combined, aes(x = year, y = proficiency_rate, color = subject, group = subject)) +
+      geom_line(linewidth = 1.2) +
+      geom_point(size = 3) +
+      scale_color_manual(values = c("Math" = "#2E86AB", "ELA" = "#A23B72")) +
+      labs(
+        title = "Math vs ELA Proficiency Rates",
+        subtitle = "NYC Grades 3-8 State Assessments",
+        x = "Year",
+        y = "Proficiency Rate (%)",
+        color = "Subject"
+      ) +
+      theme_minimal(base_size = 14) +
+      theme(
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "top"
+      )
+  }
+  
+}
+#+END_SRC
+
+** Test Scores by Borough
+
+#+NAME: scores-by-borough
+#+BEGIN_SRC R :results output graphics :file output/scores_by_borough.png
+## ============================================================
+## Test proficiency by borough
+## ============================================================
+
+if (exists("math_results") && "borough" %in% names(math_results)) {
+  
+  boro_math <- math_results |>
+    group_by(borough) |>
+    summarise(
+      proficiency_rate = sum(as.numeric(level_3_4_count), na.rm = TRUE) /
+                        sum(as.numeric(number_tested), na.rm = TRUE) * 100,
+      n_schools = n_distinct(dbn),
+      .groups = "drop"
+    ) |>
+    filter(!is.na(borough)) |>
+    mutate(borough = fct_reorder(borough, proficiency_rate))
+  
+  ggplot(boro_math, aes(x = proficiency_rate, y = borough, fill = borough)) +
+    geom_col(show.legend = FALSE) +
+    geom_text(aes(label = sprintf("%.1f%%", proficiency_rate)), 
+              hjust = -0.1, size = 4) +
+    scale_fill_viridis_d(option = "mako", begin = 0.2, end = 0.8) +
+    labs(
+      title = "Math Proficiency by Borough",
+      x = "Proficiency Rate (%)",
+      y = NULL
+    ) +
+    theme_minimal(base_size = 14) +
+    expand_limits(x = max(boro_math$proficiency_rate) * 1.15)
+  
+}
+#+END_SRC
+
+* Graduation Analysis
+:PROPERTIES:
+:header-args:R: :exports both :results output graphics
+:END:
+
+** Graduation Rate Trends
+
+#+NAME: graduation-trends
+#+BEGIN_SRC R :results output graphics :file output/graduation_trends.png
+## ============================================================
+## High school graduation rate trends
+## ============================================================
+
+if (exists("graduation") && nrow(graduation) > 0) {
+  
+  grad_year_col <- intersect(c("cohort_year", "cohort", "year"), names(graduation))[1]
+  grad_rate_col <- intersect(c("total_grads_pct", "graduation_rate", "grad_rate"), names(graduation))[1]
+  
+  if (!is.na(grad_year_col) && !is.na(grad_rate_col)) {
+    
+    grad_trend <- graduation |>
+      group_by(year = .data[[grad_year_col]]) |>
+      summarise(
+        avg_grad_rate = mean(as.numeric(.data[[grad_rate_col]]), na.rm = TRUE),
+        .groups = "drop"
+      ) |>
+      filter(!is.na(year), !is.na(avg_grad_rate)) |>
+      arrange(year)
+    
+    ggplot(grad_trend, aes(x = year, y = avg_grad_rate, group = 1)) +
+      geom_line(color = "forestgreen", linewidth = 1.2) +
+      geom_point(color = "forestgreen", size = 3) +
+      geom_hline(yintercept = 80, linetype = "dashed", color = "gray50") +
+      annotate("text", x = min(grad_trend$year), y = 82, 
+               label = "80% Goal", hjust = 0, color = "gray50") +
+      scale_y_continuous(limits = c(50, 100)) +
+      labs(
+        title = "NYC High School Graduation Rate",
+        subtitle = "4-Year Cohort Graduation Rate",
+        x = "Cohort Year",
+        y = "Graduation Rate (%)"
+      ) +
+      theme_minimal(base_size = 14) +
+      theme(axis.text.x = element_text(angle = 45, hjust = 1))
+    
+  }
+  
+} else {
+  cat("Graduation data not available\n")
+}
+#+END_SRC
+
+** Graduation by Demographics
+
+#+NAME: graduation-demographics
+#+BEGIN_SRC R :results output
+## ============================================================
+## Graduation rates by demographic group
+## ============================================================
+
+if (exists("graduation")) {
+  
+  # Check for demographic columns
+  demo_cols <- c("asian", "black", "hispanic", "white", "male", "female",
+                 "ell", "swd", "poverty")
+  available_demo <- intersect(demo_cols, names(graduation))
+  
+  if (length(available_demo) > 0) {
+    cat("Graduation Rate by Demographics:\n\n")
+    
+    for (col in available_demo) {
+      avg_rate <- mean(as.numeric(graduation[[col]]), na.rm = TRUE)
+      if (!is.na(avg_rate)) {
+        cat(sprintf("  %s: %.1f%%\n", str_to_title(col), avg_rate))
+      }
+    }
+  }
+  
+}
+#+END_SRC
+
+** Dropout Analysis
+
+#+NAME: dropout-analysis
+#+BEGIN_SRC R :results output graphics :file output/dropout_rates.png
+## ============================================================
+## Dropout rate analysis
+## ============================================================
+
+if (exists("graduation") && "dropout_pct" %in% names(graduation)) {
+  
+  dropout_dist <- graduation |>
+    filter(!is.na(dropout_pct)) |>
+    mutate(dropout_rate = as.numeric(dropout_pct))
+  
+  ggplot(dropout_dist, aes(x = dropout_rate)) +
+    geom_histogram(bins = 25, fill = "firebrick", color = "white", alpha = 0.8) +
+    geom_vline(aes(xintercept = mean(dropout_rate, na.rm = TRUE)),
+               color = "darkred", linetype = "dashed", linewidth = 1) +
+    labs(
+      title = "Distribution of Dropout Rates",
+      subtitle = "NYC High Schools (dashed line = mean)",
+      x = "Dropout Rate (%)",
+      y = "Number of Schools"
+    ) +
+    theme_minimal(base_size = 12)
+  
+}
+#+END_SRC
+
+* Regents Exam Analysis
+:PROPERTIES:
+:header-args:R: :exports both :results output graphics
+:END:
+
+** Regents Pass Rates by Subject
+
+#+NAME: regents-by-subject
+#+BEGIN_SRC R :results output graphics :file output/regents_subjects.png
+## ============================================================
+## Regents exam pass rates by subject
+## ============================================================
+
+if (exists("regents") && nrow(regents) > 0) {
+  
+  if ("regents_exam" %in% names(regents) || "subject" %in% names(regents)) {
+    
+    subject_col <- if ("regents_exam" %in% names(regents)) "regents_exam" else "subject"
+    
+    regents_summary <- regents |>
+      group_by(subject = .data[[subject_col]]) |>
+      summarise(
+        total_tested = sum(as.numeric(total_tested), na.rm = TRUE),
+        total_passed = sum(as.numeric(total_passed_65), na.rm = TRUE),
+        .groups = "drop"
+      ) |>
+      mutate(
+        pass_rate = total_passed / total_tested * 100,
+        subject = fct_reorder(subject, pass_rate)
+      ) |>
+      filter(!is.na(subject), total_tested > 1000)
+    
+    ggplot(regents_summary, aes(x = pass_rate, y = subject)) +
+      geom_col(fill = "slateblue", alpha = 0.8) +
+      geom_vline(xintercept = 65, linetype = "dashed", color = "gray50") +
+      labs(
+        title = "Regents Exam Pass Rates by Subject",
+        subtitle = "Passing score = 65+",
+        x = "Pass Rate (%)",
+        y = NULL
+      ) +
+      theme_minimal(base_size = 12)
+    
+  }
+  
+} else {
+  cat("Regents data not available\n")
+}
+#+END_SRC
+
+* Achievement Gap Analysis
+
+** Performance Gap by Economic Status
+
+#+NAME: achievement-gap
+#+BEGIN_SRC R :results output graphics :file output/achievement_gap.png
+## ============================================================
+## Achievement gap analysis
+## Compare economically disadvantaged vs all students
+## ============================================================
+
+if (exists("math_results")) {
+  
+  # Check for economic need indicator
+  econ_cols <- names(math_results)[grep("econ|poverty|free_lunch|need", 
+                                         names(math_results), 
+                                         ignore.case = TRUE)]
+  
+  if (length(econ_cols) > 0) {
+    cat("Economic indicator columns found:\n")
+    print(econ_cols)
+    
+    # Analysis would depend on actual column structure
+    # Placeholder for gap visualization
+  } else {
+    cat("Economic indicator not found in test data\n")
+    cat("Available columns:\n")
+    print(names(math_results))
+  }
+  
+}
+#+END_SRC
+
+* Summary Statistics
+
+#+NAME: learning-summary
+#+BEGIN_SRC R :results output
+## ============================================================
+## Generate learning outcomes summary
+## ============================================================
+
+cat("\n========== Learning Outcomes Summary ==========\n\n")
+
+if (exists("math_results")) {
+  cat("Math Assessment Records:", nrow(math_results), "\n")
+}
+
+if (exists("ela_results")) {
+  cat("ELA Assessment Records:", nrow(ela_results), "\n")
+}
+
+if (exists("graduation")) {
+  cat("Graduation Records:", nrow(graduation), "\n")
+  
+  avg_grad <- mean(as.numeric(graduation$total_grads_pct), na.rm = TRUE)
+  if (!is.na(avg_grad)) {
+    cat(sprintf("Average Graduation Rate: %.1f%%\n", avg_grad))
+  }
+}
+
+if (exists("regents")) {
+  cat("Regents Exam Records:", nrow(regents), "\n")
+}
+
+cat("\n--- Data Sources ---\n")
+cat("Math Tests:", NYC_DATA$math_test_results, "\n")
+cat("ELA Tests:", NYC_DATA$ela_test_results, "\n")
+cat("Graduation:", NYC_DATA$graduation_outcomes, "\n")
+cat("Regents:", NYC_DATA$regents_results, "\n")
+#+END_SRC
+
+* Key Findings
+
+#+BEGIN_QUOTE
+/This section will be populated after running the analysis with actual data./
+#+END_QUOTE
+
+** Proficiency Trends
+- [ ] Math proficiency trend (improving/declining)
+- [ ] ELA proficiency trend
+- [ ] Gap between subjects
+
+** Graduation Outcomes
+- [ ] Overall graduation rate trend
+- [ ] Demographic disparities
+- [ ] Dropout hotspots
+
+** Areas for Further Investigation
+- [ ] Schools exceeding expectations
+- [ ] Intervention effectiveness
+- [ ] Resource allocation patterns

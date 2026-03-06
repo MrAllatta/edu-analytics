@@ -1,0 +1,112 @@
+---
+title: "About"
+subtitle: "Project Information and Methods"
+format: html
+---
+
+
+# About This Project
+
+This project explores NYC public education data using literate programming techniques. All analysis is conducted transparently with reproducible code.
+
+
+## Methodology
+
+
+### Data Sources
+
+All data comes from the [NYC Open Data Portal](https://opendata.cityofnewyork.us/), specifically the Education category maintained by the NYC Department of Education.
+
+
+### Analysis Pipeline
+
+1.  **Data Acquisition** - Fetched via Socrata SODA API with local Parquet caching
+2.  **Data Cleaning** - Standardized borough names, parsed DBN codes, handled missing values
+3.  **Exploratory Analysis** - Summary statistics, distributions, correlations
+4.  **Visualization** - ggplot2 graphics with consistent theming
+5.  **Reporting** - Org-mode → Quarto → HTML publishing
+
+
+### Tools
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Tool</th>
+<th scope="col" class="org-right">Version</th>
+<th scope="col" class="org-left">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">R</td>
+<td class="org-right">4.x</td>
+<td class="org-left">Statistical computing</td>
+</tr>
+
+<tr>
+<td class="org-left">tidyverse</td>
+<td class="org-right">2.x</td>
+<td class="org-left">Data manipulation</td>
+</tr>
+
+<tr>
+<td class="org-left">ggplot2</td>
+<td class="org-right">3.x</td>
+<td class="org-left">Visualization</td>
+</tr>
+
+<tr>
+<td class="org-left">Quarto</td>
+<td class="org-right">1.x</td>
+<td class="org-left">Publishing</td>
+</tr>
+
+<tr>
+<td class="org-left">Emacs Org-mode</td>
+<td class="org-right">9.x</td>
+<td class="org-left">Literate programming</td>
+</tr>
+</tbody>
+</table>
+
+
+## Limitations
+
+-   Data reflects publicly available aggregations; individual student data is protected
+-   Some datasets may have reporting delays or gaps
+-   School-level aggregations may mask within-school variation
+-   Historical data comparability affected by policy and assessment changes
+
+
+## Reproducibility
+
+All code is available in the project repository. To reproduce:
+
+    git clone <repository>
+    cd edu-analytics
+    make setup
+    make fetch-data
+    make all
+
+
+## Contact
+
+For questions about this analysis, please open an issue on the project repository.
+
+
+## License
+
+-   **Code**: MIT License
+-   **Data**: NYC Open Data Terms of Use
+-   **Content**: CC BY 4.0
+

@@ -1,0 +1,74 @@
+#+TITLE: About This Project
+#+AUTHOR: Education Data Project
+#+PROPERTY: header-args:R :session *R* :exports both
+#+OPTIONS: toc:nil num:nil
+
+#+BEGIN_EXPORT markdown
+---
+title: "About"
+subtitle: "Project Information and Methods"
+format: html
+---
+#+END_EXPORT
+
+* About This Project
+
+This project explores NYC public education data using literate programming techniques. All analysis is conducted transparently with reproducible code.
+
+** Methodology
+
+*** Data Sources
+
+All data comes from the [[https://opendata.cityofnewyork.us/][NYC Open Data Portal]], specifically the Education category maintained by the NYC Department of Education.
+
+#+BEGIN_SRC R :results output :exports results
+source("src/R/nyc_data.R")
+knitr::kable(list_datasets(), format = "markdown")
+#+END_SRC
+
+*** Analysis Pipeline
+
+1. *Data Acquisition* - Fetched via Socrata SODA API with local Parquet caching
+2. *Data Cleaning* - Standardized borough names, parsed DBN codes, handled missing values
+3. *Exploratory Analysis* - Summary statistics, distributions, correlations
+4. *Visualization* - ggplot2 graphics with consistent theming
+5. *Reporting* - Org-mode → Quarto → HTML publishing
+
+*** Tools
+
+| Tool | Version | Purpose |
+|------|---------|---------|
+| R | 4.x | Statistical computing |
+| tidyverse | 2.x | Data manipulation |
+| ggplot2 | 3.x | Visualization |
+| Quarto | 1.x | Publishing |
+| Emacs Org-mode | 9.x | Literate programming |
+
+** Limitations
+
+- Data reflects publicly available aggregations; individual student data is protected
+- Some datasets may have reporting delays or gaps
+- School-level aggregations may mask within-school variation
+- Historical data comparability affected by policy and assessment changes
+
+** Reproducibility
+
+All code is available in the project repository. To reproduce:
+
+#+BEGIN_EXAMPLE
+git clone <repository>
+cd edu-analytics
+make setup
+make fetch-data
+make all
+#+END_EXAMPLE
+
+** Contact
+
+For questions about this analysis, please open an issue on the project repository.
+
+** License
+
+- *Code*: MIT License
+- *Data*: NYC Open Data Terms of Use
+- *Content*: CC BY 4.0

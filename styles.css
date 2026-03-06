@@ -1,0 +1,107 @@
+/* styles.css - NYC Education Analytics Custom Styles */
+
+/* Color Palette */
+:root {
+  --nyc-blue: #003366;
+  --nyc-orange: #f26522;
+  --manhattan: #1f77b4;
+  --bronx: #ff7f0e;
+  --brooklyn: #2ca02c;
+  --queens: #d62728;
+  --staten-island: #9467bd;
+}
+
+/* Header styling */
+.navbar {
+  background-color: var(--nyc-blue) !important;
+}
+
+.navbar-title {
+  font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar-title {
+  color: var(--nyc-blue);
+  font-weight: 600;
+}
+
+/* Code blocks */
+pre.sourceCode {
+  background-color: #f8f9fa;
+  border-left: 3px solid var(--nyc-blue);
+  border-radius: 0 4px 4px 0;
+}
+
+/* Tables */
+table {
+  margin: 1.5rem 0;
+}
+
+table thead th {
+  background-color: var(--nyc-blue);
+  color: white;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* Callouts */
+.callout-note {
+  border-left-color: var(--nyc-blue);
+}
+
+.callout-tip {
+  border-left-color: var(--brooklyn);
+}
+
+.callout-warning {
+  border-left-color: var(--nyc-orange);
+}
+
+/* Borough color badges */
+.borough-manhattan { background-color: var(--manhattan); color: white; }
+.borough-bronx { background-color: var(--bronx); color: white; }
+.borough-brooklyn { background-color: var(--brooklyn); color: white; }
+.borough-queens { background-color: var(--queens); color: white; }
+.borough-staten-island { background-color: var(--staten-island); color: white; }
+
+/* Data cards */
+.data-card {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.data-card h4 {
+  color: var(--nyc-blue);
+  margin-top: 0;
+}
+
+/* Figure captions */
+.figure-caption {
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Print styles */
+@media print {
+  .sidebar, .navbar {
+    display: none !important;
+  }
+  
+  pre.sourceCode {
+    border: 1px solid #ccc;
+    page-break-inside: avoid;
+  }
+}

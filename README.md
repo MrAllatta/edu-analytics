@@ -16,6 +16,7 @@ This project analyzes NYC Department of Education data across three domains:
 |-----------|---------|
 | **Org-mode** | Literate programming, source documents |
 | **R** | Data analysis, visualization |
+| **renv** | R package management, reproducibility |
 | **Quarto** | Website generation, publishing |
 | **NYC Open Data** | Data source (Socrata API) |
 | **Parquet** | Local data caching |
@@ -39,10 +40,16 @@ edu-analytics/
 │   ├── org-to-qmd.sh       # Shell export script
 │   └── org-to-qmd.el       # Emacs export script
 │
+├── renv/                   # renv package management
+│   ├── activate.R          # Auto-activation script
+│   └── settings.json       # renv configuration
+│
 ├── data/                   # Cached data (parquet)
 ├── output/                 # Generated figures
 ├── docs/                   # Quarto output (website)
 │
+├── .Rprofile               # R startup (activates renv)
+├── renv.lock               # Locked package versions
 ├── _quarto.yml             # Quarto configuration
 ├── Makefile                # Build automation
 └── README.md               # This file
@@ -52,21 +59,41 @@ edu-analytics/
 
 ### Prerequisites
 
-- **R** (≥ 4.0) with packages: tidyverse, httr, jsonlite, arrow
+- **R** (≥ 4.0)
 - **Quarto** (≥ 1.3) - [Install from quarto.org](https://quarto.org/docs/get-started/)
 - **Emacs** (optional) - For org-mode editing and export
 
 ### Setup
 
+This project uses [renv](https://rstudio.github.io/renv/) for reproducible R package management. All package dependencies are tracked in `renv.lock`.
+
 ```bash
 # Clone and enter project
 cd edu-analytics
 
-# Install R packages
+# Restore R packages from renv.lock
 make setup
 
 # Or manually:
-Rscript -e "source('src/R/setup.R')"
+Rscript -e "renv::restore()"
+```
+
+The `.Rprofile` automatically activates renv when you start R in this directory.
+
+### Package Management
+
+```bash
+# Check current package status
+make renv-status
+
+# Install a new package
+make renv-install PKG=packagename
+
+# Save package changes to renv.lock
+make renv-snapshot
+
+# Update all packages
+make renv-update
 ```
 
 ### Workflow
@@ -107,22 +134,22 @@ make help
 The project includes a curated library of 22 NYC education datasets in `src/R/nyc_data.R`:
 
 ### Schools
-| Dataset | ID | Description |
-|---------|-----|-------------|
-| `school_directory` | wg9x-4ke6 | DOE School Directory |
-| `building_space_usage` | wavz-fkw8 | Building utilization |
-| `school_locations` | jfju-ynrr | Geographic coordinates |
-| `hs_directory` | uq7m-95z8 | High school details |
-| `upk_directory` | kiyv-ks3f | Pre-K programs |
+| Dataset                | ID        | Description                    |
+|------------------------|-----------|--------------------------------|
+| `school_directory`     | wg9x-4ke6 | 2021 NYC High School Directory |
+| `building_space_usage` | wavz-fkw8 | Building utilization           |
+| `school_locations`     | jfju-ynrr | Geographic coordinates         |
+| `hs_directory`         | uq7m-95z8 | High school details            |
+| `upk_directory`        | kiyv-ks3f | Pre-K programs                 |
 
 ### Students
-| Dataset | ID | Description |
-|---------|-----|-------------|
+| Dataset                | ID        | Description            |
+|------------------------|-----------|------------------------|
 | `demographic_snapshot` | s52a-8aq6 | Demographics by school |
-| `enrollment` | 7z8d-msnt | Enrollment counts |
-| `attendance` | hrwk-wb2d | Attendance rates |
-| `swd_enrollment` | 47xe-dv98 | Special education |
-| `ell_enrollment` | 72bx-k62e | English learners |
+| `enrollment`           | 7z8d-msnt | Enrollment counts      |
+| `attendance`           | hrwk-wb2d | Attendance rates       |
+| `swd_enrollment`       | 47xe-dv98 | Special education      |
+| `ell_enrollment`       | 72bx-k62e | English learners       |
 
 ### Learning
 | Dataset | ID | Description |
@@ -249,6 +276,7 @@ This project is for educational purposes. Data is from [NYC Open Data](https://o
 
 - [NYC Open Data Portal](https://opendata.cityofnewyork.us/)
 - [Socrata SODA API](https://dev.socrata.com/)
+- [renv Documentation](https://rstudio.github.io/renv/)
 - [Quarto Documentation](https://quarto.org/docs/)
 - [Org-mode Manual](https://orgmode.org/manual/)
 - [R for Data Science](https://r4ds.hadley.nz/)

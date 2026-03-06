@@ -1,0 +1,247 @@
+#+TITLE: Schools Analysis
+#+AUTHOR: Education Data Project
+#+DATE: {{{time(%Y-%m-%d)}}}
+#+PROPERTY: header-args:R :session *R* :exports both :results output :cache yes
+#+OPTIONS: toc:2 num:t ^:nil
+
+#+BEGIN_EXPORT markdown
+---
+title: "Schools Analysis"
+subtitle: "NYC School Buildings, Locations, and Facilities"
+format: html
+execute:
+  echo: true
+  warning: false
+---
+#+END_EXPORT
+
+* Overview
+
+Analysis of NYC school buildings, locations, and facilities using DOE Open Data.
+
+* Setup
+:PROPERTIES:
+:header-args:R: :exports code :results silent
+:END:
+
+#+NAME: setup
+#+BEGIN_SRC R
+## ============================================================
+## Setup: Load packages and data access functions
+## ============================================================
+
+source("src/R/setup.R")
+source("src/R/nyc_data.R")
+source("src/R/utils.R")
+#+END_SRC
+
+* Data Loading
+:PROPERTIES:
+:header-args:R: :exports both :results output
+:END:
+
+** School Directory
+
+#+NAME: load-school-directory
+#+BEGIN_SRC R
+## ============================================================
+## Fetch NYC School Directory
+## Dataset: 2019-2020 School Locations
+## ============================================================
+
+schools <- fetch_dataset(
+  dataset_id = NYC_DATA$school_directory,
+  cache_name = "school_directory"
+)
+
+## Display structure
+cat("Dataset dimensions:", nrow(schools), "rows x", ncol(schools), "columns\n")
+cat("\nColumn names:\n")
+print(names(schools))
+#+END_SRC
+
+** Building Space Usage
+
+#+NAME: load-building-space
+#+BEGIN_SRC R
+## ============================================================
+## Fetch DOE Building Space Usage
+## Updated annually - tracks space utilization in school buildings
+## ============================================================
+
+building_space <- fetch_dataset(
+  dataset_id = NYC_DATA$building_space_usage,
+  cache_name = "building_space"
+)
+
+cat("Building space records:", nrow(building_space), "\n")
+glimpse(building_space)
+#+END_SRC
+
+* Exploratory Analysis
+:PROPERTIES:
+:header-args:R: :exports both :results output graphics :file (org-babel-temp-file "figure-" ".png")
+:END:
+
+** Schools by Borough
+
+#+NAME: schools-by-borough
+#+BEGIN_SRC R :results output graphics :file output/schools_by_borough.png
+## ============================================================
+## Count of schools by borough
+## ============================================================
+
+schools_by_boro <- schools |>
+  count(borough = boro, name = "n_schools") |>
+  mutate(borough = fct_reorder(borough, n_schools))
+
+ggplot(schools_by_boro, aes(x = n_schools, y = borough, fill = borough)) +
+  geom_col(show.legend = FALSE) +
+  geom_text(aes(label = n_schools), hjust = -0.2, size = 4) +
+  scale_fill_viridis_d(option = "plasma", begin = 0.2, end = 0.8) +
+  labs(
+    title = "NYC Public Schools by Borough",
+    subtitle = "Source: NYC Open Data School Directory",
+    x = "Number of Schools",
+    y = NULL
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    panel.grid.major.y = element_blank()
+  ) +
+  expand_limits(x = max(schools_by_boro$n_schools) * 1.1)
+#+END_SRC
+
+** School Types Distribution
+
+#+NAME: school-types
+#+BEGIN_SRC R :results output graphics :file output/school_types.png
+## ============================================================
+## Distribution of school types
+## ============================================================
+
+school_types <- schools |>
+  count(school_type = schooltype, name = "count") |>
+  filter(!is.na(school_type)) |>
+  mutate(
+    pct = count / sum(count) * 100,
+    school_type = fct_reorder(school_type, count)
+  )
+
+ggplot(school_types, aes(x = count, y = school_type)) +
+  geom_col(fill = "steelblue", alpha = 0.8) +
+  geom_text(aes(label = sprintf("%.1f%%", pct)), hjust = -0.1, size = 3.5) +
+  labs(
+    title = "Distribution of NYC School Types",
+    x = "Number of Schools",
+    y = NULL
+  ) +
+  theme_minimal(base_size = 12) +
+  expand_limits(x = max(school_types$count) * 1.15)
+#+END_SRC
+
+** Geographic Distribution
+
+#+NAME: school-map
+#+BEGIN_SRC R :results output graphics :file output/school_map.png
+## ============================================================
+## Map of school locations
+## Requires: sf package for spatial data
+## ============================================================
+
+if ("latitude" %in% names(schools) && "longitude" %in% names(schools)) {
+  
+  schools_geo <- schools |>
+    filter(!is.na(latitude), !is.na(longitude)) |>
+    mutate(
+      lat = as.numeric(latitude),
+      lon = as.numeric(longitude)
+    ) |>
+    filter(between(lat, 40.4, 41.0), between(lon, -74.3, -73.7))
+  
+  ggplot(schools_geo, aes(x = lon, y = lat, color = boro)) +
+    geom_point(alpha = 0.5, size = 1) +
+    scale_color_viridis_d(name = "Borough") +
+    labs(
+      title = "Geographic Distribution of NYC Schools",
+      x = "Longitude",
+      y = "Latitude"
+    ) +
+    theme_minimal() +
+    coord_fixed(ratio = 1.2)
+  
+} else {
+  cat("Geographic coordinates not available in this dataset\n")
+}
+#+END_SRC
+
+* Building Utilization Analysis
+
+** Space Utilization by District
+
+#+NAME: space-utilization
+#+BEGIN_SRC R :results output
+## ============================================================
+## Analyze building space utilization
+## ============================================================
+
+if (exists("building_space") && nrow(building_space) > 0) {
+  
+  utilization_summary <- building_space |>
+    group_by(district) |>
+    summarise(
+      n_buildings = n_distinct(building_id),
+      total_capacity = sum(as.numeric(bldg_capacity), na.rm = TRUE),
+      total_enrollment = sum(as.numeric(bldg_enrollment), na.rm = TRUE),
+      .groups = "drop"
+    ) |>
+    mutate(
+      utilization_rate = total_enrollment / total_capacity * 100
+    ) |>
+    arrange(desc(utilization_rate))
+  
+  cat("Top 10 Districts by Utilization Rate:\n")
+  print(head(utilization_summary, 10))
+  
+} else {
+  cat("Building space data not available\n")
+}
+#+END_SRC
+
+* Summary Statistics
+
+#+NAME: summary-stats
+#+BEGIN_SRC R :results output
+## ============================================================
+## Generate summary statistics table
+## ============================================================
+
+cat("\n========== NYC Schools Summary ==========\n\n")
+
+cat("Total Schools:", nrow(schools), "\n\n")
+
+cat("By Borough:\n")
+schools |>
+  count(boro) |>
+  arrange(desc(n)) |>
+  print()
+
+cat("\nBy Grade Level:\n")
+if ("grades" %in% names(schools)) {
+  schools |>
+    count(grades) |>
+    arrange(desc(n)) |>
+    head(10) |>
+    print()
+}
+#+END_SRC
+
+* Export Notes
+
+This file is designed to be:
+1. Edited in Emacs Org-mode with live R evaluation
+2. Exported to Quarto markdown (.qmd) via =org-export=
+3. Rendered to HTML via =quarto render=
+
+See =Makefile= and =scripts/org-to-qmd.el= for automation.
