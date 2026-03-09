@@ -19,3 +19,4 @@ renv/
 renv.lock
 *~
 docs/
+data/
