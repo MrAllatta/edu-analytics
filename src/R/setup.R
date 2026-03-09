@@ -20,8 +20,10 @@ required_packages <- c(
   "httr",
   "jsonlite",
   
-  # Data storage
+  # Data storage & wrangling
   "arrow",      # Parquet files
+  "readxl",     # Excel files
+  "janitor",    # Data cleaning
   
   # Tables
   "knitr",
@@ -49,6 +51,8 @@ suppressPackageStartupMessages({
   library(httr)
   library(jsonlite)
   library(arrow)
+  library(readxl)
+  library(janitor)
   library(scales)
   library(viridis)
 })
@@ -86,3 +90,7 @@ dir.create(OUTPUT_DIR, showWarnings = FALSE, recursive = TRUE)
 message("✓ Setup complete. Packages loaded.")
 message(sprintf("  Data directory: %s", DATA_DIR))
 message(sprintf("  Output directory: %s", OUTPUT_DIR))
+
+## -- Load Data Modules --
+source(file.path(PROJECT_ROOT, "src/R/nyc_data.R"))
+source(file.path(PROJECT_ROOT, "src/R/infohub_data.R"))
