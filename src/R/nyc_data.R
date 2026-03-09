@@ -110,7 +110,7 @@ NYC_DATA <- list(
   
   # School Quality Reports
   # Annual school performance reports
-  quality_reports = "bnea-fu6w",
+  quality_reports = "dnpx-dfnc",
   
   # After School Programs
   # DYCD after-school program locations
@@ -354,7 +354,7 @@ report_data_sources <- function() {
       
       cat(sprintf("  %s\n", row$name))
       cat(sprintf("  ID: %s\n", dataset_id))
-      cat(sprintf("  Columns: %d\n", if (!is.null(info)) info$columns else "N/A"))
+      cat(sprintf("  Columns: %d\n", if (!is.null(info)) info$columns else 0))
       if (!is.null(info) && !is.na(info$last_updated)) {
         cat(sprintf("  Last Updated: %s\n", info$last_updated))
       }
