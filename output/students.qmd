@@ -39,15 +39,15 @@ Analysis of NYC student enrollment, demographics, and attendance using DOE Open 
 <a id="org132cdb8"></a>
 
 # Setup
+```{r}
+## ============================================================
+## Setup: Load packages and data access functions
+## ============================================================
 
-    ## ============================================================
-    ## Setup: Load packages and data access functions
-    ## ============================================================
-    
-    source("src/R/setup.R")
-    source("src/R/nyc_data.R")
-    source("src/R/utils.R")
-
+source("src/R/setup.R")
+source("src/R/nyc_data.R")
+source("src/R/utils.R")
+```
 
 <a id="org1c31ea7"></a>
 
@@ -58,7 +58,8 @@ Analysis of NYC student enrollment, demographics, and attendance using DOE Open 
 
 ## Demographic Snapshot
 
-    ## ============================================================
+```{r}
+## ============================================================
     ## Fetch NYC School Demographics
     ## Dataset: Demographic snapshot by school
     ## ============================================================
@@ -72,39 +73,44 @@ Analysis of NYC student enrollment, demographics, and attendance using DOE Open 
     cat("\nAvailable columns:\n")
     print(names(demographics))
 
+```
 
 <a id="org693669a"></a>
 
 ## Enrollment Data
+```{r}
 
-    ## ============================================================
-    ## Fetch school enrollment data
-    ## ============================================================
-    
-    enrollment <- fetch_dataset(
-      dataset_id = NYC_DATA$enrollment,
-      cache_name = "enrollment"
-    )
-    
-    cat("Enrollment records:", nrow(enrollment), "\n")
-    glimpse(enrollment)
+## ============================================================
+## Fetch school enrollment data
+## ============================================================
 
+enrollment <- fetch_dataset(
+  dataset_id = NYC_DATA$enrollment,
+  cache_name = "enrollment"
+)
+
+cat("Enrollment records:", nrow(enrollment), "\n")
+glimpse(enrollment)
+
+```
 
 <a id="org98031f9"></a>
 
 ## Attendance Data
+```{r}
 
-    ## ============================================================
-    ## Fetch attendance and chronic absenteeism data
-    ## ============================================================
-    
-    attendance <- fetch_dataset(
-      dataset_id = NYC_DATA$attendance,
-      cache_name = "attendance"
-    )
-    
-    cat("Attendance records:", nrow(attendance), "\n")
+## ============================================================
+## Fetch attendance and chronic absenteeism data
+## ============================================================
 
+attendance <- fetch_dataset(
+  dataset_id = NYC_DATA$attendance,
+  cache_name = "attendance"
+)
+
+cat("Attendance records:", nrow(attendance), "\n")
+
+```
 
 <a id="org6a54f14"></a>
 
@@ -114,16 +120,17 @@ Analysis of NYC student enrollment, demographics, and attendance using DOE Open 
 <a id="org40750cf"></a>
 
 ## Total Enrollment Trends
+```{r}
 
-    ## ============================================================
-    ## Enrollment trends over time
-    ## ============================================================
-    
-    if ("year" %in% names(enrollment) || "school_year" %in% names(enrollment)) {
-    
-      year_col <- if ("year" %in% names(enrollment)) "year" else "school_year"
-    
-      enrollment_trend <- enrollment |>
+## ============================================================
+## Enrollment trends over time
+## ============================================================
+
+if ("year" %in% names(enrollment) || "school_year" %in% names(enrollment)) {
+
+  year_col <- if ("year" %in% names(enrollment)) "year" else "school_year"
+
+  enrollment_trend <- enrollment |>
         group_by(year = .data[[year_col]]) |>
         summarise(
           total_enrollment = sum(as.numeric(total_enrollment), na.rm = TRUE),
@@ -150,50 +157,51 @@ Analysis of NYC student enrollment, demographics, and attendance using DOE Open 
     } else {
       cat("Year column not found in enrollment data\n")
     }
-
+```
 
 <a id="org9eb0cbd"></a>
 
 ## Enrollment by Grade Level
+```{r}
 
-    ## ============================================================
-    ## Enrollment distribution by grade level
-    ## ============================================================
+## ============================================================
+## Enrollment distribution by grade level
+## ============================================================
     
-    # Look for grade-related columns
-    grade_cols <- names(enrollment)[grep("grade|pk|k_|_k$", names(enrollment), ignore.case = TRUE)]
+# Look for grade-related columns
+grade_cols <- names(enrollment)[grep("grade|pk|k_|_k$", names(enrollment), ignore.case = TRUE)]
     
-    if (length(grade_cols) > 0) {
-      cat("Grade-related columns found:\n")
-      print(grade_cols)
-    
-      # Pivot to long format for visualization
-      enrollment_by_grade <- enrollment |>
-        select(any_of(c("dbn", "school_name", grade_cols))) |>
-        pivot_longer(
-          cols = any_of(grade_cols),
-          names_to = "grade",
-          values_to = "count"
-        ) |>
-        group_by(grade) |>
-        summarise(total = sum(as.numeric(count), na.rm = TRUE), .groups = "drop") |>
-        filter(total > 0) |>
-        mutate(grade = fct_reorder(grade, total))
-    
-      ggplot(enrollment_by_grade, aes(x = total, y = grade)) +
-        geom_col(fill = "darkorange", alpha = 0.8) +
-        scale_x_continuous(labels = scales::comma) +
-        labs(
-          title = "Total Enrollment by Grade Level",
-          x = "Total Students",
-          y = "Grade"
-        ) +
-        theme_minimal(base_size = 12)
-    
-    } else {
-      cat("No grade-level columns found\n")
-    }
+if (length(grade_cols) > 0) {
+  cat("Grade-related columns found:\n")
+  print(grade_cols)
 
+  # Pivot to long format for visualization
+  enrollment_by_grade <- enrollment |>
+    select(any_of(c("dbn", "school_name", grade_cols))) |>
+    pivot_longer(
+      cols = any_of(grade_cols),
+      names_to = "grade",
+      values_to = "count"
+    ) |>
+    group_by(grade) |>
+    summarise(total = sum(as.numeric(count), na.rm = TRUE), .groups = "drop") |>
+    filter(total > 0) |>
+    mutate(grade = fct_reorder(grade, total))
+
+  ggplot(enrollment_by_grade, aes(x = total, y = grade)) +
+    geom_col(fill = "darkorange", alpha = 0.8) +
+    scale_x_continuous(labels = scales::comma) +
+    labs(
+      title = "Total Enrollment by Grade Level",
+      x = "Total Students",
+      y = "Grade"
+    ) +
+    theme_minimal(base_size = 12)
+
+} else {
+  cat("No grade-level columns found\n")
+}
+```
 
 <a id="org295dbac"></a>
 
@@ -203,13 +211,14 @@ Analysis of NYC student enrollment, demographics, and attendance using DOE Open 
 <a id="orgfde3641"></a>
 
 ## Demographic Composition
+```{r}
 
-    ## ============================================================
-    ## Overall demographic composition
-    ## ============================================================
-    
-    # Common demographic column patterns
-    demo_cols <- c("asian", "black", "hispanic", "white", "multi_racial", 
+## ============================================================
+## Overall demographic composition
+## ============================================================
+
+# Common demographic column patterns
+demo_cols <- c("asian", "black", "hispanic", "white", "multi_racial", 
                    "native_american", "pacific_islander")
     
     available_demo <- names(demographics)[names(demographics) %in% demo_cols]
@@ -243,36 +252,37 @@ Analysis of NYC student enrollment, demographics, and attendance using DOE Open 
       cat("Demographic columns not found. Available columns:\n")
       print(names(demographics))
     }
-
+```
 
 <a id="org50a7909"></a>
 
+```{r}
 ## Demographics by Borough
 
-    ## ============================================================
-    ## Demographic breakdown by borough
-    ## ============================================================
-    
-    if ("borough" %in% names(demographics) || "boro" %in% names(demographics)) {
-    
-      boro_col <- if ("borough" %in% names(demographics)) "borough" else "boro"
-    
-      demo_by_boro <- demographics |>
-        group_by(borough = .data[[boro_col]]) |>
-        summarise(
-          total_students = sum(as.numeric(total_enrollment), na.rm = TRUE),
-          n_schools = n(),
-          .groups = "drop"
-        ) |>
-        arrange(desc(total_students))
-    
-      cat("Student Distribution by Borough:\n\n")
-      print(demo_by_boro)
-    
-    } else {
-      cat("Borough column not found\n")
-    }
+## ============================================================
+## Demographic breakdown by borough
+## ============================================================
 
+if ("borough" %in% names(demographics) || "boro" %in% names(demographics)) {
+
+  boro_col <- if ("borough" %in% names(demographics)) "borough" else "boro"
+
+  demo_by_boro <- demographics |>
+    group_by(borough = .data[[boro_col]]) |>
+    summarise(
+      total_students = sum(as.numeric(total_enrollment), na.rm = TRUE),
+      n_schools = n(),
+      .groups = "drop"
+    ) |>
+    arrange(desc(total_students))
+
+  cat("Student Distribution by Borough:\n\n")
+  print(demo_by_boro)
+
+} else {
+  cat("Borough column not found\n")
+}
+```
 
 <a id="orgf4eec5e"></a>
 
@@ -282,8 +292,9 @@ Analysis of NYC student enrollment, demographics, and attendance using DOE Open 
 <a id="orgda01517"></a>
 
 ## Chronic Absenteeism
+```{r}
 
-    ## ============================================================
+## ============================================================
     ## Chronic absenteeism analysis
     ## (Students missing 10%+ of school days)
     ## ============================================================
@@ -322,12 +333,14 @@ Analysis of NYC student enrollment, demographics, and attendance using DOE Open 
       cat("Attendance data not loaded\n")
     }
 
+```
 
 <a id="org8ba1535"></a>
 
 ## Attendance by School Type
 
-    ## ============================================================
+```{r}
+## ============================================================
     ## Compare attendance across school types
     ## ============================================================
     
@@ -348,12 +361,14 @@ Analysis of NYC student enrollment, demographics, and attendance using DOE Open 
     
     }
 
+```
 
 <a id="org5bbce80"></a>
 
 # Summary Statistics
+```{r}
 
-    ## ============================================================
+## ============================================================
     ## Generate student summary statistics
     ## ============================================================
     
@@ -376,7 +391,7 @@ Analysis of NYC student enrollment, demographics, and attendance using DOE Open 
     cat("- demographic_snapshot:", NYC_DATA$demographic_snapshot, "\n")
     cat("- enrollment:", NYC_DATA$enrollment, "\n")
     cat("- attendance:", NYC_DATA$attendance, "\n")
-
+```
 
 <a id="org5b00f30"></a>
 

@@ -22,33 +22,34 @@ We use the [NYC Open Data Education Portal](https://data.cityofnewyork.us/browse
 
 
 ## Getting Started
+```{r}
 
-    # Load required packages
-    source("src/R/setup.R")
-    
-    # Fetch school directory data
-    schools <- fetch_dataset(NYC_DATA$school_directory)
-    
-    # Quick overview
-    glimpse(schools)
+# Load required packages
+source("src/R/setup.R")
 
+# Fetch school directory data
+schools <- fetch_dataset(NYC_DATA$school_directory)
+
+# Quick overview
+glimpse(schools)
+```
 
 ## Project Structure
 
-    edu-analytics/
-    ├── org/                  # Org-mode source files
-    │   ├── index.org
-    │   ├── schools.org
-    │   ├── students.org
-    │   └── learning.org
-    ├── src/R/               # R scripts and functions
-    │   ├── setup.R          # Package loading
-    │   ├── nyc_data.R       # NYC Open Data endpoints
-    │   └── utils.R          # Helper functions
-    ├── data/                # Local data cache (parquet)
-    ├── output/              # Generated figures
-    ├── docs/                # Quarto output (website)
-    └── _quarto.yml          # Quarto configuration
+edu-analytics/
+├── org/  # Org-mode source files
+│   ├── index.org
+│   ├── schools.org
+│   ├── students.org
+│   └── learning.org
+├── src/R/   # R scripts and functions
+│   ├── setup.R  # Package loading
+│   ├── nyc_data.R   # NYC Open Data endpoints
+│   └── utils.R  # Helper functions
+├── data/# Local data cache (parquet)
+├── output/  # Generated figures
+├── docs/# Quarto output (website)
+└── _quarto.yml  # Quarto configuration
 
 
 ## Quick Links

@@ -1,3 +1,11 @@
+---
+title: "Schools Analysis"
+subtitle: "NYC School Buildings, Locations, and Facilities"
+format: html
+execute:
+  echo: true
+  warning: false
+---
 
 # Table of Contents
 
@@ -15,15 +23,6 @@
 6.  [Summary Statistics](#orga540894)
 7.  [Export Notes](#org278ce6e)
 
----
-title: "Schools Analysis"
-subtitle: "NYC School Buildings, Locations, and Facilities"
-format: html
-execute:
-  echo: true
-  warning: false
----
-
 
 <a id="org0045ab9"></a>
 
@@ -34,16 +33,16 @@ Analysis of NYC school buildings, locations, and facilities using DOE Open Data.
 
 <a id="orgc6560fc"></a>
 
-# Setup
+# Setup 
+```{r}
+## ============================================================
+## Setup: Load packages and data access functions
+## ============================================================
 
-    ## ============================================================
-    ## Setup: Load packages and data access functions
-    ## ============================================================
-    
-    source("src/R/setup.R")
-    source("src/R/nyc_data.R")
-    source("src/R/utils.R")
-
+source(here::here("src/R/setup.R"))
+source(here::here("src/R/nyc_data.R"))
+source(here::here("src/R/utils.R"))
+```
 
 <a id="org03f96ec"></a>
 
@@ -53,40 +52,40 @@ Analysis of NYC school buildings, locations, and facilities using DOE Open Data.
 <a id="org84fa474"></a>
 
 ## School Directory
+```{r}
+## ============================================================
+## Fetch NYC School Directory
+## Dataset: 2019-2020 School Locations
+## ============================================================
 
-    ## ============================================================
-    ## Fetch NYC School Directory
-    ## Dataset: 2019-2020 School Locations
-    ## ============================================================
-    
-    schools <- fetch_dataset(
-      dataset_id = NYC_DATA$school_directory,
-      cache_name = "school_directory"
-    )
-    
-    ## Display structure
-    cat("Dataset dimensions:", nrow(schools), "rows x", ncol(schools), "columns\n")
-    cat("\nColumn names:\n")
-    print(names(schools))
+schools <- fetch_dataset(
+  dataset_id = NYC_DATA$school_directory,
+  cache_name = "school_directory"
+)
 
+## Display structure
+cat("Dataset dimensions:", nrow(schools), "rows x", ncol(schools), "columns\n")
+cat("\nColumn names:\n")
+print(names(schools))
+```
 
 <a id="orgfdf0785"></a>
 
 ## Building Space Usage
+```{r}
+## ============================================================
+## Fetch DOE Building Space Usage
+## Updated annually - tracks space utilization in school buildings
+## ============================================================
 
-    ## ============================================================
-    ## Fetch DOE Building Space Usage
-    ## Updated annually - tracks space utilization in school buildings
-    ## ============================================================
-    
-    building_space <- fetch_dataset(
-      dataset_id = NYC_DATA$building_space_usage,
-      cache_name = "building_space"
-    )
-    
-    cat("Building space records:", nrow(building_space), "\n")
-    glimpse(building_space)
+building_space <- fetch_dataset(
+  dataset_id = NYC_DATA$building_space_usage,
+  cache_name = "building_space"
+)
 
+cat("Building space records:", nrow(building_space), "\n")
+glimpse(building_space)
+```
 
 <a id="orgfd765f4"></a>
 
@@ -96,24 +95,24 @@ Analysis of NYC school buildings, locations, and facilities using DOE Open Data.
 <a id="orgd8bb88c"></a>
 
 ## Schools by Borough
+```{r}
+## ============================================================
+## Count of schools by borough
+## ============================================================
 
-    ## ============================================================
-    ## Count of schools by borough
-    ## ============================================================
-    
-    schools_by_boro <- schools |>
-      count(borough = boro, name = "n_schools") |>
-      mutate(borough = fct_reorder(borough, n_schools))
-    
-    ggplot(schools_by_boro, aes(x = n_schools, y = borough, fill = borough)) +
-      geom_col(show.legend = FALSE) +
-      geom_text(aes(label = n_schools), hjust = -0.2, size = 4) +
-      scale_fill_viridis_d(option = "plasma", begin = 0.2, end = 0.8) +
-      labs(
-        title = "NYC Public Schools by Borough",
-        subtitle = "Source: NYC Open Data School Directory",
-        x = "Number of Schools",
-        y = NULL
+schools_by_boro <- schools |>
+  count(borough = boro, name = "n_schools") |>
+  mutate(borough = fct_reorder(borough, n_schools))
+
+ggplot(schools_by_boro, aes(x = n_schools, y = borough, fill = borough)) +
+  geom_col(show.legend = FALSE) +
+  geom_text(aes(label = n_schools), hjust = -0.2, size = 4) +
+  scale_fill_viridis_d(option = "plasma", begin = 0.2, end = 0.8) +
+  labs(
+    title = "NYC Public Schools by Borough",
+    subtitle = "Source: NYC Open Data School Directory",
+    x = "Number of Schools",
+    y = NULL
       ) +
       theme_minimal(base_size = 14) +
       theme(
@@ -121,12 +120,12 @@ Analysis of NYC school buildings, locations, and facilities using DOE Open Data.
         panel.grid.major.y = element_blank()
       ) +
       expand_limits(x = max(schools_by_boro$n_schools) * 1.1)
-
+```
 
 <a id="org00f8ff5"></a>
 
 ## School Types Distribution
-
+``````{r}
     ## ============================================================
     ## Distribution of school types
     ## ============================================================
@@ -149,18 +148,18 @@ Analysis of NYC school buildings, locations, and facilities using DOE Open Data.
       ) +
       theme_minimal(base_size = 12) +
       expand_limits(x = max(school_types$count) * 1.15)
-
+```
 
 <a id="orgc53cc92"></a>
 
 ## Geographic Distribution
+```{r}
+## ============================================================
+## Map of school locations
+## Requires: sf package for spatial data
+## ============================================================
 
-    ## ============================================================
-    ## Map of school locations
-    ## Requires: sf package for spatial data
-    ## ============================================================
-    
-    if ("latitude" %in% names(schools) && "longitude" %in% names(schools)) {
+if ("latitude" %in% names(schools) && "longitude" %in% names(schools)) {
     
       schools_geo <- schools |>
         filter(!is.na(latitude), !is.na(longitude)) |>
@@ -185,7 +184,7 @@ Analysis of NYC school buildings, locations, and facilities using DOE Open Data.
       cat("Geographic coordinates not available in this dataset\n")
     }
 
-
+```
 <a id="org3a1ad53"></a>
 
 # Building Utilization Analysis
@@ -194,12 +193,12 @@ Analysis of NYC school buildings, locations, and facilities using DOE Open Data.
 <a id="orgdfa4eb0"></a>
 
 ## Space Utilization by District
+```{r}
+## ============================================================
+## Analyze building space utilization
+## ============================================================
 
-    ## ============================================================
-    ## Analyze building space utilization
-    ## ============================================================
-    
-    if (exists("building_space") && nrow(building_space) > 0) {
+if (exists("building_space") && nrow(building_space) > 0) {
     
       utilization_summary <- building_space |>
         group_by(district) |>
@@ -220,22 +219,22 @@ Analysis of NYC school buildings, locations, and facilities using DOE Open Data.
     } else {
       cat("Building space data not available\n")
     }
-
+```
 
 <a id="orga540894"></a>
 
 # Summary Statistics
+```{r}
+## ============================================================
+## Generate summary statistics table
+## ============================================================
 
-    ## ============================================================
-    ## Generate summary statistics table
-    ## ============================================================
-    
-    cat("\n========== NYC Schools Summary ==========\n\n")
-    
-    cat("Total Schools:", nrow(schools), "\n\n")
-    
-    cat("By Borough:\n")
-    schools |>
+cat("\n========== NYC Schools Summary ==========\n\n")
+
+cat("Total Schools:", nrow(schools), "\n\n")
+
+cat("By Borough:\n")
+schools |>
       count(boro) |>
       arrange(desc(n)) |>
       print()
@@ -248,7 +247,7 @@ Analysis of NYC school buildings, locations, and facilities using DOE Open Data.
         head(10) |>
         print()
     }
-
+```
 
 <a id="org278ce6e"></a>
 

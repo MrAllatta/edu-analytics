@@ -46,15 +46,15 @@ Analysis of NYC student learning outcomes including standardized test scores, gr
 <a id="orgda166f7"></a>
 
 # Setup
+```{r}
+## ============================================================
+## Setup: Load packages and data access functions
+## ============================================================
 
-    ## ============================================================
-    ## Setup: Load packages and data access functions
-    ## ============================================================
-    
-    source("src/R/setup.R")
-    source("src/R/nyc_data.R")
-    source("src/R/utils.R")
-
+source("src/R/setup.R")
+source("src/R/nyc_data.R")
+source("src/R/utils.R")
+```
 
 <a id="org4ed7f72"></a>
 
@@ -64,71 +64,71 @@ Analysis of NYC student learning outcomes including standardized test scores, gr
 <a id="org1674518"></a>
 
 ## Math Test Results
+```{r}
+## ============================================================
+## Fetch Math Test Results (Grades 3-8)
+## NY State standardized assessments
+## ============================================================
 
-    ## ============================================================
-    ## Fetch Math Test Results (Grades 3-8)
-    ## NY State standardized assessments
-    ## ============================================================
-    
-    math_results <- fetch_dataset(
-      dataset_id = NYC_DATA$math_test_results,
-      cache_name = "math_results"
-    )
-    
-    cat("Math test records:", nrow(math_results), "\n")
-    cat("\nColumns:\n")
-    print(names(math_results))
+math_results <- fetch_dataset(
+  dataset_id = NYC_DATA$math_test_results,
+  cache_name = "math_results"
+)
 
+cat("Math test records:", nrow(math_results), "\n")
+cat("\nColumns:\n")
+print(names(math_results))
+```
 
 <a id="orge190f7b"></a>
 
 ## ELA Test Results
+```{r}
+## ============================================================
+## Fetch ELA (English Language Arts) Test Results
+## ============================================================
 
-    ## ============================================================
-    ## Fetch ELA (English Language Arts) Test Results
-    ## ============================================================
-    
-    ela_results <- fetch_dataset(
-      dataset_id = NYC_DATA$ela_test_results,
-      cache_name = "ela_results"
-    )
-    
-    cat("ELA test records:", nrow(ela_results), "\n")
+ela_results <- fetch_dataset(
+  dataset_id = NYC_DATA$ela_test_results,
+  cache_name = "ela_results"
+)
 
+cat("ELA test records:", nrow(ela_results), "\n")
+```
 
 <a id="orgda8910e"></a>
 
 ## Graduation Outcomes
+```{r}
+## ============================================================
+## Fetch High School Graduation Outcomes
+## ============================================================
 
-    ## ============================================================
-    ## Fetch High School Graduation Outcomes
-    ## ============================================================
-    
-    graduation <- fetch_dataset(
-      dataset_id = NYC_DATA$graduation_outcomes,
-      cache_name = "graduation"
-    )
-    
-    cat("Graduation records:", nrow(graduation), "\n")
-    glimpse(graduation)
+graduation <- fetch_dataset(
+  dataset_id = NYC_DATA$graduation_outcomes,
+  cache_name = "graduation"
+)
 
+cat("Graduation records:", nrow(graduation), "\n")
+glimpse(graduation)
+```
 
 <a id="org1413fb0"></a>
 
 ## Regents Exam Results
+```{r}
+## ============================================================
+## Fetch Regents Exam Results
+## NY State high school assessments
+## ============================================================
 
-    ## ============================================================
-    ## Fetch Regents Exam Results
-    ## NY State high school assessments
-    ## ============================================================
-    
-    regents <- fetch_dataset(
-      dataset_id = NYC_DATA$regents_results,
-      cache_name = "regents"
-    )
-    
-    cat("Regents exam records:", nrow(regents), "\n")
+regents <- fetch_dataset(
+  dataset_id = NYC_DATA$regents_results,
+  cache_name = "regents"
+)
 
+cat("Regents exam records:", nrow(regents), "\n")
+```
 
 <a id="orgb06f684"></a>
 
@@ -138,23 +138,23 @@ Analysis of NYC student learning outcomes including standardized test scores, gr
 <a id="org811dbad"></a>
 
 ## Math Proficiency Trends
+```{r}
+## ============================================================
+## Math proficiency levels over time
+## Level 3+ = proficient
+## ============================================================
 
-    ## ============================================================
-    ## Math proficiency levels over time
-    ## Level 3+ = proficient
-    ## ============================================================
-    
-    if (exists("math_results") && nrow(math_results) > 0) {
-    
-      # Look for year and proficiency columns
-      year_col <- intersect(c("year", "school_year", "test_year"), names(math_results))[1]
-    
-      if (!is.na(year_col)) {
-    
-        # Calculate proficiency rate (Level 3 + Level 4)
-        math_proficiency <- math_results |>
-          filter(!is.na(.data[[year_col]])) |>
-          group_by(year = .data[[year_col]]) |>
+if (exists("math_results") && nrow(math_results) > 0) {
+
+  # Look for year and proficiency columns
+  year_col <- intersect(c("year", "school_year", "test_year"), names(math_results))[1]
+
+  if (!is.na(year_col)) {
+
+    # Calculate proficiency rate (Level 3 + Level 4)
+    math_proficiency <- math_results |>
+      filter(!is.na(.data[[year_col]])) |>
+      group_by(year = .data[[year_col]]) |>
           summarise(
             total_tested = sum(as.numeric(number_tested), na.rm = TRUE),
             level_3_4 = sum(as.numeric(level_3_4_count), na.rm = TRUE),
@@ -185,28 +185,28 @@ Analysis of NYC student learning outcomes including standardized test scores, gr
     } else {
       cat("Math results not available\n")
     }
-
+```
 
 <a id="orgbb45515"></a>
 
 ## Math vs ELA Comparison
+```{r}
+## ============================================================
+## Compare Math and ELA proficiency by year
+## ============================================================
 
-    ## ============================================================
-    ## Compare Math and ELA proficiency by year
-    ## ============================================================
-    
-    if (exists("math_results") && exists("ela_results")) {
-    
-      # Process both datasets similarly
-      process_test_data <- function(df, subject) {
-        year_col <- intersect(c("year", "school_year", "test_year"), names(df))[1]
-        if (is.na(year_col)) return(NULL)
-    
-        df |>
-          group_by(year = .data[[year_col]]) |>
-          summarise(
-            proficiency_rate = sum(as.numeric(level_3_4_count), na.rm = TRUE) /
-                              sum(as.numeric(number_tested), na.rm = TRUE) * 100,
+if (exists("math_results") && exists("ela_results")) {
+
+  # Process both datasets similarly
+  process_test_data <- function(df, subject) {
+    year_col <- intersect(c("year", "school_year", "test_year"), names(df))[1]
+    if (is.na(year_col)) return(NULL)
+
+    df |>
+      group_by(year = .data[[year_col]]) |>
+      summarise(
+        proficiency_rate = sum(as.numeric(level_3_4_count), na.rm = TRUE) /
+                          sum(as.numeric(number_tested), na.rm = TRUE) * 100,
             .groups = "drop"
           ) |>
           mutate(subject = subject)
@@ -237,20 +237,20 @@ Analysis of NYC student learning outcomes including standardized test scores, gr
       }
     
     }
-
+```
 
 <a id="org881d3b1"></a>
 
 ## Test Scores by Borough
+```{r}
+## ============================================================
+## Test proficiency by borough
+## ============================================================
 
-    ## ============================================================
-    ## Test proficiency by borough
-    ## ============================================================
-    
-    if (exists("math_results") && "borough" %in% names(math_results)) {
-    
-      boro_math <- math_results |>
-        group_by(borough) |>
+if (exists("math_results") && "borough" %in% names(math_results)) {
+
+  boro_math <- math_results |>
+    group_by(borough) |>
         summarise(
           proficiency_rate = sum(as.numeric(level_3_4_count), na.rm = TRUE) /
                             sum(as.numeric(number_tested), na.rm = TRUE) * 100,
@@ -274,7 +274,7 @@ Analysis of NYC student learning outcomes including standardized test scores, gr
         expand_limits(x = max(boro_math$proficiency_rate) * 1.15)
     
     }
-
+```
 
 <a id="orgf0dd8df"></a>
 
@@ -284,12 +284,12 @@ Analysis of NYC student learning outcomes including standardized test scores, gr
 <a id="orge4c4d39"></a>
 
 ## Graduation Rate Trends
+```{r}
+## ============================================================
+## High school graduation rate trends
+## ============================================================
 
-    ## ============================================================
-    ## High school graduation rate trends
-    ## ============================================================
-    
-    if (exists("graduation") && nrow(graduation) > 0) {
+if (exists("graduation") && nrow(graduation) > 0) {
     
       grad_year_col <- intersect(c("cohort_year", "cohort", "year"), names(graduation))[1]
       grad_rate_col <- intersect(c("total_grads_pct", "graduation_rate", "grad_rate"), names(graduation))[1]
@@ -326,17 +326,17 @@ Analysis of NYC student learning outcomes including standardized test scores, gr
     } else {
       cat("Graduation data not available\n")
     }
-
+```
 
 <a id="org2f89db8"></a>
 
 ## Graduation by Demographics
+```{r}
+## ============================================================
+## Graduation rates by demographic group
+## ============================================================
 
-    ## ============================================================
-    ## Graduation rates by demographic group
-    ## ============================================================
-    
-    if (exists("graduation")) {
+if (exists("graduation")) {
     
       # Check for demographic columns
       demo_cols <- c("asian", "black", "hispanic", "white", "male", "female",
@@ -355,17 +355,17 @@ Analysis of NYC student learning outcomes including standardized test scores, gr
       }
     
     }
-
+```
 
 <a id="org206e790"></a>
 
 ## Dropout Analysis
+```{r}
+## ============================================================
+## Dropout rate analysis
+## ============================================================
 
-    ## ============================================================
-    ## Dropout rate analysis
-    ## ============================================================
-    
-    if (exists("graduation") && "dropout_pct" %in% names(graduation)) {
+if (exists("graduation") && "dropout_pct" %in% names(graduation)) {
     
       dropout_dist <- graduation |>
         filter(!is.na(dropout_pct)) |>
@@ -384,7 +384,7 @@ Analysis of NYC student learning outcomes including standardized test scores, gr
         theme_minimal(base_size = 12)
     
     }
-
+```
 
 <a id="org3f108b0"></a>
 
@@ -394,12 +394,12 @@ Analysis of NYC student learning outcomes including standardized test scores, gr
 <a id="org042f8a4"></a>
 
 ## Regents Pass Rates by Subject
+```{r}
+## ============================================================
+## Regents exam pass rates by subject
+## ============================================================
 
-    ## ============================================================
-    ## Regents exam pass rates by subject
-    ## ============================================================
-    
-    if (exists("regents") && nrow(regents) > 0) {
+if (exists("regents") && nrow(regents) > 0) {
     
       if ("regents_exam" %in% names(regents) || "subject" %in% names(regents)) {
     
@@ -435,7 +435,7 @@ Analysis of NYC student learning outcomes including standardized test scores, gr
       cat("Regents data not available\n")
     }
 
-
+```
 <a id="org3d56dcc"></a>
 
 # Achievement Gap Analysis
@@ -444,13 +444,13 @@ Analysis of NYC student learning outcomes including standardized test scores, gr
 <a id="org6aab7ad"></a>
 
 ## Performance Gap by Economic Status
+```{r}
+## ============================================================
+## Achievement gap analysis
+## Compare economically disadvantaged vs all students
+## ============================================================
 
-    ## ============================================================
-    ## Achievement gap analysis
-    ## Compare economically disadvantaged vs all students
-    ## ============================================================
-    
-    if (exists("math_results")) {
+if (exists("math_results")) {
     
       # Check for economic need indicator
       econ_cols <- names(math_results)[grep("econ|poverty|free_lunch|need", 
@@ -470,17 +470,17 @@ Analysis of NYC student learning outcomes including standardized test scores, gr
       }
     
     }
-
+```
 
 <a id="org1f3c748"></a>
 
 # Summary Statistics
+```{r}
+## ============================================================
+## Generate learning outcomes summary
+## ============================================================
 
-    ## ============================================================
-    ## Generate learning outcomes summary
-    ## ============================================================
-    
-    cat("\n========== Learning Outcomes Summary ==========\n\n")
+cat("\n========== Learning Outcomes Summary ==========\n\n")
     
     if (exists("math_results")) {
       cat("Math Assessment Records:", nrow(math_results), "\n")
@@ -508,7 +508,7 @@ Analysis of NYC student learning outcomes including standardized test scores, gr
     cat("ELA Tests:", NYC_DATA$ela_test_results, "\n")
     cat("Graduation:", NYC_DATA$graduation_outcomes, "\n")
     cat("Regents:", NYC_DATA$regents_results, "\n")
-
+```
 
 <a id="orgcddf5fa"></a>
 
