@@ -183,6 +183,61 @@ data_quality_check <- function(df) {
   invisible(df)
 }
 
+#' Report all NYC Open Data sources
+#' 
+#' Generates a formatted report of all datasets in NYC_DATA by calling 
+#' get_dataset_info() on each, organized by category with metadata.
+#' 
+#' @return Prints report to stdout, returns invisibly
+#'
+report_data_sources <- function() {
+  cat("\n")
+  cat("=== NYC OPEN DATA SOURCES REPORT ===\n")
+  cat("Total datasets: ", length(NYC_DATA), "\n\n")
+  
+  # Get all datasets and their info
+  datasets_df <- list_datasets()
+  
+  # Process by category
+  categories <- unique(datasets_df$category)
+  
+  for (cat in categories) {
+    cat_datasets <- datasets_df |>
+      filter(category == cat) |>
+      arrange(name)
+    
+    cat("\n", strrep("─", 60), "\n")
+    cat(sprintf("▸ %s (%d datasets)\n", cat, nrow(cat_datasets)))
+    cat(strrep("─", 60), "\n\n")
+    
+    # Get info for each dataset in category
+    for (i in seq_len(nrow(cat_datasets))) {
+      row <- cat_datasets[i, ]
+      dataset_id <- row$dataset_id
+      
+      # Safely get dataset info
+      info <- tryCatch(
+        get_dataset_info(NYC_DATA[[row$name]]),
+        error = function(e) NULL
+      )
+      
+      cat(sprintf("  %s\n", row$name))
+      cat(sprintf("  ID: %s\n", dataset_id))
+      cat(sprintf("  Columns: %d\n", if (!is.null(info)) info$columns else "N/A"))
+      if (!is.null(info) && !is.na(info$last_updated)) {
+        cat(sprintf("  Last Updated: %s\n", info$last_updated))
+      }
+      cat(sprintf("  Link: https://data.cityofnewyork.us/d/%s\n", dataset_id))
+      cat("\n")
+    }
+  }
+  
+  cat(strrep("─", 60), "\n")
+  cat("End of report\n\n")
+  
+  invisible(NULL)
+}
+
 #' Color palette for NYC boroughs
 #' 
 #' @return Named vector of colors
