@@ -45,8 +45,6 @@ Analysis of NYC student enrollment, demographics, and attendance using DOE Open 
 ## ============================================================
 
 source("src/R/setup.R")
-source("src/R/nyc_data.R")
-source("src/R/utils.R")
 ```
 
 <a id="org1c31ea7"></a>

@@ -40,8 +40,6 @@ Analysis of NYC school buildings, locations, and facilities using DOE Open Data.
 ## ============================================================
 
 source(here::here("src/R/setup.R"))
-source(here::here("src/R/nyc_data.R"))
-source(here::here("src/R/utils.R"))
 ```
 
 <a id="org03f96ec"></a>

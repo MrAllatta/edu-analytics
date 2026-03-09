@@ -48,7 +48,6 @@ The [NYC Open Data Portal](https://opendata.cityofnewyork.us/) provides free pub
 ## ============================================================
 
 source(here::here("src/R/setup.R"))
-source(here::here("src/R/nyc_data.R"))
 
 # Display available datasets
 datasets <- list_datasets()

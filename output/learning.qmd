@@ -52,8 +52,6 @@ Analysis of NYC student learning outcomes including standardized test scores, gr
 ## ============================================================
 
 source("src/R/setup.R")
-source("src/R/nyc_data.R")
-source("src/R/utils.R")
 ```
 
 <a id="org4ed7f72"></a>
