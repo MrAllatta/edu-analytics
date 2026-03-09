@@ -1,10 +1,109 @@
-  # Row-bind all sheets
-  result <- dplyr::bind_rows(dfs)
+# ============================================================
+## infohub_data.R - NYC InfoHub Excel Data Loading
+# ============================================================
 
-  message(sprintf("Loaded %d rows from %d sheets", nrow(result), length(dfs)))
+## -- INFOHUB_DATA Registry --
+## Maps categories to Excel file patterns and sheet names
+##
+# $pattern   - Regex to match filename (case-insensitive)
+# $sheets    - Named vector mapping subgroup label → Excel sheet name
 
-  return(result)
+INFOHUB_DATA <- list(
+  attendance = list(
+    pattern = "attendance",
+    sheets = c(
+      "All Students" = "All Students",
+      "SWD" = "Students with Disabilities",
+      "Ethnicity" = "Ethnicity"
+    )
+  ),
+  enrollment = list(
+    pattern = "enrollment",
+    sheets = c(
+      "All Students" = "All Students",
+      "SWD" = "Students with Disabilities",
+      "Ethnicity" = "Ethnicity"
+    )
+  ),
+  test_results = list(
+    pattern = "test_results|test results",
+    sheets = c(
+      "All Students" = "All Students",
+      "SWD" = "Students with Disabilities",
+      "ELL" = "English Language Learners"
+    )
+  ),
+  demographic_snapshot = list(
+    pattern = "demographic|demographics",
+    sheets = c(
+      "Snapshot" = "Snapshot",
+      "Grade Level" = "Grade Level"
+    )
+  )
+)
+
+# ============================================================
+## Foundational Readers
+# ============================================================
+
+#' Read a single sheet from an InfoHub Excel file
+#'
+#' Reads one named sheet, cleans column names, and adds source attribution.
+#'
+#' @param file_path Path to Excel file
+#' @param sheet Sheet name or index to read
+#' @param ... Additional arguments passed to readxl::read_excel()
+#'
+#' @return tibble with source column added
+#'
+read_infohub_sheet <- function(file_path, sheet, ...) {
+  df <- readxl::read_excel(file_path, sheet = sheet, ...)
+  df <- janitor::clean_names(df)
+  df <- df |> dplyr::mutate(source = "infohub", .before = 1)
+  return(df)
 }
+
+#' Read all sheets from an InfoHub file for a category
+#'
+#' Iterates over the $sheets mapping for a category, reads each sheet,
+#' adds a subgroup column, and row-binds into a single tibble.
+#'
+#' @param file_path Path to Excel file
+#' @param category_name Category name (used for messaging)
+#' @param sheets Named vector mapping subgroup label -> Excel sheet name
+#'
+#' @return tibble with all sheets combined and subgroup column added
+#'
+read_infohub_file <- function(file_path, category_name, sheets) {
+  results <- list()
+
+  for (subgroup_label in names(sheets)) {
+    sheet_name <- sheets[[subgroup_label]]
+
+    tryCatch({
+      df <- read_infohub_sheet(file_path, sheet = sheet_name)
+      df <- df |> dplyr::mutate(subgroup = subgroup_label, .after = source)
+      results[[subgroup_label]] <- df
+    }, error = function(e) {
+      warning(sprintf(
+        "Failed to read sheet '%s' from %s: %s",
+        sheet_name,
+        basename(file_path),
+        conditionMessage(e)
+      ))
+    })
+  }
+
+  if (length(results) == 0) {
+    stop(sprintf("No valid sheets could be read from %s", file_path))
+  }
+  
+  dplyr::bind_rows(results)
+}
+
+## ============================================================
+## Data Loading Functions
+## ============================================================
 
 #' Load InfoHub data with caching
 #'
@@ -163,7 +262,7 @@ list_infohub <- function(raw_dir = NULL) {
 }
 
 ## ==========================================================
-## UNIFIED ACCESSOR - Fallback to API
+# UNIFIED ACCESSOR - Fallback to API
 ## ==========================================================
 
 #' Load education data with InfoHub priority, API fallback

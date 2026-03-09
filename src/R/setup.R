@@ -92,5 +92,6 @@ message(sprintf("  Data directory: %s", DATA_DIR))
 message(sprintf("  Output directory: %s", OUTPUT_DIR))
 
 ## -- Load Data Modules --
+source(file.path(PROJECT_ROOT, "src/R/utils.R"))
 source(file.path(PROJECT_ROOT, "src/R/nyc_data.R"))
 source(file.path(PROJECT_ROOT, "src/R/infohub_data.R"))
