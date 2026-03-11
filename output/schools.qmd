@@ -99,7 +99,7 @@ glimpse(building_space)
 ## ============================================================
 
 schools_by_boro <- schools |>
-  count(borough = boro, name = "n_schools") |>
+  count(borough = substr(borough_block_lot,1,1), name = "n_schools") |>
   mutate(borough = fct_reorder(borough, n_schools))
 
 ggplot(schools_by_boro, aes(x = n_schools, y = borough, fill = borough)) +
