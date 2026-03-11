@@ -10,31 +10,41 @@
 
 INFOHUB_DATA <- list(
   attendance = list(
-    pattern = "attendance",
+    pattern = "attendance_school",
     sheets = c(
-      "All Students" = "All Students",
-      "SWD" = "Students with Disabilities",
-      "Ethnicity" = "Ethnicity"
+      "All" = "All Students",
+      "SWD" = "SWD",
+      "Ethnicity" = "Ethnicity",
+      "Gender" = "Gender",
+      "Poverty" = "Poverty",
+      "ELL" = "ELL",
+      "STH" = "STH"
     )
   ),
-  enrollment = list(
-    pattern = "enrollment",
+  math_results = list(
+    pattern = "math_results",
     sheets = c(
-      "All Students" = "All Students",
-      "SWD" = "Students with Disabilities",
-      "Ethnicity" = "Ethnicity"
-    )
-  ),
-  test_results = list(
-    pattern = "test_results|test results",
-    sheets = c(
-      "All Students" = "All Students",
-      "SWD" = "Students with Disabilities",
-      "ELL" = "English Language Learners"
+      "All" = "All Students",
+      "SWD" = "SWD",
+      "ELL" = "ELL"
     )
   ),
   demographic_snapshot = list(
-    pattern = "demographic|demographics",
+    pattern = "demographic_snapshot",
+    sheets = c(
+      "Snapshot" = "Snapshot",
+      "Grade Level" = "Grade Level"
+    )
+  ),
+  directory_school = list(
+    pattern = "directory_school",
+    sheets = c(
+      "Snapshot" = "Snapshot",
+      "Grade Level" = "Grade Level"
+    )
+  ),
+  school_quality = list(
+    pattern = "school_quality_high_school",
     sheets = c(
       "Snapshot" = "Snapshot",
       "Grade Level" = "Grade Level"
