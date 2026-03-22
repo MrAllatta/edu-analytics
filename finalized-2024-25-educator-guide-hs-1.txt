@@ -1,0 +1,4198 @@
+Educator Guide to the School Quality Reports |High Schools
+
+Educator Guide to the
+School Quality Reports
+High Schools | 2024–25
+Last Updated: March 6, 2026
+
+OVERVIEW....................................................................................................................................................... 3
+SCHOOL QUALITY REPORT SECTIONS ................................................................................................................................. 4
+NEW YORK STATE SCHOOL DESIGNATIONS ......................................................................................................................... 4
+DEFINITIONS .................................................................................................................................................... 5
+SCHOOL QUALITY REPORT SCHOOL TYPE ............................................................................................................................ 5
+NYC SCHOOL SURVEY SCHOOL TYPE ................................................................................................................................. 5
+COMPARISON GROUP ..................................................................................................................................................... 6
+ECONOMIC NEED INDEX .................................................................................................................................................. 6
+STUDENTS IN A SCHOOL’S LOWEST THIRD ........................................................................................................................... 6
+STUDENTS IN LOWEST THIRD CITYWIDE ............................................................................................................................. 7
+MINIMUM N (NUMBER OF STUDENTS) .............................................................................................................................. 7
+YEAR IN HIGH SCHOOL/ COHORT LETTER............................................................................................................................ 7
+OVERAGE/ UNDER-CREDITED ........................................................................................................................................... 8
+MOST AT RISK ............................................................................................................................................................... 9
+DEMOGRAPHIC INFORMATION....................................................................................................................... 10
+STUDENT SUBGROUP DEMOGRAPHICS ............................................................................................................................. 10
+TEACHER RACIAL SUBGROUP DEMOGRAPHICS ................................................................................................................... 11
+INSTRUCTION AND PERFORMANCE METRICS .................................................................................................. 12
+PROGRESS TOWARD GRADUATION .................................................................................................................................. 12
+PERFORMANCE BY RACIAL SUBGROUPS ............................................................................................................................ 15
+GRADUATION, DIPLOMA, AND NON-DROPOUT METRICS................................................................................. 17
+STUDENT ATTRIBUTION ................................................................................................................................................. 17
+OTHER METRICS .......................................................................................................................................................... 19
+COLLEGE AND CAREER READINESS .................................................................................................................. 20
+STUDENTS IN ADVANCED COURSES BY RACIAL SUBGROUP ................................................................................................... 24
+STUDENTS WITH INDIVIDUALIZED EDUCATION PROGRAMS (IEPS) ......................................................................................... 26
+ATTENDANCE .............................................................................................................................................................. 27
+SCORES AND RATINGS .................................................................................................................................... 29
+OVERALL CATEGORY SCORES AND RATINGS....................................................................................................................... 29
+METRIC SCORES AND RATING ......................................................................................................................................... 30
+RATING LABELS IN THE SCHOOL QUALITY REPORTS: SCORING GUIDE AND SCHOOL QUALITY REPORTS: SNAPSHOT ......................... 32
+METRIC COMPARISONS .................................................................................................................................. 33
+CITY AND BOROUGH AVERAGES ...................................................................................................................................... 33
+COMPARISON GROUP’S RESULTS .................................................................................................................................... 33
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+1
+
+Educator Guide to the School Quality Reports |High Schools
+
+SCHOOL QUALITY REPORTS METRICS AND DATA SOURCES .............................................................................. 42
+RESPONSE RECOGNITION PROGRAM ................................................................................................................................ 46
+APPENDIX A: REFERENCE TABLES FOR COLLEGE AND CAREER READINESS (CCR) ................................................ 47
+APPENDIX B: CATEGORY-MEASURE-QUESTION STRUCTURE ............................................................................. 54
+APPENDIX C: THE “TOPHALFCONST AND BOTTOMHALFCONST” TABLE ............................................................. 80
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+2
+
+Overview
+
+Educator Guide to the School Quality Reports |High Schools
+
+The School Quality Reports (SQR) share information about school performance, set
+expectations for schools, and promote school improvement. The School Quality
+Reports include:
+• School Quality Reports: Snapshot: A summary report for families and
+community members to learn about school performance and quality.
+• School Quality Reports: Dashboard: An interactive report with data
+visualizations for educators to investigate multiple years of school
+performance data. The report is publicly available for community members
+interested in more information.
+• School Quality Reports: Citywide Results: Spreadsheets that contain
+detailed results for every public school in NYC.
+These reports include information from multiple sources, including the NYC School
+Survey and student performance.
+This Educator Guide describes the methodology used to calculate metric values in
+the School Quality Reports.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+3
+
+Educator Guide to the School Quality Reports |High Schools
+
+School Quality Report Sections
+
+The School Quality Reports include four categories: School Description, Instruction
+and Performance, Safety and School Climate, and Relationships with Families.
+These new categories aim to be intuitive and aligned with New York City Public
+Schools' priorities.
+• School Description: Information on programs, students, faculty, and the school
+space.
+• Instruction and Performance: Survey questions about the instruction and learning
+environment and data on standardized test performance, graduation, credit
+accumulation, special populations, and next-level readiness.
+• Safety and School Climate: Survey data on safety, social-emotional support,
+school leadership, and attendance data.
+• Relationships with Families: Survey data on how schools engage families and
+school-parent trust.
+
+New York State School Designations
+New York State implements a state accountability system that measures student
+performance on NYS ELA and math exams, Regents exams, and graduation rates.
+State accountability status does not affect the School Quality Report ratings.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+4
+
+Definitions
+
+Educator Guide to the School Quality Reports |High Schools
+
+School Quality Report School Type
+School Quality Reports are provided for the following school types:
+School Type
+Grades Served
+Elementary School K-4, K-5, and K-6
+K-8 School*
+K-7, K-8, and K-12 (minus grades 9-12)
+Middle School
+5-8, 6-8, and 6-12 (minus grades 9-12)
+District 75 School K-8 and K-12 (minus grades K-8), and 6-12 (minus grades 68)
+High School
+9-12, K-12 (minus grades K-8), and 6-12 (minus grades 6-8)
+Transfer High
+9-12, focus on overage and under-credited students.
+School
+* If a new K–8 school has grade 6 but does not yet have grades 3 or 4. It will be
+considered a middle school until it adds one of those grades.
+A school that serves grades K–12 receives two separate School Quality Reports: one
+for the K–8 part of the school, and one for the high school.
+Similarly, a school that serves grades 6–12 receives two separate School Quality
+Reports: one for the middle school and one for the high school.
+This document explains the rules for the School Quality Report for High School.
+Separate Educator Guides explain the rules for the other school types.
+
+NYC School Survey School Type
+School Type
+Elementary School
+K–8 School*
+6–12/K–12
+Middle School
+High School
+Transfer High School
+District 75 School
+
+Last Updated: March 6, 2026
+
+Grades and Students Served
+K–5, and K–6
+K–8
+K–12, 6–12
+5–8, 6–8
+9–12
+Transfer schools serving grades 9–12
+District 75 schools
+
+Back to the Top
+
+5
+
+Comparison Group
+
+Educator Guide to the School Quality Reports |High Schools
+
+See the Comparison Group section of this guide for a detailed explanation of a
+school’s Comparison Group.
+
+Economic Need Index
+The Economic Need Index (ENI) estimates the percentage of students at the school
+facing economic hardship. The metric is calculated as follows:
+• If the student is eligible for public assistance from the NYC Human
+Resources Administration (HRA) or lived in temporary housing in the past four
+years, the student’s Economic Need Value is 1.
+• Otherwise, the student’s Economic Need Value is the percentage of families
+with school-age children in the student’s Census tract whose income is
+below the poverty level, as estimated by the American Community Survey 5Year Estimate. This percentage is converted to a decimal from 0.00 to 1.00.
+• The school’s Economic Need Index is the average of its students’ Economic
+Need Values.
+• The Economic Need Index captures economic factors that affect student
+achievement without relying on student lunch forms, which can be
+burdensome and unreliable.
+To protect confidentiality, schools with an HRA or ENI over 95% will be reported as
+“over 95%” instead of their exact values.
+
+Students in a School’s Lowest Third
+The school’s lowest third for high schools is based on a student’s average 8th-grade
+ELA and math scores. For students who took math Regents exams in lieu of 8thgrade math scores, an imputed 8th-grade score is used that estimates what they
+would have most likely received on the regular 8th-grade exam. For each school,
+three separate cutoffs are calculated: one for first-year students, one for secondyear students, and one for third-year students. As students in their fourth year or
+beyond do not contribute to the credit-accumulation metrics, they are not included
+in the school’s lowest third calculations. Students without 8th-grade scores cannot
+be in the school’s lowest third.
+Because of disruptions caused by the COVID-19 pandemic, NYCPS did not
+calculate any schools’ lowest third for students in the third year of high school in
+2024–25. In 2021, when these students were in 8th grade, many remote students
+Last Updated: March 6, 2026
+
+Back to the Top
+
+6
+
+Educator Guide to the School Quality Reports |High Schools
+
+did not take the New York State 8th-grade ELA and math exams. The school’s
+lowest third is reported for first-, second-, and third-year high school students in the
+2024–25 School Quality Reports.
+
+Students in Lowest Third Citywide
+High-school students with 8th grade test scores are included in the lowest third
+citywide based on their average 8th grade ELA and math scores.
+A student without 8th grade scores will also be included in the lowest third citywide
+if the student:
+• Was placed in a Special Class anytime in the past five school years (2019-20
+through 2023-24); or
+• Is considered overage or overage/under-credited; or
+• Is a long-term ELL upon entry into school.
+
+Minimum N (Number of Students)
+In general, a school’s metric value is not reported if fewer than 15 students
+contributed to the metric. For graduation rate for ELLs and students with IEPs, the
+minimum number is 10. For the following metrics, the minimum number of students
+required for each metric is five: graduation rate for lowest third citywide and
+graduation rate for Black and Hispanic males in lowest third citywide.
+Metrics with fewer than the minimum number of students are not reported because
+of confidentiality considerations. Metrics with fewer than 15 students do not
+contribute to the school’s ratings because of the unreliability of measurements
+based on small numbers.
+
+Year in High School/ Cohort Letter
+Most accountability measures for high schools are based on each student’s “year in
+high school.” This is determined by the amount of time that has passed since the
+student entered ninth grade. This ninth-grade entry year, which is the school year
+when the student entered ninth grade (or the equivalent) anywhere in the world, is
+year one of high school. The next school year is the second year of high school, and
+so on. The year in high school often corresponds to the grade level, but not always.
+For example, a student who is repeating ninth grade is a second-year student. If this
+student drops out during the second year, the next year is the student’s third year
+even if the student is no longer in school.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+7
+
+Educator Guide to the School Quality Reports |High Schools
+
+A group of students in the same year in high school are members of a “cohort”, and
+each cohort is assigned a letter or number. Cohorts are sometimes referred to as
+the “Class of [year],” with the year of expected graduation based on graduating in
+four years after entering ninth grade. The following table shows the group of
+students corresponding to each cohort letter/number:
+Year in High
+Cohort Letter/
+Ninth Grade Entry “Class Of”
+School During
+Number
+School Year
+Designation
+2024-25
+First
+4
+2024-25
+Class of 2028
+Second
+3
+2023–24
+Class of 2027
+Third
+2
+2022–23
+Class of 2026
+Fourth
+1
+2021–22
+Class of 2025
+Fifth
+Z
+2020–21
+Class of 2024
+Sixth
+Y
+2019–20
+Class of 2023
+
+Overage/ Under-credited
+For high schools, a student’s overage/under-credited status is based on credits
+earned and Regents passed given the student’s age (where age is as of December
+31 of the entry school year, and the credits and Regents are earned before the start
+of the entry school year). During the COVID-19 pandemic, some Regents exams
+were not offered, and eligible students received waivers for those exams. For this
+metric, a Regents waiver is equivalent to a passed Regents exam.
+Age
+16
+
+Criteria
+Under 22 credits and two or fewer Regents passed.
+
+17
+
+Under 22 credits; or
+Under 33 credits and three or fewer Regents passed.
+Under 22 credits; or
+Under 33 credits and four or fewer Regents passed: or
+Under 44 credits and one or fewer Regents passed.
+Under 33 credits; or
+Under 44 credits and one or fewer Regents passed.
+
+18
+19 or older
+
+For students entering a high school from outside of the NYC Public School system,
+a credits-only criteria is used (because those students may not have taken Regents
+exams at their prior school).
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+8
+
+Educator Guide to the School Quality Reports |High Schools
+
+Age
+Criteria for students entering from outside of NYCPS
+16
+Under 11 credits.
+17
+Under 22 credits.
+18
+Under 33 credits.
+19 or older
+Under 44 credits.
+Students with a history of incarceration are also considered overage/undercredited.
+
+Most at Risk
+A subset of the overage/under-credited category is called “most at risk,” and takes
+into account students who are very far behind when they enter the school. A
+student is considered “most at risk” based on the following criteria (where age is as
+of December 31 of the entry school year, and the credits and Regents are earned
+before the start of the entry school year).
+Age
+16
+17
+18
+19 or
+older
+
+Criteria
+Under 11 credits and zero Regents passed.
+Under 22 credits.
+Under 22 credits; or
+Under 33 credits and one or fewer Regents passed.
+Under 22 credits; or
+Under 44 credits and one or fewer Regents passed.
+
+For students entering a high school from outside of the NYC Public School system,
+a credits-only criteria is used (because those students may not have taken Regents
+exams at their prior school).
+Age
+16
+17
+18
+19 or older
+
+Criteria for students entering from outside of NYCPS
+Under 11 credits.
+Under 11 credits.
+Under 22 credits.
+Under 33 credits.
+
+Students with a history of participation in an NYCPS program for justice-involved
+youth are also considered most at risk.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+9
+
+Educator Guide to the School Quality Reports |High Schools
+
+Demographic Information
+
+This section describes the demographic information reported in the School Quality
+Reports, including the School Quality Reports: Snapshot.
+
+Student Subgroup Demographics
+►Percent of Students Enrolled in the School
+The first set of values reflects students who are enrolled on the audited register as
+of October 31, 2024 by racial/ethnic subgroup: Asian, Black, Hispanic or Latinx,
+Native American, Native Hawaiian/Pacific Islander, and White. Following NYSED
+reporting guidelines, any student identified as ethnically Hispanic is included only in
+the Hispanic category, regardless of which racial groups the student is in. Any nonHispanic student who is identified in more than one category counts as Multiracial
+and is not included in the individual categories.
+The next set of values reflects students who are enrolled on the audited register as
+of October 31, 2024 by gender: Female, Male, and Neither Female nor Male. Gender
+is recorded on student enrollment paperwork and can be changed on request.
+
+►Percent of Students Enrolled in the Borough
+NYCPS students in grades 9–12 who are enrolled on the audited register as of
+October 31, 2024 attending a school inside of the school’s borough by racial/ethnic
+subgroup.
+
+►Percent of Grade 9-12 Public School Students Living within X Miles
+NYCPS students in grades 9–12 who are enrolled on the audited register as of
+October 31, 2024 residing inside of the school’s nearby area, by racial/ethnic
+subgroup: Asian, Black, Hispanic or Latinx, Native American, Native
+Hawaiian/Pacific Islander, and White.
+The school’s nearby area is calculated as the median distance of students’ home
+addresses from the school address in miles, based on students enrolled in the
+school on the audited register as of October 31, 2024. Based on current students’
+home addresses, NYCPS projects that a typical family living within this nearby area
+would be willing to have their child travel the necessary distance to attend this
+school. If the school’s racial percentages are not representative of the racial
+percentages of public-school students living in the nearby area, this may indicate
+that the reason for the school’s racial make-up relates more to school factors (e.g.,
+admissions) than to housing factors.
+Last Updated: March 6, 2026
+
+Back to the Top
+
+10
+
+Educator Guide to the School Quality Reports |High Schools
+
+Teacher Racial Subgroup Demographics
+
+Any school staff member who is active and in a teacher title as of October 31, 2024
+by racial subgroup: Asian, Black, Hispanic or Latinx, Native American, Native
+Hawaiian/Pacific Islander, and White.
+A value for this metric is displayed when there are at least five people in a given
+category.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+11
+
+Educator Guide to the School Quality Reports |High Schools
+
+Instruction and Performance Metrics
+
+This section describes the Instruction and Performance metrics that are not related
+to the New York City School Survey. The School Quality Reports: Snapshot includes
+a subset of those metrics.
+
+Progress Toward Graduation
+►Student Attribution
+Students in grades 9–12 who are continuously accountable in the NYC public
+school system from October 31, 2024 through June 30, 2025, are attributed to the
+last diploma-granting school responsible as of October 31, 2024. We use that date
+to attribute students because it is tied to funding and there are yearly procedures in
+place to ensure the accuracy of the register on that date.
+A student is considered continuously accountable for the year if the student is
+accountable to one or more NYC public schools or programs on every day from
+October 31 through June 30. Students who receive a cohort-removing discharge
+during the period are non-accountable for the year. Students who enter the NYC
+public school system for the first time or who return from a cohort-removing
+discharge during the period are also non-accountable.
+Students who graduate mid-year remain accountable for the remainder of that
+school year only. Students who are discharged with anything other than a cohortremoving discharge or graduation are considered dropped out. Dropped-out
+students are accountable in the Progress Toward Graduation metrics through the
+end of the fourth year of high school. Students in non-diploma granting programs,
+such as Young Adult Borough Center (YABC), high school equivalency diploma
+(HSE, formerly the GED), home/hospital instruction, or programs for incarcerated
+students, are also accountable through the end of the fourth year of high school.
+Dropped-out students and students in non-diploma granting programs become
+non-accountable in the Progress Toward Graduation metrics starting in year five of
+high school.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+12
+
+Educator Guide to the School Quality Reports |High Schools
+
+►Percentage of Students Earning 10+ Credits: in Year 1 of High
+School; in Year 2 of High School; and in Year 3 of High School.
+
+These metrics show the percentage of the school’s students, in the specified year of
+school, who met the following criteria:
+• Earned 10 or more credits between Fall 2024 and Summer 2025 (i.e., during
+the fall, spring, and summer terms).
+• At least 6 of these credits were earned from the four main subjects (English,
+math, science and social studies); and
+• At least some credit (greater than zero) was earned in at least three of the
+four main subjects. Both elective and core courses count toward this
+requirement.
+Eligible students who do not meet the above requirements contribute negatively
+(contribute 0 to the numerator and 1 to the denominator) for this metric. Students
+who drop out of school or enter non-diploma granting programs remain in the
+denominator for this metric for as long as they would have been in the first three
+years of high school.
+Students eligible for the New York State Alternate Assessment (NYSAA) are
+excluded from this metric.
+
+►Percentage of Students in the School’s Lowest Third Earning 10+
+Credits in Year 1 of High School; in Year 2 of High School; and in Year 3 of
+High School
+These metrics are the same as the previous metrics, except they are limited to
+students in the school’s lowest third, as determined by the average of the 8th-grade
+ELA and math proficiency ratings.
+
+►Average Completion Rate for Remaining Regents
+This metric measures students’ progress each year toward passing the five Regents
+subject tests required for a Regents diploma: English, math, science, social studies,
+and an additional exam. The additional exam can be a second exam in math,
+science, social studies, or a language other than English (LOTE) assessment
+approved by the New York State Education Department for the 4+1 pathway to
+graduation. This metric applies to students in years two, three, and four of high
+school.
+The metric value for the school is the total number of needed subjects passed (the
+numerator) divided by the total number of needed subjects (the denominator).
+Last Updated: March 6, 2026
+
+Back to the Top
+
+13
+
+Educator Guide to the School Quality Reports |High Schools
+
+For students in years three and four of high school, the denominator contribution
+(exams needed) is the total number of subjects not passed as of the beginning of
+2024–25. The numerator (exams passed) is the total number of needed subjects
+passed in 2024–25.
+For students in year two of high school, the first and second years are considered
+together as if they were one long year. Also, because second-year students are only
+expected to have passed any three of the five subjects total, the denominator
+contribution (exams needed) is three minus the number of subjects passed in
+middle school. The numerator contribution is the number of needed subjects
+passed during years one or two.
+When applying these rules, the denominator contribution is never allowed to go
+below zero and the numerator is never allowed to be higher than the denominator.
+On Regents exams, the required passing score for all students in all exams is 65 or
+higher. Scores of “PR” on component exams are considered passing. Successful
+completion of State-approved Regents alternatives, including some Advanced
+Placement exams, International Baccalaureate exams, and SAT subject exams,
+also count towards satisfying the Regents requirements. The minimum acceptable
+scores that can be substituted for Regents exams are described on the NYSED
+website. Subjects with WA (waivers) are considered passing. Because the
+denominator is based on the needed exams for the entire cohort, failing a needed
+exam counts the same as having never taken it.
+In addition to students that are currently enrolled, those who have dropped out or
+are attending a non-diploma granting program continue to be included in this metric
+until after their 4th year of high school. Students eligible for NYSAA are excluded.
+Schools with a waiver from the state to use portfolio assessments instead of some
+Regents exams do not get values for this metric.
+
+►Average Regents Score: English, Living Environment, Biology, Global
+History, U.S. History, Algebra I
+These metrics show the school’s mean scores on the listed Regents exams. There is
+a separate metric for each of the listed exams.
+As described above, students are attributed to the last diploma-granting school
+responsible as of October 31, 2024 (even if they took the exam while enrolled at a
+different school). If a student took the same Regents exam multiple times during the
+Last Updated: March 6, 2026
+
+Back to the Top
+
+14
+
+Educator Guide to the School Quality Reports |High Schools
+
+school year, the highest score is used.
+Note: The U.S. History Regents exam was not offered in June 2022.
+
+Performance by Racial Subgroups
+Snapshot: The School Quality Reports: Snapshot includes the following
+performance metric for Asian, Black, Hispanic or Latinx, Native American, Native
+Hawaiian/Pacific Islander and White students:
+4-Year Graduation Rate
+The Snapshot includes a graphic that shows the subgroup’s metric value.
+The minimum N for the subgroup metrics is 15; the metric value will be N/A if the
+number of students is less than 15.
+School Quality Reports: In addition to the metric listed above (4-Year Graduation
+Rate), the School Quality Reports: Dashboard and Citywide Results file include the
+following performance metrics for Asian, Black, Hispanic, Native American, Native
+Hawaiian/Pacific Islander, Multiracial, and White students:
+• Percent of 1st Year Students Earning 10+ Credits,
+• Percent of 2nd Year Students Earning 10+ Credits,
+• Percent of 3rd Year Students Earning 10+ Credits,
+• Regents Completion Rate,
+• 6-Year Graduation Rate,
+• 4-Year High School Persistence Rate,
+• 6-Year High School Persistence Rate,
+• College and Career Preparatory Course Index (CCPCI), and
+• Post-secondary enrollment rate (PSER)—6 months.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+15
+
+Educator Guide to the School Quality Reports |High Schools
+
+►4-Year Graduation Rate for Student Subgroups:
+English Language Learners; Students Recommended for Special Class,
+ICT, SETSS Services; Students in the Lowest Third Citywide; Black and
+Hispanic Males in the Lowest Third Citywide
+
+These metrics are calculated the same way as the Four-Year Graduation Rate for
+the school, except that each metric is limited to students in the specified groups.
+Schools will be able to earn additional points on their Student Achievement scores
+based on 4-year Graduation Rate for Native American, Black, Native
+Hawaiian/Pacific Islander, and Hispanic or Latinx students.
+For this metric, students are included in the students with IEPs group if their most
+restrictive placement in the last five school years was Special Class, ICT, or SETSS.
+Any student identified as an English language learner for any of the last five school
+years will be considered an ELL for this metric.
+If a student belongs to more than one of these groups, the student counts in all of
+those groups.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+16
+
+Educator Guide to the School Quality Reports |High Schools
+
+Graduation, Diploma, and Non-Dropout
+Metrics
+Student Attribution
+►4-Year Graduation Cohort
+
+For graduation metrics, students are attributed to schools using different rules than
+for the Progress Toward Graduation metrics. Students are attributed to the last
+diploma-granting school as of June 30 of their fourth year of high school. Consistent
+with state and federal graduation-reporting rules, continuous enrollment is not
+necessary. Any student enrolled for one or more days (including no-shows) is
+accountable at their last diploma-granting school before June 30 of the fourth year
+of high school.
+For the 2024–25 School Quality Reports, a school’s 4-year graduation cohort,
+represented by the number ‘1’, consists of all students who:
+• Entered 9th grade for the first time anywhere in 2021–22.
+• Were active in the school as of June 30, 2025, or the school is the last
+diploma-granting high school that they attended before June 30, 2025; and
+• Did not meet the criteria for a documented cohort-removing discharge (see
+below) before June 30, 2025.
+A discharged student can become non-accountable under limited circumstances. If
+the student leaves school for one of the reasons below before June 30 of year four,
+the student will become non-accountable if all required documentation is collected
+and stored on file.
+Potentially Cohort-Removing Discharge Codes:
+Code
+08
+10
+11
+15
+25
+
+Description
+Admitted to a non-public NYC school with documentation
+Discharged to a court-ordered placement (non-incarceration)
+Transferred to a school outside of NYC with documentation
+Deceased
+Already received a high school diploma outside NYCPS at the time of
+enrollment
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+17
+
+►6-Year Graduation Cohort
+
+Educator Guide to the School Quality Reports |High Schools
+
+For the 2024–25 School Quality Reports, a school’s 6-year graduation cohort
+consists of all students who were in the school’s 4-year graduation cohort in 2022–
+23. These students are represented by cohort letter ‘Y’. The rules for inclusion and
+exclusion are the same as for the 4-year cohort. Because attribution is by June 30 of
+year four, if a student transfers to a new school in year five, the student remains
+accountable for graduation to the year-four school.
+
+►4 -Year Graduation Rate
+This metric shows the percentage of students in the school’s four-year cohort
+(defined above) that graduated with a Regents or Local Diploma, including August
+graduates. For the 2024–25 School Quality Reports, the four-year cohort reflects the
+‘1’ cohort of students who first entered high school during the 2021–22 school year.
+This cohort can be viewed in ATS using the command RGCS.
+For schools with at least 1.5% of students who are NYSAA-eligible, a separate
+metric indicates the school’s graduation rate for only students eligible for standard
+assessment. This graduation rate is printed on the School Quality Snapshot for
+informational purposes.
+Please note: Students should be discharged dates communicated in the
+Graduation-GRDT Wiki Page to count as graduates in the School Quality Reports.
+
+►6-Year Graduation Rate
+This metric is similar to the four-year graduation rate, except that it shows the
+percentage of students in a school’s cohort that graduated with a Regents or Local
+Diploma within six years of beginning high school, including August graduates. For
+the 2024–25 School Quality Reports: Scoring Guide, the six-year cohort reflects the
+‘Y’ cohort of students who first entered high school during the 2019–20 school year.
+This cohort can be viewed in ATS using the command RGCS.
+
+►4-Year High School Persistence Rate
+This metric is the percentage of the students in the 4-year graduation cohort who
+earned a local or higher diploma, earned a HS equivalency (formerly known as
+GED), earned a CDOS/SACC (only NYSAA-eligible students), or were still enrolled in
+a DOE school or program with at least 50% attendance since February 1, 2024.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+18
+
+Educator Guide to the School Quality Reports |High Schools
+
+►6-Year High School Persistence Rate
+
+This metric is the same as 4-year High School Persistence Rate except that it is
+based on students in the 6-year graduation cohort.
+
+Other Metrics
+►Average SAT Score
+The School Quality Snapshot for high schools reports the average SAT score for
+informational purposes. The average SAT score is based on the highest “super
+score” of each student in the graduating cohort who took the SAT. The “super
+score” combines the highest section scores (in Math and Evidence-Based Reading
+& Writing) that the student has achieved, even if they were achieved during different
+test dates.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+19
+
+Educator Guide to the School Quality Reports |High Schools
+
+College and Career Readiness
+►Student Attribution
+
+For the College and Career Readiness metrics, students are attributed to the last
+diploma-granting school as of June 30 of their fourth year of high school. The
+inclusion criteria are the same as those used for the graduation rate; both
+graduates and non-graduates are included.
+If a student earns an associate degree before the end of high school, that student
+contributes positively to all of the college and career readiness metrics regardless
+of whether the student meets the other requirements.
+
+►College and Career Readiness Score (4 Year)
+This metric shows the average College and Career Readiness (CCR) score of
+students in the school’s four-year cohort after their fourth year of high school. For
+the 2024-25 School Quality Reports, this metric evaluates cohort ‘1’ (students who
+first entered high school during the 2021-22 school year / “Class of 2025”). The
+College and Career Readiness metric is reported on a 0-100 scale for each school.
+Each student receives a CCR score from 0 to 100 where 100 represents the highest
+readiness for college and careers. Students earn points through predictors that
+demonstrate college and career readiness including test scores, advanced course
+completion, course grades, and a variety of endorsements and certificates. These
+predictors are divided into six categories:
+• Course Grades: up to 30 points
+• English: up to 15 points
+• Mathematics: up to 15 points
+• Science up to 15 points
+• Social Studies: up to 15 points
+• Technology, Art, and World Languages: up to 10 points.
+Students only receive points for their highest predictor in each category. Predictor
+points are based on how predictive they are of CUNY GPA based on historical
+analysis of NYCPS graduates. A list of all predictors and their point values for the
+2024-25 School Quality Reports can be found in Appendix A.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+20
+
+Educator Guide to the School Quality Reports |High Schools
+
+Note: The College and Career Readiness metric will now be used for non-charter
+high school ratings in the 2024-25 School Quality Reports. This metric was
+introduced in the 2023-24 School Quality Reports and replaces the College
+Readiness Index, which was reported from 2012 to 2020.
+
+►College and Career Readiness Score (6 Year)
+This metric shows the average College and Career Readiness (CCR) score of
+students in the school’s six-year cohort after their sixth year of high school. For the
+2024-25 School Quality reports, this metric evaluates cohort ‘Y’ (students who first
+entered high school during the 2020-21 school year / “Class of 2023”). The College
+and Career Readiness metric is reported on a 0-100 scale for each school.
+Note: The College and Career Readiness metric will now be used for non-charter
+high school ratings in the 2024-25 School Quality reports. This metric was
+introduced in the 2023-24 School Quality reports and replaces the College
+Readiness Index, which was reported from 2012 to 2020.
+
+►College and Career Preparatory Course Index (CCPCI)
+This metric shows the percentage of students in the school’s four-year cohort who
+successfully completed approved rigorous courses and assessments after four
+years of high school. For the 2024–25 School Quality reports, this metric evaluates
+cohort ‘1’ (students who first entered high school during the 2021–22 school year/
+“Class of 2025”).
+A student who has accomplished any of the following achievements contributes
+positively to this metric:
+• Scored 65+ on the Algebra II or Math B Regents exam*.
+• Scored 65+ on the Chemistry Regents exam*.
+• Scored 65+ on the Physics Regents exam*.
+• Scored 3+ on any Advanced Placement (AP) exam;
+• Scored 4+ on any International Baccalaureate (IB) exam;
+• Earned college credit via the College Board College-Level Examination
+Program (CLEP);
+• Earned a grade of “C” or higher in a college credit-bearing course (e.g.,
+College Now, Early College);
+• Passed another course certified by NYCPS as college- and career-ready;
+• Earned a diploma with a New York State Seal of Biliteracy (NYSSB)
+Last Updated: March 6, 2026
+
+Back to the Top
+
+21
+
+Educator Guide to the School Quality Reports |High Schools
+
+endorsement;
+• Earned a diploma with a Career and Technical Education (CTE) endorsement;
+• Earned a diploma with a Seal of Civic Readiness endorsement;
+• Earned a diploma with an Arts endorsement; or
+• Passed an industry-recognized technical assessment.
+Students who meet more than one of the requirements above are only counted
+once in the numerator.
+*Due to COVID-19, Regents exams were not administered from June 2020 through
+January 2022. Students who received waivers were able to use them in lieu of
+exams for graduation purposes. On the CCPCI metric, schools receive credit for
+Algebra II, Chemistry, and Physics where the student received a Regents waiver.
+In addition, students who did not meet any of the requirements above but scored 2
+on an AP exam or scored 3 on an IB exam contribute 0.5 to the numerator. This
+provides partial credit for these scores, which reflect some degree of readiness for
+higher-level courses.
+
+►Postsecondary Enrollment Rate by Six Months after High School
+This metric shows the percentage of students who graduated and enrolled in a twoor four-year college, vocational program, approved apprenticeship, or public
+service within six months of their scheduled graduation date. For the 2024–25
+School Quality Reports, this metric evaluates cohort ‘Z’ (students who first entered
+high school during the 2020–21 school year/ “Class of 2024”). To contribute
+positively, a student must have graduated high school with a local or higher diploma
+and enrolled in a qualifying post-secondary program by December 31, 2024.
+For this metric, public service includes enlistment in armed forces (U.S. Army,
+Navy, Marine Corps, Air Force, or Coast Guard) or participation in AmeriCorps or the
+City Year Volunteer Corps.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+22
+
+Educator Guide to the School Quality Reports |High Schools
+
+►Postsecondary Enrollment Rate by 18 Months after High School
+
+This metric is like Postsecondary Enrollment Rate by Six Months after High School
+except that it shows the percentage of students who graduated and enrolled in a
+two- or four-year college, vocational program, or public service within 18 months of
+their scheduled graduation date. For the 2024–25 School Quality Reports, this
+metric evaluates cohort ‘Y’ (students who first entered high school during the 2019–
+20 school year / “Class of 2023”). To contribute positively, a student must have
+graduated and enrolled in a qualifying postsecondary program by December 31,
+2024.
+
+►College Persistence
+This metric shows the percentage of students in the six-year cohort who graduated
+from high school, enrolled in college, and persisted in college through the beginning
+of their third semester, within six years of starting high school. To count as having
+persisted, a student must have enrolled in college for three consecutive semesters.
+For the 2024–25 School Quality Reports, this metric evaluates cohort ‘Y’ (students
+who first entered high school during the 2019–20 school year/ “Class of 2023”).
+The persistence metric is based primarily on semester-enrollment data from the
+National Student Clearinghouse (NSC) and CUNY. If these data show that a student
+enrolled for three consecutive semesters, the student contributes 1 to the
+numerator. If these data show that a student did not enroll for three consecutive
+semesters, the student contributes 0 to the numerator. If a student never enrolled
+in college in the first place, the student contributes 0 to the numerator. If school
+staff entered a student’s college enrollment in CVER (and the student did not
+appear in the NSC/CUNY data), the student is given a persistence value equal to the
+school’s percentage of students that persisted according to the NSC/CUNY data.
+Example: Suppose a school had the following groups of students
+Groups of students
+Contribution to persistence metric
+50 students who never entered college Contribute 0.00 each.
+80 students who entered college and
+Contribute 1.00 each.
+persisted, based on the NSC/CUNY
+data
+20 students who entered college but
+Contribute 0.00 each.
+did not persist, based on the
+NSC/CUNY data
+10 students where the school staff
+Contribute 0.80 each (because 80 out
+recorded in CVER that they entered
+of 100 students at the school with
+college
+NSC/CUNY data persisted).
+Last Updated: March 6, 2026
+
+Back to the Top
+
+23
+
+Educator Guide to the School Quality Reports |High Schools
+
+The school’s persistence rate is (80 x 1.00 + 10 x 0.80) / 160 = 55%.
+
+►Postsecondary Enrollment Rate by Six Months after High School for
+Students in the Lowest Third Citywide
+These metrics are calculated the same way as the corresponding metrics in the
+College and Career Readiness category, except that the population for each metric
+is limited to students in the lowest third citywide.
+For 2024-25, this metric is not displayed because in 2019-20, 8th-grade students did
+not take the State math and ELA tests due to COVID-19.
+
+Students in Advanced Courses by Racial Subgroup
+Students Enrolled in Advanced Courses by Race is calculated as the count of
+unique students of a race enrolled in the advanced course category divided by all
+unique students enrolled in that advanced course category. Enrollment
+calculations are based on which courses each student is enrolled in on October 31,
+2024.
+The following course codes are used to determine advanced course categories. If a
+student is enrolled in any of the courses outlined below, they count positively
+towards being enrolled in an advanced course. Only credit-bearing courses are
+included in this metric. Each course may only count towards one of the categories.
+Advanced
+Course
+Course Code
+Course
+Category
+Advanced
+Advanced Placement
+Sixth character "X"
+Placement (AP)
+(AP)
+International
+International
+Sixth character "B"
+Baccalaureate
+Baccalaureate (IB)
+(IB)
+CLEP
+College Board College
+N/A
+Level Examination
+Program
+College Credit
+College course that
+Sixth character "U"
+awards credit
+Other College
+College Preparatory
+Approved for CPCC with year
+Preparatory
+Course Certification
+matching the Reports year
+Course
+(CPCC) Courses
+Last Updated: March 6, 2026
+
+Back to the Top
+
+24
+
+Educator Guide to the School Quality Reports |High Schools
+
+Other Advanced
+Math/Science
+
+Algebra II
+
+Other Advanced
+Math/Science
+
+Calculus
+
+Other Advanced
+Math/Science
+
+Chemistry
+
+Other Advanced
+Math/Science
+
+Physics
+
+First two characters "MR", and does
+not meet the criteria for AP, IB,
+College Credit, or CPCC defined
+above.
+First two characters "MC", and
+does not meet the criteria for AP,
+IB, College Credit, or CPCC defined
+above.
+First two characters "SC", and does
+not meet the criteria for AP, IB,
+College Credit, or CPCC defined
+above.
+First two characters "SP", and does
+not meet the criteria for AP, IB,
+College Credit, or CPCC defined
+above.
+
+►“Then and Now” Table
+The School Quality Reports: Snapshot includes a table showing key student results
+broken out by students’ starting points.
+For high schools, the Snapshot shows four-year graduation rates broken out by 8thgrade starting points (Level 1, 2, 3–4).
+Please note for the class of 2024, and class of 2025 then 8th-grade students were
+unable to take the State math and ELA tests due to COVID-19. These tables are thus
+suppressed in the 2024-25 School Quality Reports.
+The starting-point levels are based on rescaled test scores, so that a starting point
+of Level 1 on the 8th grade exams reflects a score on a prior version of the state
+exam that would be equivalent to a Level 1 on the most recent state exam.
+For this table, students are categorized based on the lower of their levels on the
+math and ELA state tests in 8th grade. For example, a student who scored a Level 3
+on math and a Level 2 on ELA would be characterized as a Level 2 in the table.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+25
+
+Educator Guide to the School Quality Reports |High Schools
+
+Students with Individualized Education Programs
+(IEPs)
+►Percent of Students Receiving Special Education Programs
+
+This metric includes all students with Individualized Education Programs (IEPs) as
+of June 2025, where the IEP recommends special education programs. Types of
+programs include Special Class (SC), Integrated Co-Teaching (ICT), and Special
+Education Teacher Support Services (SETSS). A student is reflected as “fully
+receiving” if there is an exact match between the IEP and the course enrollment in
+the STARS scheduling system. If the student is receiving some subjects or services
+but not all recommended subjects or services, this is reflected as “partially
+receiving.” Students with no STARS data or no matching programs are reflected as
+“not receiving.”
+
+► Percent of Students Receiving Recommended Related Services
+This metric includes all students with Individualized Education Programs (IEPs) as
+of June 2025, where the IEP recommends related services. This includes services
+such as speech therapy, occupational therapy, physical therapy, and counseling. If
+the student’s received services match all of the recommended services, the
+student is listed as “fully receiving.” If they have some but not all recommended
+services, this is “partially receiving.” A student with a recommendation but no
+services is reflected as “not receiving.”
+
+►Movement of Students with IEPs to Less Restrictive Environments
+This measure recognizes schools that educate students with IEPs in the least
+restrictive environment that is educationally appropriate. Students with an IEP
+during any of the last four school years are sorted into four tiers based on primary
+program recommendations and the amount of time spent with general education
+peers, as of the end of September of each year. The denominator for this measure
+includes all 9–12 students with Tier Two or higher in any of the years 2022–23, 2021–
+22, or 2020–21. Students who are newly certified in 2024–25 are excluded.
+The numerator contribution of each student is the highest tier number from the last
+four school years minus the tier number for 2024–25. This number can range from
+zero (for students who are in their highest tier in 2024–25) to three (for students who
+were previously in Tier Four and are in Tier One in 2024–25). Negative numbers are
+not possible; students who move to a more restrictive environment count the same
+as if they had always been in that setting.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+26
+
+Educator Guide to the School Quality Reports |High Schools
+
+Tier One—General education
+• No IEP, or
+• IEP with a recommendation of related services only
+Tier Two—80–100% of time with general education peers
+• Primary recommendation of SETSS or ICT, or
+• A Primary recommendation of Special Class, spend 80–100% of instructional
+periods with general education peers.
+Tier Three—40–79% of time with general education peers
+• Primary recommendation of Special Class, spend 40–79% of instructional
+periods with general education peers.
+Tier Four—0–39% of time with general education peers
+• Primary recommendation of Special Class, spend 0–39% of instructional
+periods with general education peers
+Students who start a less restrictive program at the beginning of 2024–25 count
+immediately, but if they start the less restrictive program mid-year, they will not
+contribute to the metric until the next year.
+
+Attendance
+The attendance rate includes the attendance for all high school students on a
+school’s register at any point during the period September 2024 through June 2025.
+The attendance rate is calculated by adding together the total number of days
+attended by all students and dividing it by the total number of days on register for all
+students.
+Pre-K attendance is excluded for any school that has a pre-K grade. Students in
+grades 6–8 are not included in the high school Reports of a 6–12 school, and
+students in grades K–8 are not included in the high school Reports of a K–12 school.
+
+►Percentage of Students with Attendance Rates of 90% or Higher
+This metric shows the percentage of students at the school with attendance rates of
+90% or higher. Because chronic absenteeism is defined as students with
+attendance rates below 90%, this metric shows the percentage of students who are
+not chronically absent.
+Each student’s attendance rate is calculated by adding together the total number of
+days when the student was present and dividing it by the total number of days on
+Last Updated: March 6, 2026
+
+Back to the Top
+
+27
+
+Educator Guide to the School Quality Reports |High Schools
+
+register for the student at the school (the sum of the days when the student was
+present and the days when the student was absent). If a student’s total number of
+days on register at the school is less than 20, the student’s attendance rate is
+treated as N/A and the student does not contribute to this metric.
+Pre-K attendance is excluded for any school that has a Pre-K grade. For K–12
+schools, this metric is calculated separately for the K–8 grades and 9–12 grades.
+Similarly, for 6–12 schools, the metric is calculated separately for the 6–8 grades
+and the 9–12 grades.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+28
+
+Scores and Ratings
+
+Educator Guide to the School Quality Reports |High Schools
+
+The School Quality Reports include scores and ratings based on schools’
+performance across various metrics relative to citywide averages and their
+Comparison Group estimates. The scores for each rated metrics in the School
+Quality Reports are used to calculate an overall rating on a 1-4.99 scale for each
+rated School Quality Reports category.
+
+Overall Category Scores and Ratings
+Category ratings are the weighted average of the various scores of the metrics that
+compose each category. In cases where a metric or subcategory score is missing,
+the weight that would be given to the missing score is distributed across all other
+metrics or subcategories.
+• For Instruction and Performance, all metrics and the survey subcategory are
+weighted individually.
+• For Safety and School Climate and Relationships with Families, each
+subcategory score is the average of the metric scores in that subcategory,
+and the category score is the weighted average of the subcategory scores.
+The section ratings for Instruction and Performance, Safety and School Climate,
+and Relationships with Families are based on the first digit of the weighted average.
+• If the first digit is 4, the section rating is Excellent.
+• If the first digit is 3, the section rating is Good.
+• If the first digit is 2, the section rating is Fair.
+• If the first digit is 1, the section rating is Needs Improvement.
+Schools designated for phase-out and schools in their first year of operation in
+2024-2025 do not receive ratings for any category.
+Schools do not receive ratings for Instruction and Performance if they do not have a
+4-year graduation rate in 2024-25.
+Schools do not receive ratings for Safety and School Climate if:
+• Teacher response rate was less than 30%, or
+• Fewer than 5 teachers responded, or
+• Student response rate was less than 30% (K-8 and middle schools only), or
+Last Updated: March 6, 2026
+
+Back to the Top
+
+29
+
+Educator Guide to the School Quality Reports |High Schools
+
+• Fewer than 5 students responded.
+
+Schools do not receive ratings for Relationships with Families if:
+• Average of teacher response rate and parent response rate was less than
+30%, or
+• Fewer than 5 teachers responded, or
+• Fewer than 5 parents responded.
+
+Metric Scores and Rating
+►Non-Survey Performance Metrics
+The School Quality Reports include scores and ratings based on schools’
+performance across various metrics relative to citywide averages and their
+Comparison Group estimates. The scores for each rated metric in the School
+Quality Reports are used to calculate an overall rating on a 1-4.99 scale for each
+rated SQR category.
+For each metric, the school received a metric score from 1.00 to 4.99 based on their
+students’ raw performance and their impact on their students, as determined
+through their Comparison Group. The metric scores are calculated through the
+following steps:
+1. Determine the school’s “impact score” for a given metric, which measures
+the school’s performance relative to their Comparison Group estimate for the
+metric. The formulas used to determine a school’s “impact score” allow us to
+compare schools’ performance to their Comparison Group and to other
+schools of the same school type. We use the conditional standard deviation
+to find the “impact score,” which is the standard deviation of (school’s
+performance minus Comparison Group value) for each metric/school type.
+a. If the school’s raw performance met or exceeded their Comparison
+Group estimate, then their “impact score” is defined by this formula on
+a 1-4.99 scale: 3 +
+
+𝑡𝑜𝑝𝐻𝑎𝑙𝑓𝐶𝑜𝑛𝑠𝑡(𝑣𝑎𝑙𝑢𝑒−𝐶𝑜𝑚𝐺𝑟𝑜𝑢𝑝)
+𝐶𝑜𝑛𝑑𝑖𝑡𝑖𝑜𝑛𝑎𝑙 𝑆𝑡𝑑 𝐷𝑒𝑣
+
+b. If the school’s raw performance is less than their Comparison Group
+estimate, then their “impact score’ is defined by this formula on a 14.99 scale: 3 −
+
+𝑏𝑜𝑡𝑡𝑜𝑚𝐻𝑎𝑙𝑓𝐶𝑜𝑛𝑠𝑡(𝐶𝑜𝑚𝐺𝑟𝑜𝑢𝑝−𝑣𝑎𝑙𝑢𝑒)
+𝐶𝑜𝑛𝑑𝑖𝑡𝑖𝑜𝑛𝑎𝑙 𝑆𝑡𝑑 𝐷𝑒𝑣
+
+c. The topHalfConst and bottomHalfConst refer to constants that allow
+Last Updated: March 6, 2026
+
+Back to the Top
+
+30
+
+Educator Guide to the School Quality Reports |High Schools
+
+scores to be distributed reasonably across school types. They are
+listed in Appendix C for 2024-2025.
+2. Determine the school’s “performance score” for a given metric, which
+measures the school’s performance relative to the citywide average. The
+“performance score” is based on the same formulas as the “impact score,”
+but the conditional standard deviation is replaced by the citywide standard
+deviation: the standard deviation of (school’s performance minus city
+average) for each metric/school type.
+3. Each metric score is a balance of the school’s “impact” and “performance”
+on that particular metric. To find how much each plays a part in that metrics’
+score, we find the “impact weight” and “performance weight” for that specific
+metric at that specific school.
+a. The impact weight is found using the quadratic formula 𝑌 = −3.6(𝑥 −
+0.5)2 + 0.95, where 𝑥 is the performance score for that metric and 𝑌 is
+the impact weight.
+i. Why do we use this formula? Using this quadratic formula
+means that schools with low and high-performance scores will
+be scored primarily on their performance, whereas schools with
+more moderate performance scores will be scored more heavily
+based on their impact. This particular formula weighs a school’s
+impact on a metric a minimum of 5%, which allows schools that
+outperform their Comparison Group estimates to have that
+reflected in their scores even if raw performance is relatively low.
+ii. Example: A school has an overall performance score of 0.62 on
+a scale of 0 − 1. The school’s impact weight is calculated by
+solving for 𝑦: 𝑦 = −3.6(0.62 − 0.5)2 + 0.95. The school’s
+impact weight is thus 0.8982, 𝑜𝑟 89.82%.
+b. The performance weight is 1-Y.
+i. Example: In the example above, the school would have a
+performance weight of (1 – 0.8982 = 0.1018), or 10.18%.
+4. The score for the metric is (impact score * impact weight) + (performance
+Last Updated: March 6, 2026
+
+Back to the Top
+
+31
+
+Educator Guide to the School Quality Reports |High Schools
+
+score * performance weight).
+a. Example: If the school in the example above had an impact score of
+0.78 on this metric, then their metric score would be (0.78 * 0.8982) +
+(0.62 * 0.1018) = 0.7637. Rescaled to a 1-4.99 scale, this is a metric
+score of 4.05.
+
+Rating Labels in the School Quality Reports: Scoring
+Guide and School Quality Reports: Snapshot
+The ratings in the School Quality Reports: Snapshot are the same as in the School
+Quality Report: Scoring Guide, except that different rating labels are used in the
+School Quality Reports: Snapshot.
+School Quality Reports: Scoring Guide
+Rating Labels
+Exceeding Target
+Meeting Target
+Approaching Target
+Not Meeting Target
+
+Last Updated: March 6, 2026
+
+School Quality Reports: Snapshot
+Rating Labels
+Excellent
+Good
+Fair
+Needs Improvement
+
+Back to the Top
+
+32
+
+Metric Comparisons
+
+Educator Guide to the School Quality Reports |High Schools
+
+In addition to the scores and ratings, the School Quality Reports provide context
+for a school’s performance by sharing city averages, district averages, and the
+results of a Comparison Group of similar students throughout the city.
+
+City and Borough Averages
+In general, we calculate city and borough averages by taking n-weighted averages of
+school-level results for all schools within the same school type. The n-weighting is
+based on the number of students at each school included in the metric; it means
+that a school with many students included in a metric will count more toward the
+city and borough averages than a school with fewer students included in that
+metric.
+For graduation cohort metrics (including graduation rates, high school persistence
+rates, College and Career Preparatory Course Index, post-secondary enrollment
+rates, and College Persistence), the city and borough averages are calculated
+based on the full cohort of students.
+
+Comparison Group’s Results
+
+We refer to this benchmark as the “Comparison Group” performance level for the
+students at school ABC. By comparing School ABC’s results to the Comparison
+Group estimate, a reader can assess School ABC’s effectiveness at helping
+students improve and exceed expected outcomes.
+New York City Public Schools worked with MIT Blueprint Labs to develop an
+updated methodology for Comparison Groups beginning in the 2023 School Quality
+Reports.
+To create Comparison Groups for each school, we use a statistical technique called
+Last Updated: March 6, 2026
+
+Back to the Top
+
+33
+
+Educator Guide to the School Quality Reports |High Schools
+
+regression. This technique allows us to measure the relationship between the
+quality of an individual school and the outcomes of its students. We are also able to
+control for factors that shape students’ starting points and challenges—such as
+incoming test scores, socio-economic status, English language proficiency, and
+special education program recommendations—which enables us to measure a
+school’s effectiveness or impact on their students’ achievement independent of
+student background. We measure how a school’s impact on students compares to
+what we would expect students to achieve had they enrolled in the “average” New
+York City public school, shown as the Comparison Group performance level in the
+graphic below.
+
+In this graphic, 4-year graduation rates for school ABC and XYZ combine two key
+components: 1) Comparison Group graduation rates, which measure how School
+ABC or XYZ’s students would have achieved if they enrolled in the “average” NYC
+school; and 2) the impact School ABC or XYZ had on their students’ graduation
+rates. In this case, we can see that students have benefited from enrolling in School
+ABC because their graduation rate was 86%, which is significantly higher than the
+81% Comparison Group graduation rate that we would expect had these students
+enrolled in the “average” NYC school instead. We would say then that School ABC
+positively affects its students’ outcomes. In contrast, students at School XYZ did
+not benefit as much from enrolling in School XYZ. While 90% of School XYZ’s
+students graduated, we expect that 94% of these students would have graduated
+had they enrolled in the “average” NYC school. This suggests that School XYZ is less
+effective than the average NYC school at improving student graduation.
+Additionally, School ABC appears more effective than School XYZ at improving
+student graduation.
+Last Updated: March 6, 2026
+
+Back to the Top
+
+34
+
+Educator Guide to the School Quality Reports |High Schools
+
+For readers with a statistics background, there are three steps to make a
+Comparison Group performance for each school and each Student Achievement
+metric:
+• Step 1: Student outcomes are regressed on enrolled school indicators. This
+regression model allows us to measure the relationship between school
+enrollment and student outcomes. Our outputs are indicative of the effect
+schools have on their students’ achievement. To isolate the extent to which
+schools impact, or cause, certain outcomes in their students from the
+backgrounds of their students, this regression model controls for student
+demographics, baseline student achievement, and grade fixed effects (which
+control for variations in school quality across grade levels). Regressions for
+high schools add baseline curricular achievement controls. Step 1 allows us
+to determine the effect of enrolling in a certain school on each Student
+Achievement metric outcome.
+• Note: The baseline student achievement metrics used as controls are 3rd,
+4th, and 5th grade attendance rate and State test scores for middle schools
+and K-8 upper grades. For high schools, baseline achievement metrics come
+from grades 6th, 7th, and 8th and also include curricular achievement
+controls. For elementary schools, baseline scores are not available for all
+students within a school, so the model replaces scores for these students
+with city-wide mean scores. This is also the case for a few schools across
+school types where many students do not have baseline scores. For these
+schools, missing scores are replaced by city-wide mean scores by grade, and
+additional control variables indicate that these scores have been imputed. In
+these cases, it should be noted that the Comparison Group estimates are not
+as robust.
+To understand how effectively a school helps its students, it is important to
+consider students’ starting points and challenges. Without that context, schools
+can be mischaracterized as ineffective simply because they serve higher-need
+students.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+35
+
+Educator Guide to the School Quality Reports |High Schools
+
+Based on the data above, you might think the school with the higher average math
+score and graduation rate is the best school. But this is not necessarily true!
+Researchers have found that only 10% - 20% of the differences in test scores are
+due to school quality while the rest of the difference is due to other factors, such as
+students’ incoming preparation for school.1
+The comparison group methodology in the School Quality Reports is designed to
+control for these factors, which are generally outside of the control of the school.
+2
+
+The Comparison Group, pictured below in a screenshot from the SQR: Snapshot,
+helps answer an important question: How well is the school helping its students
+grow and improve? Just looking at how high or low a school’s overall results –
+whether its graduation rate or test scores – are doesn’t answer that question
+because it doesn’t consider where the students started or the challenges they
+face.
+
+To infer school quality, the comparison group estimates: How would students who
+attended this school have performed on average if they had instead enrolled at a
+random school in the NYC Public School system? The comparison group captures
+the average performance of students in NYC with the characteristics of the school’s
+students.
+To create Comparison Groups for each school, we use a statistical technique called
+regression. A regression is a statistical technique that measures the relationship
+between a dependent variable – in this case, a student’s performance on a given
+metric, such as State test scores – and any independent variables, such as
+enrollment in a specific school. Using a regression model helps us estimate the
+extent to which enrollment in a specific school (independent variable) impacts a
+student’s performance on a given metric (dependent variable). Using this
+technique, we are also able to control for factors that shape students’ starting
+points and challenges—such as incoming test scores, socio-economic status,
+English language proficiency, and special education program recommendations—
+1
+2
+
+https://journals.sagepub.com/doi/10.3102/0013189X18759524
+https://bpb-us-e1.wpmucdn.com/sites.dartmouth.edu/dist/9/2108/files/2019/06/KaneStaiger_brookings2002.pdf
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+36
+
+Educator Guide to the School Quality Reports |High Schools
+
+which enables us to measure a school’s impact on their students’ achievement
+independent of student background. Holding a control variable constant means
+that results for a student with a certain characteristic, such as having an IEP, are
+compared to results for students with that same characteristic within the same
+school type across the City. A school’s Comparison Group estimate, then, is
+essentially a weighted average of the outcomes of the students enrolled in all other
+the schools in the City, where the weight given to each student depends on the
+characteristics of your student body.
+To better understand this, consider kids on a playground slide that has multiple
+lanes. If you were trying to see which lane is the fastest to slide down, you might
+think that the third lane, for example, is the fastest because the kids are going down
+the fastest in this lane. But, when you look closer, you notice that the kids in the
+third lane are older and taller than most of the kids in other lanes. To know which
+lane is really the fastest, then, you need to take the kids’ height and age into
+account since these factors affect their speed. To do so, you can compare speeds
+across all of the lanes by comparing only kids of the same age and height across the
+different lanes. Considering the age and height of kids in each lane ("controlling for
+age and height") allows you to isolate the speed of the lane from the ages and
+heights of kids who play at each lane. While the value-added model is more
+complex due to more variables, this is essentially what we do when we control for
+student factors to isolate school impact on student outcomes.
+Our Comparison Groups thus estimate how a school’s impact on students
+compares to what we would expect students to achieve had they enrolled in the
+“average” New York City public school. By comparing School A and School B’s
+results to their respective Comparison Group estimates, a reader can assess each
+school’s effectiveness at helping students improve and exceed expected
+outcomes.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+37
+
+Educator Guide to the School Quality Reports |High Schools
+
+In this case, we can see that students have benefitted from enrolling in School A
+because their graduation rate was 86%, which is significantly higher than the 81%
+Comparison Group graduation rate that we would expect had these students
+enrolled at random instead. We would say then that School A positively affects its
+students’ outcomes. In contrast, students at School B did not benefit as much from
+enrolling in School B. While 90% of School B’s students graduated, we expect that
+94% of these students would have graduated had they enrolled in a random NYC
+school. This suggests that School B is less effective than other schools at improving
+student graduation.
+Steps for the regression:
+There are three steps to calculating the Comparison Group (Value-Added Model):
+• Step 1: We use a regression model to estimate the relationship between
+school enrollment and student outcomes, controlling for student background
+and prior achievement to isolate the school's impact.
+• Step 2: We adjust these impact estimates to reduce statistical noise and
+ensure that differences reflect true school quality rather than random
+variation. This adjustment is called “shrinking” as it reduces the variance of
+the estimates and improves their mean squared error, or the average squared
+distance between a school’s estimated impact score and its true impact
+score. This is important for small schools where an impact estimate might be
+highly affected by the addition or removal of just one student. Shrinking helps
+make these estimates less extreme and more accurate. For larger schools,
+which have more observations due to higher enrollment, shrinkage has a
+small effect on impact estimates.
+• Step 3: We use the adjusted estimates to calculate how each school’s
+Last Updated: March 6, 2026
+
+Back to the Top
+
+38
+
+Educator Guide to the School Quality Reports |High Schools
+
+students would have performed at a hypothetical NYCPS school of average
+quality, enabling a fair comparison.
+For more information about how this model works, please read the Data Explained:
+School Quality Report Comparison Group and Impact Score Explainer.
+
+Impact and Performance Scores
+For informational purposes, the SQR: Dashboard presents scores representing a
+school’s “Impact” and “Performance” on a standardized scale.
+
+The horizontal axis of this chart is based on performance for metrics such as the
+average test scores or graduation rate. This “performance score” reflects whether
+the school outperformed the citywide average, by school type, without making any
+adjustments to account for the student population of the school. The vertical axis is
+the “impact score,” which uses our value-added model to shed light on a school’s
+results relative to the performance of similar students across the city, by school
+type. Both scores are standardized to be between 0.00 and 1.00 so the mean is
+0.50.
+The impact and performance scores on the SQR: Dashboard use limited metrics to
+be more predictive of student success.
+Impact Score Calculation
+• Step 1: For each of the relevant metrics, listed below by school type, we
+calculate the difference between the school’s value and their Comparison
+Group value. (This is, in fact, the regression model estimate.)
+• Step 2: We standardize these differences, translating the scores to a scale of
+0.00-1.00. We use the range of differences for a particular metric and school
+type to rescale these differences, excluding outliers. If a standardized
+difference is outside of the 0.00-1.00 scale because it is an outlier, the value
+is capped at 0 (if it is negative) or 1 (if it is positive).
+Last Updated: March 6, 2026
+
+Back to the Top
+
+39
+
+Educator Guide to the School Quality Reports |High Schools
+
+• Step 3: We take a weighted average of the standardized scores for the
+relevant metrics to produce the impact score displayed in this chart.
+
+Here’s what those steps look like for an example elementary school with the
+following characteristics:
+• ELA state test mean score of 3.32. The Comparison Group value for this
+school is a mean score of 2.86.
+• Math state test mean score of 3.35. The Comparison Group value for this
+school is a mean score of 2.99.
+o Step 1: The difference between the school’s value and their
+Comparison Group value is 0.46 (3.32 - 2.86) for ELA and 0.36 (3.352.99) for Math.
+o Step 2: We find the highest and lowest differences for mean scores in
+ELA and Math among elementary schools. Let’s take the following
+school as an example:
+Metric
+
+Minimum Difference between
+Value and Comparison Group
+for Elementary Schools
+-0.63
+
+Maximum Difference between
+Value and Comparison Group
+for Elementary Schools
+1.27
+
+ELA mean
+score
+Math mean
+-0.70
+1.28
+score
+We use these minimum and maximum differences to standardize every elementary
+school’s scores. That gives our example school a score of 0.81 in ELA and 0.33 in
+Math. This makes sense, since they outperformed their Comparison Group (had a
+high impact) in ELA and underperformed the Comparison Group (had a lower
+impact) in Math.
+(𝑣𝑎𝑙𝑢𝑒−𝑚𝑖𝑛)
+
+A formula to standardize the range to 0 − 1: (𝑚𝑎𝑥−𝑚𝑖𝑛)
+
+(𝟎. 𝟒𝟔 − −𝟎. 𝟔𝟑)
+ELA standardization:
+⁄(𝟏. 𝟐𝟕 − −𝟎. 𝟔𝟑) = 𝟎. 𝟓𝟕
+(𝟎.
+Math standardization: 𝟑𝟔 − 𝟎. 𝟕𝟎)⁄(𝟏. 𝟐𝟖 − 𝟎. 𝟕𝟎) = 𝟎. 𝟓𝟒
+
+Step 3: The average of the scores for the two metrics gives us the school’s impact
+score reported on the SQR.
+(𝟎. 𝟓𝟕 + 𝟎. 𝟓𝟒)/𝟐 = 𝟎. 𝟓𝟔
+Last Updated: March 6, 2026
+
+Back to the Top
+
+40
+
+Educator Guide to the School Quality Reports |High Schools
+
+Our interpretation is that this school has a higher-than-average positive impact on
+its students in their ELA and Math state test scores as their impact score is above
+the mean of 𝟎. 𝟓.
+Performance Score Calculation
+School's performance score is calculated using the same steps as the impact
+score, except that the performance score uses the citywide average, by school
+type, for a metric rather than the school’s Comparison Group value for that metric.
+*Note: Standardized scores do not inherently have a median of 0.5, so we
+mechanically adjust the average on the SQR: Dashboard. This involves adding a
+constant to each score to bring the median to 0.5, by school type. On the SQR:
+Dashboard chart, scores are capped at 1. However, some impact and performance
+scores might exceed 1 with the addition of this constant and these uncapped
+scores are available in the downloaded data file.
+The metrics included in each school’s impact and performance scores are
+determined by school type. The metrics are for all students; subgroup performance
+is not separated in the impact or performance scores.
+School Type
+High Schools
+
+Metrics Included
+Mean ELA Regents score
+Mean Algebra I Regents score
+4-year graduation rate
+Postsecondary enrollment 6 months
+after graduation deadline
+
+Metric Weight
+25%
+25%
+25%
+25%
+
+*Note: Test score components of Impact and Performance scores in the 2023-24
+and 2024-25 SQR are calculated using a modified Comparison Group procedure
+designed to improve statistical accuracy when many students are missing test
+score data. This modified procedure results in impact scores that are highly
+correlated with impact scores were the simple average to be taken, per the table
+above. This modified procedure reduces the role of statistical noise when many
+more students have missing scores at a school on the math or ELA tests relative to
+the other test. For example, imagine that many fewer students at a school have
+valid scores for the math test compared to the ELA test. The simple average of this
+school’s Impact scores on the math and ELA tests may be misleading because the
+math Impact score reflects the performance of many fewer students compared to
+the ELA Impact score. The modified Comparison Group procedure would weight the
+Last Updated: March 6, 2026
+
+Back to the Top
+
+41
+
+Educator Guide to the School Quality Reports |High Schools
+
+school’s ELA Impact score more than its math Impact score in this example to
+compensate for the lower number of students taking the math test. When a similar
+number of students have valid scores for math and ELA tests at a school, results
+from the modified Comparison Group procedure are very similar to those produced
+by the simple average of a school’s math and ELA Impact scores. For additional
+questions, please contact schoolperformance@schools.nyc.gov.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+42
+
+Educator Guide to the School Quality Reports |High Schools
+
+School Quality Reports Metrics and Data
+Sources
+NYC School Survey
+
+The NYC School Survey is administered annually to students in grades 6–12, and to
+parents and teachers of students in all grades (3–K through 12). The survey gathers
+information from school communities on four School Quality Report categories:
+• School Description
+• Instruction and Performance
+• Safety and School Climate
+• Relationships with Families
+Example: The category of Instruction and Performance comprises six measures:
+Academic Press, Classroom Behavior, Course Clarity, Cultural Awareness and
+Inclusive Classroom Instruction, Quality of Student Discussion, and Strong Core
+Instruction. The NYC School Survey includes groups of questions related to each
+measure.
+See Appendix B for a detailed explanation of the measure-question survey
+structure.
+
+► Question-Level Percent Favorable
+For each survey question, we calculate the percentage of “favorable” responses
+(excluding “I don’t know” or missing responses from the denominator).
+Favorable responses are defined as those in the favorable half of response options
+(i.e., out of four possible response options, the two most favorable options are
+treated as positive responses).
+Note: In prior years, this metric was referred to as percent positive.
+Results are displayed overall for all students and for each of the following
+subgroups: American Indian or Alaskan Native, Asian, Black, Hispanic, Latino, or of
+Spanish Origin, multiracial, , Native Hawaiian or other Pacific Islander, White,
+English Language Learners, female, male, neither female nor male students with
+IEPs, students in temporary housing, grade level, and the intersection of race and
+Last Updated: March 6, 2026
+
+Back to the Top
+
+43
+
+Educator Guide to the School Quality Reports |High Schools
+
+gender.
+
+► Measure-Level Percent Favorable
+For each measure, we calculate the average of the question-level percent favorable
+values for all questions within the measure.
+
+► Category-Level Percent Favorable
+For each category, we calculate the average of the measure-level percent favorable
+values for all measures within the category.
+Example: the percent favorable for the Instruction and Performance category is the
+average of the percent favorable on its six measures: Academic Press, Classroom
+Behavior, Course Clarity, Cultural Awareness and Inclusive Classroom Instruction,
+Quality of Student Discussion, and Strong Core Instruction.
+For additional information about the survey, please visit the NYC School Survey or
+view results in Panorama Education’s platform, or email surveys@schools.nyc.gov
+
+Survey Performance Metrics
+For survey scoring, schools are categorized by a survey school type and are
+compared to other schools of the same survey school type. The scoring method for
+the NYC School Survey follows the structure of the survey, which is organized as
+groups of questions relating to a measure, and groups of measures relating to a
+category.
+The following process is used to generate a survey category score:
+1. Question-level percent favorable (percentage of positive responses to a question)
+2. Measure-level percent favorable (average of the question-level percent positive
+values for all questions within the measure)
+3. Measure score (score based on the measure-level percent positive)
+4. Survey category score (average of measure scores for all measures within the
+category)
+Question-level percent positive: For each question, this metric is the percent
+positive responses (excluding “I don’t know” or missing responses from the
+denominator). Positive responses are defined as those in the favorable half of
+response options (i.e., out of four possible response options, the two most
+favorable options are treated as positive responses).
+Measure-level percent positive: This metric is the average of the question-level
+Last Updated: March 6, 2026
+
+Back to the Top
+
+44
+
+Educator Guide to the School Quality Reports |High Schools
+
+percent favorable values for all questions within the measure.
+Example: Instructional Leadership is a measure within the category of School
+Leadership. The Instructional Leadership percent positive is the average of the
+question-level percent positive values on all the Instructional Leadership questions.
+Measure score: This metric converts the measure-level percent positive into a
+score on a 1.00-4.99 scale. The basic idea is that survey results fairly close to the
+city average receive scores in the 3-bar range (3.00 – 3.99), results substantially
+above average receive scores in the 4-bar range (4.00 – 4.99), and results
+substantially below average receive scores in the 2-bar or 1-bar range (2.00 – 2.99 or
+1.00 – 1.99). In addition, if a school’s measure-level percent positive is very high, it
+will receive a high measure score (regardless of whether the result is substantially
+above the citywide average).
+We implement this idea by setting cut levels (measure-level percent positive) for
+each rating category (e.g., the 4-bar category of Exceeding Target). The school’s
+1.00-4.99 measure score is based on the highest category achieved, and the
+distance to the next-higher cut level. The cut levels are based on the citywide
+average percent positive (PP) and the standard deviation (SD) among school-level
+results of schools. We use the “top of scoring range” and “bottom of scoring range”
+values to help calculate scores in the 4.00-4.99 range and the 1.00-1.99 range.
+Rating Category
+Top of Scoring Range
+Exceeding Target (4
+bars)
+Meeting Target (3
+bars)
+Approaching Target
+(2 bars)
+Bottom of Scoring
+Range
+
+Percent Positive (PF) Cut Level
+citywide mean + 2 SD, not to exceed 100
+citywide mean PP + 0.75 SD, not to exceed 95
+citywide mean PP – 0.5 SD, not to exceed 90
+citywide mean PP – 1 SD, not to exceed 85
+citywide mean + 2 SD, not to fall below 0
+
+Examples:
+• If a school’s percent positive on a measure is halfway between the Meeting
+Target and Exceeding Target cut levels, it will receive a score of 3.50 on that
+measure.
+• If a school’s percent positive on a measure is one-quarter of the way between
+Last Updated: March 6, 2026
+
+Back to the Top
+
+45
+
+Educator Guide to the School Quality Reports |High Schools
+
+the Exceeding Target cut level and the Top of Scoring Range, it will receive a
+score of 4.25 on that measure.
+Additional Notes:
+• We set separate targets for each measure and for each survey school type. In
+other words, the citywide averages and standard deviations are calculated
+separately for each survey school type and for each measure.
+• For example, the target cut levels for a middle school will be based on the
+citywide average and standard deviation among middle schools only.
+• To avoid drawing significant scoring distinctions based on small PP
+differences, we will not allow the SD in the formula to fall below 5 points.
+• The top of the scoring range is set at least 5 percentage points above the
+Exceeding Target level (but not to exceed 100).
+• The bottom of the scoring range is set at least 5 percentage points below the
+Approaching Target level (but not to fall below 0).
+• The constants referenced in the table allow scores to be distributed
+reasonably across school types. They are listed in Appendix C for 2024-2025.
+Survey Subcategory Score: This metric is the average of the measure scores for all
+measures within the subcategory.
+For example, the Family-School Trust subcategory contains two measures: ParentPrincipal Trust and Parent-Teacher Trust. The school’s subcategory score for the
+Family-School Trust subcategory is the average of the measure score for the ParentPrincipal Trust measure and the measure score for the Parent-Teacher Trust
+measure. For all metric scores, the score is analogous to the state test proficiency
+ratings based on scale scores: the first digit indicates the rating level, and the
+subsequent digits show how close the result is to the next level.
+For all metric scores, the score is analogous to the state test proficiency ratings
+based on scale scores: the first digit indicates the rating level, and the subsequent
+digits show how close the result is to the next level.
+• If the first digit of the metric score is 1, the school is considered “Needs
+Improvement” for that metric.
+• If the first digit of the metric score is 2, the school is considered “Fair” for that
+metric.
+Last Updated: March 6, 2026
+
+Back to the Top
+
+46
+
+Educator Guide to the School Quality Reports |High Schools
+
+• If the first digit of the metric score is 3, the school is considered “Good” for
+that metric.
+
+• If the first digit of the metric score is 4, the school is considered “Excellent”
+for that metric.
+The subsequent digits reflect how close the school’s value was to the next higher
+metric rating level.
+
+Response Recognition Program
+In 2024-25, the New York City School Survey Response Recognition Program
+identified district schools (Districts 1-32 and 75) that achieved an overall survey
+response rate of 85% or higher across all respondent groups. Schools that met this
+benchmark received a green ribbon designation on their 2024-25 School Quality
+Reports: Snapshot and on the 2025 NYC School Survey report.
+This recognition was based only on response rates. It did not reflect or interpret
+survey results.
+For the list of awarded recipients, see the 2024-25 NYC School Survey Response
+Recognition Award document on InfoHub.
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+47
+
+Educator Guide to the School Quality Reports |High Schools
+
+Appendix A: Reference Tables for College and
+Career Readiness (CCR)
+Overall
+College and Career Readiness is measured on a scale of 0-100
+Predictors of readiness are divided into six areas:
+Course Grades
+up to 30 points
+English
+up to 15 points
+Mathematics
+up to 15 points
+Science
+up to 15 points
+Social Studies
+up to 15 points
+Technology, Art, and World Languages
+up to 10 points
+Students with associate degrees always have 100 out of 100 for CCR.
+
+Course Grades
+HS Grade Point Average
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91 or above
+
+Last Updated: March 6, 2026
+
+CCR Points out of 30
+1
+3
+5
+6
+8
+9
+12
+14
+16
+17
+19
+20
+22
+24
+26
+28
+29
+30
+
+Back to the Top
+
+48
+
+Educator Guide to the School Quality Reports |High Schools
+
+English
+English CCR Predictors
+
+CCR Points out of 15
+
+AP English Language & Composition Score: 2
+AP English Language & Composition Score: 3 to 5
+AP English Literature & Composition Score: 2
+AP English Literature & Composition Score: 3 to 5
+College Credit English
+DOE-Certified (CPCC) Course: English
+IB English Score: 3
+IB English Score: 4
+IB English Score: 5 to 7
+Associate for English
+Regents
+English
+48 to 55
+56 to 65
+66 to 67
+68 to 72
+73 to 74
+75 to 76
+77 to 80
+81 to 82
+83 to 83
+84 to 86
+87
+88 to 89
+90 to 91
+92
+93 to 100
+
+SAT
+English
+
+401 to 420
+421 to 450
+451 to 460
+461 to 470
+471 to 490
+491 to 510
+511 to 530
+531 to 540
+541 to 570
+571 to 590
+591 to 800
+
+Last Updated: March 6, 2026
+
+ACT
+Reading
+
+11
+13
+14 to 15
+16
+17 to 19
+20
+21
+22 to 36
+
+ACT
+Writing
+
+11
+12 to 13
+14
+15
+16 to 17
+18
+19
+20 to 36
+
+Back to the Top
+
+14
+15
+13
+15
+12
+7
+9
+13
+15
+15
+CLEP
+Program
+English
+25 to 27
+28 to 30
+31 to 33
+34 to 37
+38 to 40
+41 to 43
+44 to 45
+46
+47 to 68
+
+CCR Points
+out of 15
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+
+49
+
+Educator Guide to the School Quality Reports |High Schools
+
+Mathematics
+Math CCR Predictors
+
+CCR Points out of
+15
+15
+15
+13
+15
+15
+14
+11
+9
+14
+15
+15
+
+AP Calculus AB Score: 2 to 5
+AP Calculus BC Score: 2 to 5
+AP Pre-Calculus: 2
+AP Pre-Calculus: 3 to 5
+AP Statistics Score: 2 to 5
+College Credit Math
+DOE-Certified (CPCC) Course: Math
+IB Mathematics Score: 2
+IB Mathematics Score: 3
+IB Mathematics Score: 4 to 7
+Associate- for Math
+Regents
+Algebra I
+45 to 61
+62 to 64
+65 to 66
+67 to 68
+69 to 70
+71 to 74
+75 to 77
+78
+79
+80
+81
+82 to 83
+84
+85 to 86
+87 to
+100
+
+Regents
+Geometry
+
+Regents
+Algebra II
+
+SAT Math
+
+41
+42 to 50
+51
+52 to 60
+61 to 63
+64 to 66
+67 to 69
+70 to 72
+73 to 75
+76
+77 to 79
+80 to 81
+82 to 100
+
+41
+42
+43 to 47
+48 to 54
+55 to 58
+59 to 62
+63 to 65
+66 to 68
+69 to 74
+75 to 77
+78 to 100
+
+401 to 420
+421 to 440
+441 to 460
+461 to 470
+471 to 490
+491 to 510
+511 to 520
+521 to 540
+541 to 570
+571 to 590
+591 to 800
+
+CLEP
+CCR
+Program Points
+Math
+out of 15
+28 to 31
+1
+32 to 34
+2
+35 to 38
+3
+39 to 41
+4
+42 to 45
+5
+46 to 48
+6
+11 to 14 49 to 52
+7
+15
+53 to 55
+8
+56 to 59
+9
+16
+60 to 62
+10
+17
+63 to 66
+11
+18
+67 to 69
+12
+19
+70 to 72
+13
+20 to 22 73 to 75
+14
+23 to 36 76 to 80
+15
+
+Back to the Top
+
+50
+
+Last Updated: March 6, 2026
+
+ACT
+Math
+
+Educator Guide to the School Quality Reports |High Schools
+
+Science
+Science CCR Predictors
+
+CCR Points out of 15
+
+AP Biology Score: 2
+AP Biology Score: 3 to 5
+AP Chemistry Score: 2 to 5
+AP Environmental Science Score: 2
+AP Environmental Science Score: 3 to 5
+AP Physics Score: 2 to 5
+College Credit Science
+DOE-Certified (CPCC) Course: Science
+IB Science Score: 2
+IB Science Score: 3
+IB Science Score: 4 to 7
+Associate- for Science
+Regents
+Living
+Environment
+51 to 57
+58 to 61
+62 to 64
+65 to 68
+69 to 72
+73 to 74
+75 to 76
+77 to 79
+80
+81 to 82
+83 to 84
+85 to 86
+87 to 88
+89
+90 to 100
+
+Regents
+Earth
+Science
+
+14
+15
+15
+14
+15
+15
+13
+10
+10
+14
+15
+15
+
+Regents Regents
+ACT
+Chemistry Physics Science
+
+41 to 42
+43 to 46
+47 to 53
+54 to 62
+63 to 64
+65 to 67
+68 to 72
+73 to 75
+76 to 78
+79 to 82
+83 to 84
+85 to 87
+88 to 91
+92 to 100
+
+Last Updated: March 6, 2026
+
+41 to 43
+44 to 45
+46 to 48
+49 to 52
+53 to 56
+57 to 58
+59 to 62
+63 to 65
+66 to 70
+71 to 73
+74 to 100
+
+41 to 46
+47 to 53
+54 to 60
+61 to 64
+65 to
+100
+
+Back to the Top
+
+11 to 13
+14 to 15
+16
+17
+18
+19
+21
+22 to 36
+
+CLEP
+Program
+Science
+25 to 26
+27
+28 to 29
+30
+31 to 32
+33
+34 to 35
+36 to 37
+38 to 39
+40
+41 to 42
+43
+44 to 45
+46
+47 to 80
+
+CCR
+Points
+out of
+15
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+
+51
+
+Educator Guide to the School Quality Reports |High Schools
+
+Social Studies
+Social Studies CCR Predictors
+
+CCR Points out of 15
+
+AP-African American Studies Score: 2
+AP- African American Studies Score: 3 to 5
+AP Economics: Macroeconomics Score: 2 to 5
+AP Economics: Microeconomics Score: 2 to 5
+AP European History Score: 2 to 5
+AP Government & Politics: Comparative Score: 2 to 5
+AP Government & Politics: United States Score: 2 to 5
+AP Human Geography Score: 2
+AP Human Geography Score: 3 to 5
+AP Psychology Score: 2 to 5
+AP United States History Score: 2 to 5
+AP World History Score: 2
+AP World History Score: 3 to 5
+College Credit Social Studies
+DOE-Certified (CPCC) Course: Social Studies
+IB Social Studies Score: 2
+IB Social Studies Score: 3
+IB Social Studies Score: 4 to 7
+Seal of Civic Readiness
+Associate- for Social
+Regents
+Global
+History
+61 to 62
+63
+64 to 65
+66 to 67
+68 to 69
+70 to 72
+73 to 75
+76 to 77
+78 to 79
+80 to 82
+
+13
+15
+15
+15
+15
+15
+15
+14
+15
+15
+15
+14
+15
+13
+8
+5
+12
+15
+13
+15
+
+Regents U.S.
+History
+
+CLEP Program in
+Social Studies
+
+CCR Points out of
+15
+
+41 to 60
+61 to 63
+64 to 66
+67 to 68
+69 to 72
+73 to 75
+76 to 77
+78 to 81
+82 to 84
+85
+
+26 to 28
+29 to 30
+31 to 33
+34 to 35
+36 to 37
+38 to 39
+40 to 42
+43 to 44
+45 to 46
+47 to 48
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+52
+
+Educator Guide to the School Quality Reports |High Schools
+
+83 to 84
+85
+86 to 87
+88 to 89
+90 to 100
+
+86 to 89
+91
+92 to 94
+95 to 96
+97 to 100
+
+49 to 51
+52 to 53
+54 to 55
+56 to 57
+58 to 80
+
+11
+12
+13
+14
+15
+
+Technology, Art, and World Languages
+Technology, Art, and World Language CCR
+Predictors
+AP Art History Score: 2
+AP Art History Score: 3 to 5
+AP Computer Science A Score: 2 to 5
+AP Computer Science Principles Score: 2
+AP Computer Science Principles Score: 3 to 5
+AP Exams in World Languages Score: 2
+AP Exams in World Languages Score: 3
+AP Exams in World Languages Score: 4
+AP Exams in World Languages Score: 5
+AP Music Score: 2
+AP Music Score: 3 to 5
+AP Research Score: 2
+AP Research Score: 3 to 5
+AP Seminar Score: 2
+AP Seminar Score: 3 to 5
+AP Studio Art Score: 2
+AP Studio Art Score: 3
+AP Studio Art Score: 4 to 5
+Arts Endorsement
+Career Development and Occupational Studies
+(CDOS)
+College Credit Technology, Art, and World
+Language
+Computer Science Course
+CTE Endorsement
+DOE-Certified (CPCC) Course: Tech
+IB Art, Tech, World Languages Score: 2
+IB Art, Tech, World Languages Score: 3
+IB Art, Tech, World Languages Score: 4 to 7
+Last Updated: March 6, 2026
+
+Back to the Top
+
+CCR Points out of 15
+9
+10
+10
+8
+10
+5
+6
+8
+10
+9
+10
+7
+10
+6
+10
+7
+9
+10
+6
+6
+8
+7
+10
+7
+5
+8
+10
+53
+
+Educator Guide to the School Quality Reports |High Schools
+
+Industry-Recognized Technical Assessment
+Seal of Biliteracy
+Work-Based Learning
+Associate- for Tech
+NYC Exams in
+World Languages
+
+41 to 48
+49 to 53
+54 to 61
+62 to 69
+70 to 98
+99 to 100
+
+CLEP Program in
+Tech/Art/World Languages
+42 to 43
+44 to 45
+46 to 47
+48 to 49
+50 to 51
+52 to 53
+54 to 55
+56
+57 to 80
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+8
+9
+7
+10
+CCR Points out of 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+54
+
+Educator Guide to the School Quality Reports |High Schools
+
+Appendix B: Category-Measure-Question
+Structure
+
+The following tables show the measures within each category and the respondent group(s)
+that were asked about in each measure in the NYC School Survey, and the questions that
+were asked.
+
+Category
+Measure
+Instruction
+and
+Performance
+Academic
+Press
+Classroom
+Behavior
+Course
+Clarity
+Cultural
+Awareness
+and
+Inclusive
+Classroom
+Instruction
+Family
+Satisfaction
+with Child's
+Education
+IEP Service
+Satisfaction
+Quality of
+Student
+Discussion
+Category
+Measure
+Safety and
+School Climate
+Conflict
+Resolution
+
+Non-Elementary Schools
+Students
+Teachers
+
+X
+
+Parents
+
+X
+
+Elementary Schools
+Teachers Parents
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+
+X
+
+X
+X
+
+X
+
+Non-Elementary Schools
+Students Teachers Parents
+
+X
+
+Last Updated: March 6, 2026
+
+X
+
+Back to the Top
+
+X
+
+Elementary Schools
+Teachers Parents
+
+X
+
+55
+
+Educator Guide to the School Quality Reports |High Schools
+
+Guidance
+Inclusive
+Leadership
+Inclusive
+Learning
+Environment
+Innovation And
+Collective
+Responsibility
+Instructional
+Leadership
+Peer
+Collaboration
+Personal
+Attention and
+Support
+Preventing
+Bullying
+Program
+Coherence
+Quality Of
+Professional
+Development
+Safety
+School
+Commitment
+SocialEmotional
+StudentStudent Trust
+StudentTeacher Trust
+Teacher
+Influence
+TeacherTeacher Trust
+TeacherPrincipal Trust
+Conflict
+
+X
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+
+X
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+
+X
+X
+
+X
+
+Last Updated: March 6, 2026
+
+X
+Back to the Top
+
+X
+
+X
+56
+
+Educator Guide to the School Quality Reports |High Schools
+
+Resolution
+Guidance
+Inclusive
+Leadership
+Inclusive
+Learning
+Environment
+Innovation And
+Collective
+Responsibility
+Instructional
+Leadership
+Peer
+Collaboration
+Personal
+Attention and
+Support
+Preventing
+Bullying
+Program
+Coherence
+Quality Of
+Professional
+Development
+Safety
+School
+Commitment
+SocialEmotional
+StudentStudent Trust
+StudentTeacher Trust
+Teacher
+Influence
+TeacherTeacher Trust
+TeacherPrincipal Trust
+
+X
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+
+X
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+
+X
+X
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+57
+
+Educator Guide to the School Quality Reports |High Schools
+
+Category
+Measure
+Relationship with
+Families
+Building Families'
+Capacity as Their
+Child's Primary
+Advocate
+Outreach To
+Parents
+Parent
+Involvement in
+School
+Parent-Teacher
+Trust
+Parent-Principal
+Trust
+Category
+Measure
+School
+Description
+School
+Facilities
+and
+Services
+
+Non-Elementary Schools
+Students
+Teachers Parents
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+X
+
+Non-Elementary Schools
+Students Teachers
+
+X
+
+Elementary Schools
+Teachers Parents
+
+Parents
+
+X
+
+X
+
+Elementary Schools
+Teachers
+Parents
+
+X
+
+X
+
+Instruction and Performance
+
+Questions are included within each measure in the Instruction and Performance
+category.
+
+Academic Press
+How much do YOU agree with the following statements?
+S Q37
+of students say that the classes at their school prepare them for the
+next step in their education.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+In how many of your classes …
+S Q51
+are you challenged?
+Last Updated: March 6, 2026
+
+Back to the Top
+
+58
+
+Educator Guide to the School Quality Reports |High Schools
+
+1 = None, 2 = A few, 3 = Most, 4 = All
+S Q52
+do your teachers have high expectations for you?
+1 = None, 2 = A few, 3 = Most, 4 = All
+S Q53
+are you encouraged to work in small groups?
+1 = None, 2 = A few, 3 = Most, 4 = All
+S Q54
+do your teachers want you to become better thinkers, not just
+memorize things?
+1 = None, 2 = A few, 3 = Most, 4 = All
+S Q55
+do you get so focused on learning during class activities that you lose
+track of time?
+1 = None, 2 = A few, 3 = Most, 4 = All
+T Q142 have to work hard to do well?
+1 = None, 2 = Some, 3 = A lot, 4 = All
+Please mark the extent to which you disagree or agree with each of the
+following.
+S Q35
+In this school, the staff believes that all students can learn, including
+Multilingual Leaners/English Language Learners (MLs/ELLs),
+Emergent Multilingual Learners (EMLLs), and students with
+disabilities.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S Q44
+This school has well-defined learning expectations for all students.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+Classroom Behavior
+How many students in your classes…
+T Q143 do their work when they are supposed to?
+1 = None, 2 = Some, 3 = A lot, 4 = All
+T Q113 listen carefully when the teacher gives directions?
+1 = None, 2 = A few, 3 = Most, 4 = All
+T Q114 follow the rules in class?
+1 = None, 2 = A few, 3 = Most, 4 = All
+T Q115 respond to challenging questions in class?
+1 = None, 2 = A few, 3 = Most, 4 = All
+Course Clarity
+In how many of your classes, this school year, do YOU feel the following
+statement is true?
+S Q28 My teachers make learning expectations clear.
+1 = None, 2 = Some, 3 = A lot, 4 = All
+Last Updated: March 6, 2026
+
+Back to the Top
+
+59
+
+Educator Guide to the School Quality Reports |High Schools
+
+S Q29 Class assignments are purposeful in learning the course content.
+1 = None, 2 = A few, 3 = Most, 4 = All
+S Q30 The work I do in class is good preparation for class assignments,
+projects, and assessments.
+1 = None, 2 = A few, 3 = Most, 4 = All
+S Q31 I learn a lot from feedback on my work.
+1 = None, 2 = A few, 3 = Most, 4 = All
+Cultural Awareness and Inclusive Classroom Instruction
+In how many of your classes, this school year, do YOU feel the following
+statement is true?
+T Q09 Ensure instruction represents multiple races and ethnicities
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+T Q11 Design instruction that is responsive to students' needs (e.g.
+Multilingual Learners/English Language Learners (MLs/ELLs) or
+Emergent Multilingual Leaners (EMLLs) proficiency and students with
+disabilities).
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+T Q12 apply my knowledge of parents' various cultural backgrounds when
+collaborating with them regarding their child's educational progress.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+T Q13 develop appropriate Individualized Education Programs for my
+students with disabilities.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+T Q14 monitor progress on Individualized Education Program goals for my
+students with disabilities.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+T Q15 distinguish linguistic/cultural differences from learning difficulties.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+T Q27 I have conversations about race and racism at my school that help me
+examine my own beliefs around identity.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+Last Updated: March 6, 2026
+
+Back to the Top
+
+60
+
+Educator Guide to the School Quality Reports |High Schools
+
+T
+
+Q06
+
+receive support around how to incorporate students' cultural and
+linguistic backgrounds in my practice.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+T Q07 Appropriately modify instructional activities and materials to meet the
+developmental needs and learning interests of all my students.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+T Q08 Ensure instruction represents multiple perspectives, cultures and
+backgrounds.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+T Q10 Ensure instruction represents multiple genders, gender identities and
+expressions and sexual orientations.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+S Q10 I feel that my teachers respect my culture, background, and identity.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+How much do YOU agree with the following statements?
+S Q03 My teachers use examples of students’ different races and cultures in
+their lessons to make learning more meaningful for me.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+S Q04 My teachers use examples of students’ different backgrounds and
+families in their lessons to make learning more meaningful for me.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+S Q05 I see a variety of races, ethnicities, cultures, and backgrounds
+positively represented in the curriculum.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+S Q06 I see a variety of genders, gender identities and expressions and
+sexual orientations positively represented in the curriculum.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+S Q07 At this school, we have productive conversations about race and
+racism where I feel my voice is heard.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+Last Updated: March 6, 2026
+
+Back to the Top
+
+61
+
+Educator Guide to the School Quality Reports |High Schools
+
+know
+S Q08
+
+My teachers treat students of different races, cultures, or
+backgrounds equally.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+S Q09 My teachers treat students of different genders, gender identities and
+expressions and sexual orientations equally.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+Family Satisfaction with Child's Education
+Please mark the extent to which you disagree or agree with the following
+statement.
+P Q31 My child is progressing in reading the way I would expect.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don’t
+know
+P Q32 My child is progressing in math the way I would expect.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don’t
+know
+P Q33 My child's school helps me understand what grade-level schoolwork
+looks like.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don’t
+know
+How satisfied are you with the following?
+P Q36 The education my child has received this year.
+1 =Very dissatisfied, 2 = Dissatisfied, 3 = Satisfied, 4 = Very satisfied, 5 = I
+don’t know
+P Q37 The overall quality of my child's teachers this year.
+1 =Very dissatisfied, 2 = Dissatisfied, 3 = Satisfied, 4 = Very satisfied, 5 = I
+don’t know
+IEP Service Satisfaction
+If you are a parent/guardian of a child who receives special education
+services through an Individualized Education Program (IEP), ANSWER this
+question. Mark the extent to which you disagree or agree with each of the
+following statements.
+P Q44 I am satisfied with the educational planning and Individualized
+Education Program (IEP) development process at this school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+Last Updated: March 6, 2026
+
+Back to the Top
+
+62
+
+Educator Guide to the School Quality Reports |High Schools
+
+P
+
+Q45
+
+At this school, my child receives what they need to achieve their
+Individualized Education Program (IEP) goal(s).
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+P Q46 This school offers a wide enough variety of activities and services
+(including specialized programs, related services and assistive and
+adaptive technologies where appropriate) to help improve outcomes
+for my child.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+Quality of Student Discussion
+How many students in your classes…
+T Q108 build on each other’s ideas during class discussions?
+1 = None, 2 = Some, 3 = A lot, 4 = All
+T Q109 use data or text references to support their ideas?
+1 = None, 2 = Some, 3 = A lot, 4 = All
+T Q110 show that they respect each other’s ideas?
+1 = None, 2 = Some, 3 = A lot, 4 = All
+T Q111 provide constructive feedback to their peers/teachers?
+1 = None, 2 = Some, 3 = A lot, 4 = All
+T Q112 participate in class discussions at some point?
+1 = None, 2 = Some, 3 = A lot, 4 = All
+Strong Core Instruction
+Please mark the extent to which you disagree or agree with each of the
+following. In planning my last instructional unit, I had the resources and tools
+I needed to include multiple opportunities for…
+T Q100 students to interact with complex grade-level text and tasks, using
+scaffolding where appropriate.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q101 students to engage with texts and tasks reflective of their diverse
+racial, cultural, and linguistic perspective.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q102 students to engage in meaningful discussion that critically examines
+topics that connect to the daily lives of students.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q103 focusing deeply on the concepts emphasized in the standards to help
+students build strong foundations for learning.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q91
+reading and writing experiences grounded in evidence from text, both
+Last Updated: March 6, 2026
+
+Back to the Top
+
+63
+
+Educator Guide to the School Quality Reports |High Schools
+
+literary and informational.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q92
+students to interact with complex grade-level text and tasks, using
+scaffolding where appropriate.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q93
+students to engage with texts and tasks reflective of their diverse
+racial, cultural, and linguistic perspective.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q94
+students to engage in meaningful discussion that critically examines
+topics that connect to the daily lives of students.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q95
+focusing deeply on the concepts emphasized in the standards to help
+students build strong foundations for learning.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q104 students to interact with complex grade-level text and tasks, using
+scaffolding where appropriate.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q105 students to engage with texts and tasks reflective of their diverse
+racial, cultural, and linguistic perspective.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q106 students to engage in meaningful discussion that critically examines
+topics that connect to the daily lives of students.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q107 focusing deeply on the concepts emphasized in the standards to help
+students build strong foundations for learning.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q96
+students to interact with complex grade-level text and tasks, using
+scaffolding where appropriate.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q97
+students to engage with texts and tasks reflective of their diverse
+racial, cultural, and linguistic perspective.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q98
+students to engage in meaningful discussion that critically examines
+topics that connect to the daily lives of students.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q99
+focusing deeply on the concepts emphasized in the standards to help
+students build strong foundations for learning.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q86
+reading and writing experiences grounded in evidence from text, both
+Last Updated: March 6, 2026
+
+Back to the Top
+
+64
+
+Educator Guide to the School Quality Reports |High Schools
+
+literary and informational.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q87
+students to interact with complex grade-level text and tasks, using
+scaffolding where appropriate.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q88
+students to engage with texts and tasks reflective of their diverse
+racial, cultural, and linguistic perspective.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q89
+students to engage in meaningful discussion that critically examines
+topics that connect to the daily lives of students.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q90
+creating coherent progressions within the standards from previous
+grades to current grade to build onto previous learning.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q81
+reading and writing experiences grounded in evidence from text, both
+literary and informational.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q82
+students to interact with complex grade-level text and tasks, using
+scaffolding where appropriate.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q83
+students to engage with texts and tasks reflective of their diverse
+racial, cultural, and linguistic perspective.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q84
+students to engage in meaningful discussion that critically examines
+topics that connect to the daily lives of students.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q85
+focusing deeply on the concepts emphasized in the standards to help
+students build strong foundations for learning.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+This question is for informational purposes only. It will not be scored and will
+not be used for accountability for your school.
+T Q77
+Select at least one content area that you teach. You will then answer a
+set of questions for each content area you select.
+1 = Early childhood (e.g. infants, toddlers, 3-K, or Pre-K), 2 = Social Studies, 3
+= Science, 4 = ELA, 5 = Math, 6 = English as a New Language (ENL), 7 =
+Economics/Financial Education, 8 = I don't teach any of these content areas
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+65
+
+Educator Guide to the School Quality Reports |High Schools
+
+Safety and School Climate
+
+Questions are included within each measure in the Safety and School Climate
+category.
+Conflict Resolution
+How much do you agree with the following statement?
+T Q141 Conflicts are resolved fairly in my school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q128 Behavioral supports are applied equitably to children in my
+school/program.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+How much do YOU agree with the following statements?
+S Q47
+Conflicts are resolved fairly in this school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+Please mark the extent to which you disagree or agree with the following
+statements.
+P Q34
+Conflicts are resolved fairly at my child’s school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+Guidance
+How much do you agree with the following statements? It’s a priority at this
+school that adults…
+T
+Q133
+provide students with guidance on the high school application
+process.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know, 6= N/A
+T
+Q134
+provide families with guidance on the high school application
+process.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know, 6= N/A
+T
+Q135
+provide students with opportunities to learn about different career
+paths.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know, 6 = N/A
+How much do you agree with the following statements? Adults at this
+school...
+T
+Q136
+meet with students to discuss what they plan to do after high
+school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+Last Updated: March 6, 2026
+
+Back to the Top
+
+66
+
+Educator Guide to the School Quality Reports |High Schools
+
+know
+T
+Q137
+
+provide students with information about the college application
+process.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know, 6= N/A
+T
+Q138
+help students plan for how to meet their future career goals.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+T
+Q139
+show students options for how to pay for college (scholarship,
+grants, loans, work study programs).
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know, 6= N/A
+T
+Q140
+show students options for how to pursue pathways other than
+college (apprenticeships, certifications, etc.).
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know, 6 = N/A
+If you are a student in grades 6-8, ANSWER this question. If you are a student
+in grades 9-12, SKIP this question. How much do YOU agree with the following
+statements?
+S
+Q69
+This school provides me with guidance on the high school
+application process.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S
+Q70
+This school provides my family with guidance on the high school
+application process.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+If you are a student in grades 9-12, ANSWER this question. How much do YOU
+agree with the following statements? Adults at this school (including
+teachers, administrators, counselors, and the principal) …
+S
+Q71
+meet with me to discuss what I plan to do after high school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S
+Q72
+encourage me to continue my education after high school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S
+Q73
+provide me with information about the college application
+process.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S
+Q74
+help me plan for how to meet my future career goals.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S
+Q75
+encourage students of all races, ethnicities, genders, cultures,
+and backgrounds to take challenging classes.
+Last Updated: March 6, 2026
+
+Back to the Top
+
+67
+
+Educator Guide to the School Quality Reports |High Schools
+
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S
+Q76
+advise me to take advanced courses.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S
+Q77
+help me consider which colleges to apply to.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = N/A
+S
+Q78
+show me options for how to pay for college (scholarship, grants,
+loans, work study programs, etc.).
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = N/A
+How much do YOU agree with the following statements?
+S
+Q21
+This school encourages me to develop interests, talents, or
+opportunities outside of academics.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+S
+Q49
+At this school, I have the opportunity to learn about different
+careers to help me think about my future.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S
+Q79
+show me options for how to pursue pathways other than college
+(apprenticeships, certifications, etc.)
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = N/A
+Inclusive Leadership
+How much do YOU agree with the following statements?
+S Q02 I have the opportunity to work with adults at this school to make
+decisions in important areas that impact my life (e.g. instruction,
+safety, conflict resolution, etc.).
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+Please mark the extent to which you disagree or agree with each of the
+following statements. The principal/school leader at this school…
+P Q17 puts decisions made with families into action.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don’t
+know
+P Q18 works to create a sense of community in the school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don’t
+know
+P Q19 ensures families are comfortable communicating with the school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don’t
+know
+Please mark the extent to which you disagree or agree with the following
+Last Updated: March 6, 2026
+
+Back to the Top
+
+68
+
+Educator Guide to the School Quality Reports |High Schools
+
+statement.
+P Q30 Language translation and interpretation are readily available to me at
+all family events at my child’s school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don’t
+know, 6 = N/A
+Inclusive Learning Environment
+Please mark the extent to which you disagree or agree with each of the
+following.
+T Q37 At this school, students with disabilities are included in all school
+activities.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q38 This school educates students with disabilities in the least restrictive
+environment appropriate.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q45 School staff treat students of different genders, gender identities and
+expressions and sexual orientations equally.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5= I don’t
+know
+T Q46 School staff treat students of different races, cultures, or backgrounds
+equally.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5= I don’t
+know
+S Q12 At this school, students with disabilities are included in all school
+activities.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+Innovation and Collective Responsibility
+How many teachers at this school…
+T Q1
+help build a welcoming school environment in the entire school, not
+just their classroom?
+1 = None, 2 = Some, 3 = A lot, 4 = All
+T Q2
+are actively trying to improve their teaching?
+1 = None, 2 = Some, 3 = A lot, 4 = All
+T Q3
+take responsibility for improving the school?
+1 = None, 2 = Some, 3 = A lot, 4 = All
+T Q4
+are eager to try new ideas?
+1 = None, 2 = Some, 3 = A lot, 4 = All
+Last Updated: March 6, 2026
+
+Back to the Top
+
+69
+
+Educator Guide to the School Quality Reports |High Schools
+
+T Q5
+feel responsible that all students learn?
+1 = None, 2 = Some, 3 = A lot, 4 = All
+Instructional Leadership
+Please mark the extent to which you disagree or agree with each of the
+following. The principal/program leader at this school…
+T Q63 makes clear to the staff their expectations for meeting instructional
+goals.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q64 understands how children learn.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q65 sets high standards for student learning.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+Please mark the extent to which you disagree or agree with each of the
+following. The principal/assistant principal(s) at this school...
+T Q66 supports teachers in implementing what they have learned in
+professional development.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q67 carefully tracks student academic progress.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q68 knows what’s going on in my classes.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q69 provides teachers with formative feedback to improve practice.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q70 participates in instructional planning with teams of teachers.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+Peer Collaboration
+Please mark the extent to which you disagree or agree with each of the
+following. At this school…
+T Q49 the principal/program leader, teachers, and staff collaborate to make
+this school run effectively.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q50 teachers design instructional programs (e.g. lessons, units) together.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q51 teachers make a conscious effort to coordinate their teaching with
+instruction at other grade levels.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = N/A
+Last Updated: March 6, 2026
+
+Back to the Top
+
+70
+
+Educator Guide to the School Quality Reports |High Schools
+
+Personal Attention and Support
+How much do YOU agree with the following statements?
+S Q11 In general, my teachers make their lessons relevant to my everyday life
+experiences.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S Q13 My teachers take into consideration how my background and identity
+affect my learning and interests.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+S Q40 Adults at this school check in with me frequently about how I’m doing
+personally.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S Q41 Adults at this school check in with me frequently about how I’m doing
+academically.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S Q42 I feel like I belong at this school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+In how many of your classes, this school year, do YOU feel the following
+statement is true? My teachers…
+S Q33 ask if I have everything that I need to succeed in their class
+1 = None, 2 = A few, 3 = Most, 4 = All
+S Q34 give me specific suggestions about how I can improve my work in
+class.
+1 = None, 2 = A few, 3 = Most, 4 = All
+S Q35 explain things a different way if I don't understand something in class.
+1 = None, 2 = A few, 3 = Most, 4 = All
+S Q36 support me when I am upset.
+1 = None, 2 = A few, 3 = Most, 4 = All
+Preventing Bullying
+How often is the following thing true?
+T Q47 At this school students harass, bully, or intimidate other students.
+1 = None of the time, 2 = Rarely, 3 = Some of the time, 4 = Most of the time
+How often are the following things true? At this school...
+S Q61 students harass, bully, or intimidate other students.
+1 = None of the time, 2 = Rarely, 3 = Some of the time, 4 = Most of the time
+S Q62 students harass, bully, or intimidate each other because of their race,
+religion, ethnicity, national origin, language/accent, or
+citizenship/immigration status.
+Last Updated: March 6, 2026
+
+Back to the Top
+
+71
+
+Educator Guide to the School Quality Reports |High Schools
+
+1 = None of the time, 2 = Rarely, 3 = Some of the time, 4 = Most of the time
+S Q63 students harass, bully, or intimidate each other because of their
+gender, gender identity, gender expression, or sexual orientation.
+1 = None of the time, 2 = Rarely, 3 = Some of the time, 4 = Most of the time
+S Q64 students harass, bully, or intimidate each other because of other
+differences, like different body type or disability.
+1 = None of the time, 2 = Rarely, 3 = Some of the time, 4 = Most of the time
+S Q65 students harass, bully, or intimidate each other online (through mobile
+phones, social media, email, or other forms of electronic
+communication).
+1 = None of the time, 2 = Rarely, 3 = Some of the time, 4 = Most of the time
+Program Coherence
+Please mark the extent to which you disagree or agree with each of the
+following. At this school…
+T Q52 curriculum, instruction, and learning materials are well coordinated
+across the different grade levels at this school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = N/A
+T Q53 once we start a new program, we follow up to make sure that it’s
+working.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q54 it is clear how all of the programs offered are connected to our
+school’s instructional vision.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+Quality of Professional Development
+Please mark the extent to which you disagree or agree with each of the
+following. Overall, my professional development experiences this year
+have...
+T Q60 curriculum, instruction, and learning materials are well coordinated
+across the different grade levels at this school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = N/A
+Please mark the extent to which you disagree or agree with each of the
+following. Overall, my professional development experiences this year
+have...
+T Q61 included opportunities to engage in inquiry-based, professional
+collaboration with peers and/or mentors from other schools.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q62 directly related to my students’ needs.
+Last Updated: March 6, 2026
+
+Back to the Top
+
+72
+
+Educator Guide to the School Quality Reports |High Schools
+
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+Safety
+How much do you agree with the following statements? My students are
+safe…
+T
+Q129 outside around this school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5= N/A
+T
+Q130 traveling between home and this school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5= N/A
+T
+Q131 in the hallways, bathrooms, locker rooms, and cafeteria of this
+school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5= N/A
+T
+Q132 in my class(es).
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5= N/A
+How much do you agree with the following statements? I feel safe…
+S
+Q57
+outside around this school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5= N/A
+S
+Q58
+traveling between home and this school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5= N/A
+S
+Q59
+in the hallways, bathrooms, locker rooms, and cafeteria of this
+school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5= N/A
+S Q60
+In my classes at this school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5= N/A
+School Commitment
+Please mark the extent to which you disagree or agree with each of the
+following.
+T Q21 I usually look forward to each working day at this school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q22 I would recommend this school to parents/guardians seeking a place
+for their child.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q23 I would recommend this school to other teachers as a place to work.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+Social-Emotional
+How many adults at this school…
+T Q116 help students develop the skills they need to complete challenging
+Last Updated: March 6, 2026
+
+Back to the Top
+
+73
+
+Educator Guide to the School Quality Reports |High Schools
+
+coursework despite obstacles?
+1 = None, 2 = Some, 3 = A lot, 4 = All, 5 = I don’t know
+T Q117 tell their students they believe they can achieve high academic
+standards?
+1 = None, 2 = Some, 3 = A lot, 4 = All, 5 = I don’t know
+T Q118 teach students how to advocate for themselves?
+1 = None, 2 = Some, 3 = A lot, 4 = All, 5 = I don’t know
+T Q119 recognize disruptive behavior as social-emotional learning
+opportunities?
+1 = None, 2 = Some, 3 = A lot, 4 = All, 5 = I don’t know
+T Q120 have access to school-based supports to assist in
+behavioral/emotional escalations?
+1 = None, 2 = Some, 3 = A lot, 4 = All, 5 = I don’t know
+How much do YOU agree with the following statements?
+S Q20
+I know where to go at my school if I need additional support with
+my mental health.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+S Q39
+There is time at school to talk about feelings and emotions.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+If you need mental health supports or resources, click here. During this
+school year, I have felt ___ while learning.
+S Q22
+Happy
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S Q23
+Safe
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S Q24
+Hopeful
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S Q25
+Bored
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S Q26
+Stressed
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S Q27
+Worried
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+Student-Student Trust
+How much do YOU agree with the following statements?
+S Q1
+Most students at this school treat each other with respect.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+Last Updated: March 6, 2026
+
+Back to the Top
+
+74
+
+Educator Guide to the School Quality Reports |High Schools
+
+know
+S Q46 Most students treat students from different cultures or backgrounds
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+Student-Teacher Trust
+How much do YOU agree with the following statements?
+S Q38 There is at least one adult at my school that I can confide in (trust and
+talk to about what’s going on).
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+S Q43 My teachers are open to students' ideas, suggestions, and
+comments.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+S Q44 My teachers always do what they say they will do.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+S Q45 My teachers treat me with respect.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+Teacher Influence
+Please mark the extent to which you disagree or agree with each of the
+following. At this school…
+T Q59 There is at least one adult at my school that I can confide in (trust and
+talk to about what’s going on).
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+How much influence do teachers have over school policy in each of the areas
+below?
+T Q72 planning how discretionary school funds should be used.
+1 = No influence, 2 = Little, 3 = A moderate amount, 4 = A great deal of
+influence
+T Q71 hiring new professional personnel
+1 = No influence, 2 = Little, 3 = A moderate amount, 4 = A great deal of
+influence
+T Q73 selecting instructional materials and/or curriculum used in
+classrooms.
+1 = No influence, 2 = Little, 3 = A moderate amount, 4 = A great deal of
+influence
+T Q74 setting standards for student behavior.
+1 = No influence, 2 = Little, 3 = A moderate amount, 4 = A great deal of
+influence
+Last Updated: March 6, 2026
+
+Back to the Top
+
+75
+
+Educator Guide to the School Quality Reports |High Schools
+
+Teacher-Principal Trust
+Please mark the extent to which you disagree or agree with each of the
+following.
+T
+Q28 I feel respected by the principal/program leader at this school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T
+Q29 The principal/program leader at this school is an effective manager
+who makes the school run smoothly.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T
+Q30 The principal/program leader has confidence in the expertise of the
+teachers at this school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T
+Q31 I trust the principal/program leader at their word (to do what they say
+that they will do).
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T
+Q32 The principal/program leader looks out for the personal welfare of the
+staff members.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T
+Q33 The principal/program leader places the needs of children ahead of
+personal interests.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T
+Q34 The principal and assistant principals function as a cohesive unit.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5= N/A
+Teacher-Teacher Trust
+Please mark the extent to which you disagree or agree with each of the
+following.
+T Q24 Teachers in this school trust each other.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q25 It's OK in this school to discuss feelings, worries, and frustrations with
+other teachers.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q26 I feel respected by other teachers at this school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+76
+
+Educator Guide to the School Quality Reports |High Schools
+
+Relationship with Families
+
+Questions included within each measure in the Relationship with Families
+category.
+Outreach to Parents
+Please mark the extent to which you disagree or agree with each of the
+following. At this school…
+T Q55 teachers understand families' challenges and concerns.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q56 teachers work closely with families to meet students' needs.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q57 staff regularly communicate with families about how they can help
+students learn.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q58 school staff value families’ race, ethnicity, culture, family structure,
+and background.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+P Q1
+School staff regularly communicate with me about how I can help my
+child learn.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+P Q13 My child's school will make me aware if there are any concerns about
+my child’s social or emotional well-being.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don’t
+know
+P Q13 Teachers work closely with me to meet my child's needs.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+P Q2
+My child's school communicates with me in a language that I can
+understand.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+P Q3
+I am greeted warmly when I contact or visit the school.
+P
+
+Q8
+
+If I suspect my child needs additional learning supports and services, I
+know the next steps to get support at my school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+P Q43 At this school/program, teachers incorporate feedback from families
+into supporting children in the program.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+77
+
+Educator Guide to the School Quality Reports |High Schools
+
+Parent Involvement in School
+Since the beginning of the school year, how often have you…
+P Q20 communicated with your child's teacher about your child's
+performance?
+1 = Never, 2 = Rarely, 3 = Sometimes, 4 = Often
+P Q21 seen your child’s projects, artwork, homework, tests, or quizzes?
+1 = Never, 2 = Rarely, 3 = Sometimes, 4 = Often
+P Q22 I know how to contact the Parent Coordinator at my child's school
+1 = Yes, 2 = No
+P Q40 attended a school meeting, school event, or parent-teacher
+conference (virtually or in-person)?
+1 = Yes, 2 = No
+Parent-Principal Trust
+Please mark the extent to which you disagree or agree with each of the
+following statements about this school.
+P Q5
+I feel respected by my child's principal/school leader.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+P Q10 I trust the principal/school leader at their word (to do what they say
+that they will do).
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+P Q11 The principal/school leader is an effective manager who makes the
+school run smoothly.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+Parent- Teacher Trust
+Please mark the extent to which you disagree or agree with each of the
+following statements about this school.
+P Q12 My child’s teachers treat me as a partner in educating my child.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don’t
+know
+P Q4
+I feel respected by my child's teachers.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+P Q9
+Staff at this schoolwork hard to build trusting relationships with
+parents/guardians like me.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+Last Updated: March 6, 2026
+
+Back to the Top
+
+78
+
+School Description
+
+Educator Guide to the School Quality Reports |High Schools
+
+Questions are included within each measure in the School Description category.
+School Facilities and Services
+Please mark the extent to which you disagree or agree with each of the
+following
+T Q40 This school is kept clean.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q41 This school is kept in good physical condition.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+T Q42 Physical repairs to the school building are completed in a timely
+manner.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree
+Please mark the extent to which you disagree or agree with the following
+statement.
+P Q24 My child's school provides me information about transportation
+options (e.g. MetroCard and busing).
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = N/A
+P Q25 I am satisfied with my child’s school bus transportation service this
+year.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know, 6 = N/A
+P Q29 I am satisfied with the meal options provided at my child’s school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don’t
+know, 6 = N/A
+Please mark the extent to which you disagree or agree with each of the
+following statements about this school.
+P Q15 This school is kept clean.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don’t
+know, 6 = N/A
+P Q16 This school is kept in good physical condition.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don’t
+know, 6 = N/A
+How much do YOU agree with the following statements?
+S Q15 I am satisfied with my school bus transportation service this year.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know, 6 = N/A
+S Q16 I am satisfied with the meal options provided at this school.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+Last Updated: March 6, 2026
+
+Back to the Top
+
+79
+
+Educator Guide to the School Quality Reports |High Schools
+
+S Q18 This school is kept clean.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+S Q19 This school is kept in good physical condition.
+1 = Strongly disagree, 2 = Disagree, 3 = Agree, 4 = Strongly agree, 5 = I don't
+know
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+80
+
+Educator Guide to the School Quality Reports |High Schools
+
+Appendix C: The “topHalfConst and
+bottomHalfConst” Table
+
+This refers to the constants that allow scores to be distributed reasonably across
+school types.
+School Type Category
+Type
+Bottom Half
+Top Half Constant
+Constant
+6-12/K-12
+6-12/K-12
+6-12/K-12
+High School
+High School
+High School
+High School
+
+IP
+RF
+SS
+IP
+IP
+RF
+SS
+
+survey
+survey
+survey
+perform
+survey
+survey
+perform
+
+0.7
+0.8
+0.9
+1.1
+1.3
+0.9
+1
+
+1.9
+1
+75
+2.2
+1.2
+0.8
+35
+
+High School
+
+SS
+
+survey
+
+0.9
+
+35
+
+Last Updated: March 6, 2026
+
+Back to the Top
+
+81
+
+
