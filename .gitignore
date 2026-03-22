@@ -1,10 +1,8 @@
 data/assessment.tsv
 bumpus/
-learning-r/
-learning-sql/
+learning/
 .quarto/
 **/*.quarto_ipynb
-/.quarto/
 first-r/
 student-performance/
 r-for-data-science/
@@ -23,4 +21,4 @@ data/
 .vscode/
 .venv/
 edu-analytics.code-workspace
-edu-analytics.code-workspace
+student-metrics/
