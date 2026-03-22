@@ -3,34 +3,29 @@ title: "About"
 subtitle: "Project Information and Methods"
 format: html
 ---
-
-
+ 
 # About This Project
-
-This project explores NYC public education data using literate programming techniques. All analysis is conducted transparently with reproducible code.
-
+This is a learning project, which documents benchmark skills along a pathway toward professional data analysis. The work will demonstrate and document without agentic coding. This project represents what I know.
+## Background
+For ten years I was a founding computer science teacher at the Academy for Software Engineering, a AP CS Principles pilot teacher, meet up leader, workshop facilitator, education programming language beta tester. At that time, everyone was going to learn how to code. Computer science teaching at the forefront of cs4all gave me an runway into computing knowledge and skills that was not part of my early experience and education. 
+For most of my life until my 30th year and beginning a journey into mathematics teaching, computing was a domain nearby, one a few were able to understand. Throughout that journey there was a craving to automate mathematics, to keep my hands on the computer even when taking notes in a traditional maths classroom (Latex as the gateway drug to computing), to get the machine to work for me. Learning computing on the fly while teaching it, using learning languages that didn't exist in my youth, was an opportunity.
+Computing education turned into a real skill for building spreadsheet data pipelines. Once you can read a contract, build an array, filter, index, and match, you can pipe the gradebook, teacher comments, and ATS into a reporting system that for some reason doesn't already exist.
+For the past five years, while I have been at home raising my third child, I have leaned into the foundation I built as a teacher. I was going to grok git, prototypes, and generative recursion. I was going to build the perfect emacs config. While I had been a star as a teacher building spreadsheets that everyone needed, freelance consulting while parenting was not a world that could work for me. The was too little margin, rabbit holes where everywhere, predicting the time to solution did not seem possible. Enter AI.
+As the news of large language model generative ai spread, I was afraid to even try it. A feeling of almost squeemishness. A builder friend brought me around. Why would you go back he said. And so I have been learning to incorporate coding agents and responsive message bots into my workflow. There are no more rabbit holes, unless I let them happen. Any question can be answered immediately.
+I now believe I can accelerate into new roles that I didn't think possible before the ai revolution. My spreadsheet solutions for schools (and for my farmer friend, guitar shop friend, and jeweler friend) can now be Django apps. Elegant graphs are just a few words away. At the same time I know I can't interview for as senior data analyst role by asking Claude, and I can't pay endlessly for tokens to debug code I don't understand. 
+Surviving the AI contraction means taking responsibility, connecting complex domains with human stakeholders, and building relationships over time.
 
 ## Methodology
-
-
 ### Data Sources
-
-All data comes from the [NYC Open Data Portal](https://opendata.cityofnewyork.us/), specifically the Education category maintained by the NYC Department of Education.
-
-
+Data munging is provided by Adelphi University Educational Technology Departments's NYCSchools Python package. This package solves the data sourcing problem for getting started in NYC Schools data.
 ### Analysis Pipeline
-
-1.  **Data Acquisition** - Fetched via Socrata SODA API with local Parquet caching
+1.  **Data Acquisition** - Fetched via nycschools with local caching
 2.  **Data Cleaning** - Standardized borough names, parsed DBN codes, handled missing values
 3.  **Exploratory Analysis** - Summary statistics, distributions, correlations
 4.  **Visualization** - ggplot2 graphics with consistent theming
-5.  **Reporting** - Org-mode → Quarto → HTML publishing
-
-
+5.  **Reporting** - Quarto → HTML publishing
 ### Tools
-
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
 
 <colgroup>
 <col  class="org-left" />
@@ -74,22 +69,17 @@ All data comes from the [NYC Open Data Portal](https://opendata.cityofnewyork.us
 <tr>
 <td class="org-left">Emacs Org-mode</td>
 <td class="org-right">9.x</td>
-<td class="org-left">Literate programming</td>
+<td cl</tr>
+ass="org-left">Literate programming</td>
 </tr>
 </tbody>
 </table>
-
-
 ## Limitations
-
 -   Data reflects publicly available aggregations; individual student data is protected
 -   Some datasets may have reporting delays or gaps
 -   School-level aggregations may mask within-school variation
 -   Historical data comparability affected by policy and assessment changes
-
-
 ## Reproducibility
-
 All code is available in the project repository. To reproduce:
 
     git clone <repository>
@@ -97,16 +87,9 @@ All code is available in the project repository. To reproduce:
     make setup
     make fetch-data
     make all
-
-
 ## Contact
-
 For questions about this analysis, please open an issue on the project repository.
-
-
 ## License
-
 -   **Code**: MIT License
 -   **Data**: NYC Open Data Terms of Use
 -   **Content**: CC BY 4.0
-
