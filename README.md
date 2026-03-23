@@ -12,14 +12,14 @@ This project analyzes NYC Department of Education data across three domains:
 
 ## 🛠️ Technology Stack
 
-| Component | Purpose |
-|-----------|---------|
-| **Org-mode** | Literate programming, source documents |
-| **R** | Data analysis, visualization |
-| **renv** | R package management, reproducibility |
-| **Quarto** | Website generation, publishing |
-| **NYC Open Data** | Data source (Socrata API) |
-| **Parquet** | Local data caching |
+| Component         | Purpose                                |
+|-------------------|----------------------------------------|
+| **Org-mode**      | Literate programming, source documents |
+| **R**             | Data analysis, visualization           |
+| **renv**          | R package management, reproducibility  |
+| **Quarto**        | Website generation, publishing         |
+| **NYC Open Data** | Data source (Socrata API)              |
+| **Parquet**       | Local data caching                     |
 
 ## 📁 Project Structure
 
@@ -200,14 +200,14 @@ ggplot(data, aes(x = borough, y = enrollment)) +
 
 ### Header Arguments
 
-| Argument | Purpose |
-|----------|---------|
-| `:session *R*` | Use persistent R session |
-| `:exports both` | Export code and results |
-| `:results output` | Capture printed output |
-| `:results graphics` | Generate image |
-| `:file output/x.png` | Output file path |
-| `:cache yes` | Cache results |
+| Argument             | Purpose                  |
+|----------------------|--------------------------|
+| `:session *R*`       | Use persistent R session |
+| `:exports both`      | Export code and results  |
+| `:results output`    | Capture printed output   |
+| `:results graphics`  | Generate image           |
+| `:file output/x.png` | Output file path         |
+| `:cache yes`         | Cache results            |
 
 ### Executing Code
 
@@ -217,7 +217,6 @@ In Emacs:
 - `C-c C-e m m` - Export to markdown
 
 ## 🌐 Quarto Publishing
-
 ### Local Preview
 
 ```bash

@@ -9,12 +9,6 @@ website:
     left:
       - href: output/index.qmd
         text: Home
-      - href: output/schools.qmd
-        text: Schools
-      - href: output/students.qmd
-        text: Students
-      - href: output/learning.qmd
-        text: Learning
       - href: output/about.qmd
         text: About
   sidebar:
@@ -24,13 +18,15 @@ website:
       - section: "Data Sources"
         contents:
           - text: "NYC Open Data"
-            href: data-sources.qmd
+            href: output/data-sources.qmd
       - section: "Analysis"
         contents:
-          - text: schools.qmd
-            href: output/schools.qmd
-          - students.qmd
-          - learning.qmd
+          - href: output/schools.qmd
+            text: Schools
+          - href: output/students.qmd
+            text: Students
+          - href: output/learning.qmd
+            text: Learning
 
 format:
   html:
